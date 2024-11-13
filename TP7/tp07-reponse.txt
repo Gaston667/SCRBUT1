@@ -1,0 +1,76 @@
+ALGASSIMOU PELLEL DIALLO reponse du TP07
+
+I.1
+	La commande expr:
+
+	-[dialloa@archlinux TP7]$ expr length stock_market
+	 12
+
+	Explication: la commande  expr length affiche le nombre de caratère qui est contenue dans la chaine de caratère passer en paramètre.
+	Exemple ci desous ici on a expr length stock_market qui nous donne 12 car  a longueure de stock_market est 12.
+
+
+	-[dialloa@archlinux TP7]$ expr substr stock_market 1 5
+	 stock
+
+	Explication: La commande expr substr STRING POS LENGTH renvoir la chaine de caractère qui commance de POS et qui fini à length dans ce cas on a 
+	stock car 1 = s et 5 = k. en gros il affiche de 1 suivie des 5 caractère suivant
+
+	-[dialloa@archlinux TP7]$ expr substr stock_market 7 12
+	 market
+
+	 Explication: La commande expr substr STRING POS LENGTH renvoi la chaine de caractère qui commance de POS et qui fini à length dans ce cas on a 
+	stock car 7 = m et 12 = t.
+
+	-[dialloa@archlinux TP7]$ expr index stock_market "_"
+	 6
+
+	 Explication: expr index STRING CHARS revoie l'indice de la première occurence de CHAR dans STRING
+
+	-[dialloa@archlinux TP7]$ expr index stock_market "_c"
+	 4
+
+	 Explication: Renvoir l'indice du premier CHAR trouver Dans STRING
+
+I.2
+	1. [dialloa@archlinux TP7]$ addr=10101011111011010101010101100110;expr length $addr
+		32
+
+		Explication: On initialise la variable addr puis on evirifie la longuerur avec expr length 
+
+	2.  [dialloa@archlinux TP7]$ x=$(expr substr $addr 1 8);echo $x
+		10101011
+		[dialloa@archlinux TP7]$ y=$(expr substr $addr 9 8);echo $y
+		11101101
+		[dialloa@archlinux TP7]$ z=$(expr substr $addr 17 8);echo $z
+		01010101
+		[dialloa@archlinux TP7]$ t=$(expr substr $addr 25 8);echo $t
+		01100110
+
+		Explication: x=$(expr substr $addr 1 8) pareil que x='expr substr $addr 1 8'
+		echo $x affiche x. 
+		y=$(expr substr $addr 9 8);echo $y
+		z=$(expr substr $addr 17 8);echo $z
+		t=$(expr substr $addr 25 8);echo $t
+	
+	3.	[dialloa@archlinux TP7]$ echo $((2#101))
+		5
+
+		Explication: $((...)) --> Dit au shell que le contexte est arithmétique: on calcule ce qui est à l'interieur.
+		$((2#...)) --> ce que je te donne est en base 2. exemple  $((2#101)) --> est remplacé par 5
+
+
+	4. [dialloa@archlinux TP7]$ addr_dot=$((2#$x)).$((2#$y)).$((2#$z)).$((2#$t))
+		[dialloa@archlinux TP7]$ echo $addr_dot
+		171.237.85.102
+
+		Explication: Resultat finale, après decoupage, convertion et après l'affectation à la variable addr_dot.
+
+II. La commande sort
+
+
+	1. 
+	
+
+
+
