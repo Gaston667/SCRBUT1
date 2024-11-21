@@ -69,7 +69,10 @@ I.2
 II. La commande sort
 
 
-	1. 
+	1. voici la commande pour faire le trie:  sort -nk 5,5 ls-output.txt
+
+	D'après le man tail l'option -n nous permet de donner en argument le nombre de ligne 
+              
 	
 
 
