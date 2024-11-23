@@ -1,0 +1,88 @@
+
+I. 
+	[dialloa@archlinux TP6]$ mv ~/Downloads/globpattern.tar ../TP6
+	[dialloa@archlinux TP6]$ tar xvf globpattern.tar  
+
+	Explication: On recupère l'archive globattern.tar et on le désarchive 
+
+	1. [dialloa@archlinux TP6]$ ls -d GLOB/gLob/*[[:upper:]]
+		GLOB/gLob/44patterN  GLOB/gLob/pAtterN	GLOB/gLob/paTTerN  GLOB/gLob/patterN
+
+		Explication: Pour afficher les fichiers et répertoires on utiliser la commande ls -d l'option -d permet de ne pas lister le contenue des repertoires car cela n'est pas demandé. Puis on entre le chemin du répertoire dont on veut lister le contenue, ensuite on rajoute le les motif * pour preciser qui le ficher/repertoir peut commencer par n'importe quoi et on rajoute[[:upper:]] pour preciser qu'il doit se terminer par une majuscule
+
+
+	2.	[dialloa@archlinux TP6]$ ls -d GLOB/*[[:upper:]]*
+		GLOB/1glob22gloB333  GLOB/gLob	GLOB/gloB1bloG
+
+		Explication: Pour afficher les fichiers et répertoires on utiliser la commande ls -d l'option -d permet de ne pas lister le contenue des repertoires car cela n'est pas demandé. Puis on entre le chemin du répertoire dont on veut lister le contenue, ensuite on rajoute le les motif * pour préciser qui le ficher/repertoir peut commencer par n'importe quoi et on rajoute[[:upper:]] pour preciser qu'il doit contenir une majuscule puis on rajoute * pour indiquer qu'il peut se terminer par n'importe quoi.
+
+	3. [dialloa@archlinux TP6]$ ls -d GLOB/?[[:digit:]]* GLOB/gLob/?[[:digit:]]*
+	   GLOB/11glob22blog3  GLOB/gLob/44patterN
+
+	   Explication: Pour afficher les fichiers et répertoires on utiliser la commande ls -d l'option -d permet de ne pas lister le contenue des repertoires car cela n'est pas demandé. Puis on entre le chemin du répertoire dont on veut lister le contenue, ensuite on rajoute le les motif ? pour préciser qui le ficher/repertoir commence par n'importe quoi (un seul caractère) et on rajoute[[:digit:]] pour preciser que le son caractère est un chifre puis on rajoute * pour indiquer qu'il peut se terminer par n'importe quoi. on place un espace pour entre un autre repertoir.
+	
+	4. [dialloa@archlinux TP6]$ ls -d GLOB/*[[:digit:]][[:digit:]]*
+		GLOB/11glob22blog3  GLOB/1glob22  GLOB/1glob22gloB333
+
+		Explication:  Pour afficher les fichiers et répertoires on utiliser la commande ls -d l'option -d permet de ne pas lister le contenue des repertoires car cela n'est pas demandé. Puis on entre le chemin du répertoire dont on veut lister le contenue, ensuite on rajoute le les motif * pour préciser qui le ficher/repertoir peut commencer par n'importe quoi (un ou plusieurs caractères) ensuite on rajoute[[:digit:]] pour preciser qu'il doit contenir un chiffre puis on rajoute[[:digit:]] pour preciser qu'il doit contenir un second chiffre consecutif et enfinon rajoute * pour indiquer qu'il peut se terminer par n'importe quoi.
+
+	II.
+
+		1.
+			Explication: 
+				Dans le manuel de bash, la section Pathname Expansion explique comment le shell développe les motifs (patterns) comme *, ?, ou [...] pour correspondre aux noms de fichiers.
+				Lorsque le motif ne correspond à aucun fichier, le comportement du shell dépend des options configurées.
+
+		2.
+			Explication:
+				shopt (shell options) est une commande interne qui permet d’activer ou de désactiver certaines options influençant le comportement du shell.
+				-Pour voir toutes les options disponibles on utilise la commande 'shopt'.
+				-Pour vérifier si une option est activée on utilise la cammande 'shopt' suivian de l'option 
+					par exemple:
+						'shopt nullglob' verifie si l'otion nullglob est active ou pas.
+						[dialloa@archlinux TP6]$ shopt nullglob
+						nullglob       	off
+
+				- Pour activer l’option nullglob on utilise la l'option -s 
+				'shopt -s nullglob'
+				[dialloa@archlinux TP6]$ shopt -s nullglob
+				pour desactiver on utilise le '-u'
+
+		3. 
+			a)
+				On se place dans etc/: [dialloa@archlinux ~]$ cd /etc/
+				
+				commande:
+				dialloa@archlinux etc]$ cd *5
+				bash: cd: *5: Aucun fichier ou dossier de ce nom
+				
+				Explication:
+					Le comportement du shell. Par défaut, si nullglob n’est pas activée, le shell affiche le motif littéralement, comme s’il s’agissait d’un nom de fichier.
+
+			b)
+				Vérifions si nullglob est activée ou non :
+					[dialloa@archlinux TP6]$ shopt nullglob
+					nullglob       	off
+
+				Explication: elle est désactivée, car sortie est off
+
+				Activons l’option nullglob: [dialloa@archlinux etc]$ shopt -s nullglob
+
+				On refait 3a:
+					[dialloa@archlinux etc]$ cd *5
+					[dialloa@archlinux ~]$
+
+				Explication: Le comportement du shell. Avec nullglob, le motif qui ne correspond à rien est supprimé et n’est pas interprété comme un nom de fichier ou répertoire.
+
+			c) 
+				Conclusion: 
+				- Sans 'nullglob' : Lorsque le motif ne correspond à aucun fichier, le shell traite le motif littéralement (par exemple, cd *5 génère une erreur car il n’y a pas de fichier nommé *5).
+
+				-Avec 'nullglob' : Si le motif ne correspond à aucun fichier, le shell ignore simplement le motif, et la commande ne fait rien sans générer d’erreur.
+
+
+
+
+
+
+

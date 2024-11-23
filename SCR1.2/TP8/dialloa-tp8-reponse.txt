@@ -1,0 +1,11 @@
+Dialloa Algassimou Pellel
+
+TP8: 20/11/2024
+
+1. 
+	a et b) Pour la commande seq :voir le fichier my_seq.sh
+
+
+
+
+

@@ -1,0 +1,86 @@
+Bienvenu dans le Fichier Reponse du TP2_
+
+I.
+	1.
+		[dialloa@archlinux TP2]$ echo
+
+		Explication:
+			la commande echo écrit les chaînes de caractères dans la sortie standard
+	2 et 3. 
+		[dialloa@archlinux TP2]$ echo "Hello world!"
+		Hello world!
+		[dialloa@archlinux TP2]$ echo $
+		$
+		[dialloa@archlinux TP2]$ 
+
+		explication: 
+				le terminal recopie les chaînes de caractères dans la sortie standard.
+
+	4. [dialloa@archlinux TP2]$ ls fi
+		fi
+
+		Explication: ls fi nous affiche fi la commande s'est bien executer 
+
+	5. [dialloa@archlinux TP2]$ echo "$?"
+		0	
+
+		Explication: 
+		echo $? permet e code de sortie de la ligne de commandes la plus recemment executee. Du coup là on 0 ce qui confirme bien que ls fi s'est bien exécuter.
+
+	6.
+		[dialloa@archlinux TP2]$ ls -l fi
+		-rw-r--r-- 1 dialloa senart24 0 Sep 25 16:02 fi
+
+		explication:
+			cette commande nous affiche les droit d'accès au fichier fi
+
+	7. 
+		[dialloa@archlinux TP2]$ echo "$?"
+		0
+
+		explication:
+			echo $? permet e code de sortie de la ligne de commandes la plus recemment executee. Du coup là on 0 ce qui confirme bien que ls  -l fi s'est bien exécuter.
+
+	8 et 9. 
+			[dialloa@archlinux TP2]$ ls nofi
+			ls: cannot access 'nofi': No such file or directory
+			[dialloa@archlinux TP2]$ echo "$?"
+			2
+
+			Explication: 
+			echo $? permet e code de sortie de la ligne de commandes la plus recemment executee. Du coup là on a 2 ce qui veut dire que la commande  ls nofi a fais une erreur.
+
+Pipeline:
+
+	1 et 2. 
+		[dialloa@archlinux TP2]$ echo "Hello world1!" | echo "Hello world2!"
+		Hello world2!
+		[dialloa@archlinux TP2]$ echo "Hello world2!" | echo "Hello world1!"
+		Hello world1!
+
+	Explication: 
+				Je remarque que le signe | permet de combiner deux commande si les deux commande sont equivalente alors c'est la
+				deuxième commande qui est renvoyée 
+
+Liste: 
+
+	1, 2 et 3.  
+		[dialloa@archlinux TP2]$ ls fi; echo "$?"
+		fi
+		0
+
+		explication:
+			le signe ; permet de combiner deux commande pour les executer dans l'ordre, meme si y'a une erreur sur l'une des commande le terminal va continuer a executer . dans cet exemple nous avons ls fi qui renvoie fi et echo "$?" qui renvoie 0
+
+	4. [dialloa@archlinux TP2]$ ls fi && echo "Hello world!" ; echo "$?"
+		fi
+		Hello world!
+		0
+
+		explication:
+			le signe && permet de combiner deux commande pour les executer dans l'ordre, mais si y'a une erreur sur l'une des commande le terminal va s'arreter a executer. 
+			Nous avons les 3 resultat qui correspondent aux commande ls, echo "Hello world!" et echo "$?". On remaque bien le 0 à la fin qui signifie que la commande echo "Hello word!" s'est bien executer.
+
+	5. 
+
+	à faire 

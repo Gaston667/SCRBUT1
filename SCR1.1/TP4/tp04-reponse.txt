@@ -1,0 +1,42 @@
+I.
+	[dialloa@archlinux TP4]$ localectl status
+  	System Locale: n/a
+       VC Keymap: fr-pc
+      X11 Layout: n/a
+	
+	Explication: La commande qu'il faut donner à localect est "Status" elle nous permet d'afficher la disposition courante du clavier. On peut voir dans VC keymanp: que le clavier est en français. Dans le fichier /etc/vconsole.conf on trouve cette ligne: KEYMAP=fr-pc, vue que VC Keymap est égale à KEYMAP, alors on en conclu que VC Kerymap est conforme au  fichier /etc/vconsole. La commande à donner à localectl pour avoir la liste des disposition du clavier est "list-keymaps". 
+
+II.
+	1. 
+		[dialloa@archlinux ~]$ lsblk 
+		NAME   MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+		sda      8:0    0  80G  0 disk 
+		`-sda1   8:1    0  80G  0 part / 
+
+		Explication: Dans la liste des differents block on peut voir que le disk à pour nom "sda", Le disk est divisé en une seule partition qui est -sda1. 
+		l'option pour voir le chemin complet du disk est -p (commande = lsblk -p), et le chemin complet du disk est /dev/sda.
+	2.
+		[dialloa@archlinux ~]$ lsblk -p
+		NAME        MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+		/dev/sda      8:0    0  80G  0 disk 
+		`-/dev/sda1   8:1    0  80G  0 part /
+
+		Explication:
+			Sur la machine où on est la partion montée est /dev/sda1 et elle montée sur le point de montage / .
+			Le fichier mtab et la commande mount permet d'obtenir les meme information.
+			La commande fidmnt affiche les même information avec plus de details. Pour que la commande findmnt affiche que les vrais système de fichier montée il faut rajouter l'option -D (commande = findmnt -D).
+
+III.
+	Resultat de la commande link address : 10.0.2.15/24 
+
+	1. 
+		Explication: la commande ps -e  permet d'obtenir la liste des programe deamon et on retrouve le deamon client dhcpcd, 
+		cela veut dire que dhcpcd est bien lancé.
+
+	2.
+		la ligne de commande est:  ip adress add n1.n2.n3.n4/16 dev eno1
+
+
+
+
+
