@@ -5,7 +5,6 @@ TP8: 20/11/2024
 1. 
 	a et b) Pour la commande seq :voir le fichier my_seq.sh
 
-
-
-
+2. 
+	Voir le fichier  ./mult_mat.sh
 
