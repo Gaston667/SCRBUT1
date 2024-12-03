@@ -25,6 +25,9 @@ function se_placer_dans_repertoire() {
             exit 1
         fi
     else
+        # Vérifie si le répertoire est un dépôt Git valide
+        verif
+        echo "je fais un cd $REPO_DIR pour me placer dans le répertoire Git valide."
         # Si un répertoire est spécifié, s'y déplacer
         cd "$REPO_DIR" || { echo "Erreur : Répertoire inexistant ou inaccessible."; exit 1; }
     fi
@@ -84,11 +87,14 @@ function show_help() {
 
 # Fonction pour faire un commit et un push
 function commit_push() {
-    # Vérifie si le répertoire est un dépôt Git valide
-    verif
 
     # Se placer dans le répertoire du dépôt, si nécessaire
     se_placer_dans_repertoire
+
+    if [[ -z "$COMMIT_MSG" ]]; then
+        echo "Erreur : Vous devez spécifier un message de commit."
+        exit 1
+    fi
 
     # Ajouter tous les fichiers modifiés
     git add .
@@ -102,13 +108,6 @@ function commit_push() {
 
 # Fonction pour récupérer les dernières modifications (pull)
 function pull() {
-    # Vérifie si le répertoire est un dépôt Git valide
-    verif
-
-    if [[ -z "$COMMIT_MSG" ]]; then
-        echo "Erreur : Vous devez spécifier un message de commit."
-        exit 1
-    fi
 
     # Se placer dans le répertoire du dépôt, si nécessaire
     se_placer_dans_repertoire
@@ -131,9 +130,13 @@ function git_status() {
 
 # Définir l'option, le répertoire du dépôt et le message de commit
 OPTION="$1"
-REPO_DIR="$2"
-COMMIT_MSG="$3"
 CURRENT_DIR=$(pwd)
+if [[ $# -gt 2 ]]; then
+    REPO_DIR="$2"
+    COMMIT_MSG="$3"
+elif [[ $# -le 2 ]]; then
+    COMMIT_MSG="$2"
+fi
 
 # Vérification de l'option d'aide
 if [[ "$1" == "h" ]] || [[ "$1" == "help" ]]; then
