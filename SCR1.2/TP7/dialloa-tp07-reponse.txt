@@ -64,16 +64,130 @@ I.2
 		[dialloa@archlinux TP7]$ echo $addr_dot
 		171.237.85.102
 
-		Explication: Resultat finale, après decoupage, convertion et après l'affectation à la variable addr_dot.
+		Explication: c'est le resultat finale, après decoupage, convertion et après l'affectation à la variable addr_dot.
 
 II. La commande sort
 
 
-	1. voici la commande pour faire le trie:  sort -nk 5,5 ls-output.txt
+	1. Trions ls-output.txt par taille des éléments
 
-	D'après le man tail l'option -n nous permet de donner en argument le nombre de ligne 
-              
-	
+		Étape préliminaire : Supprimons la première ligne avec tail
+		Le fichier ls-output.txt contient une première ligne qui renseigne sur le total. Cette ligne doit être ignorée.
+		Utilisons la commande tail -n +2 pour afficher le fichier à partir de la deuxième ligne.
+
+		(1). 
+			Trions par ordre croissant de taille des fichiers
+			Les tailles des fichiers sont situées dans la 5 colonne (dans le format de sortie de ls -l).
+
+			[dialloa@archlinux TP7]$ tail -n +2 ls-output.txt | sort -k 5,5 -n
+			-rw-r--r-- 1 root    root         0 30 sept.  2015 arch-release
+			-rw-r--r-- 1 root    root         0 30 sept.  2015 motd
+			-rw-r--r-- 1 root    root         0  6 nov.   2016 odbc.ini
+			-rw-r--r-- 1 root    root         0  6 nov.   2016 odbcinst.ini
+			-rw-r--r-- 1 root    root         4  5 juil.  2016 hostname.ori
+			-rw-r--r-- 1 root    root         9 13 juil.  2016 hostname
+			-rw-r--r-- 1 root    root        10  5 juil.  2016 vconsole.conf
+			-rw-r--r-- 1 root    root        17  5 juil.  2016 locale.conf
+			lrwxrwxrwx 1 root    root        19  5 juil.  2016 mtab -> ../proc/self/mounts
+			-rw-r--r-- 1 root    root        20 30 sept.  2015 issue
+			lrwxrwxrwx 1 root    root        21  5 juil.  2016 os-release -> ../usr/lib/os-release
+			lrwxrwxrwx 1 root    root        25  6 juil.  2017 localtime -> ../usr/share/zoneinfo/UTC
+
+			etc....
+
+			Explication:
+				tail -n +2 : Ignore la première ligne. ensuite on prend cette sortie grace au pipline (|) on le donne a
+				sort -k 5,5 -n : Trie les lignes sur la 5 colonne (-k 5,5) par ordre numérique croissant (-n).
+
+		(2).
+			Trions par ordre décroissant de taille des fichiers
+
+			[dialloa@archlinux TP7]$ tail -n +2 ls-output.txt | sort -k 5,5 -nr
+			-rw-r--r-- 1 root    root        97  9 juin   2016 environment
+			-rw-r--r-- 1 root    root      9614  6 août   2016 locale.gen.pacnew
+			-rw-r--r-- 1 root    root      9530  5 juil.  2016 locale.gen
+			-rw-r--r-- 1 root    root      9472 13 juil.  2016 nss_ldap.conf.ori
+			-rw-r--r-- 1 root    root       945  5 sept.  2016 mke2fs.conf
+			-rw------- 1 root    root       930 30 sept.  2015 crypttab
+			-rw-r--r-- 1 root    root       918 21 oct.   2013 gssapi_mech.conf
+			-rw-r--r-- 1 root    root       912 11 sept.  2017 vimrc
+			-rw-r--r-- 1 root    root         9 13 juil.  2016 hostname
+			-rw-r--r-- 1 root    root      8779 29 oct.   2016 nanorc
+			-rw-r--r-- 1 root    root      8678  1 juil.  2014 pam_ldap.conf.ori
+			-rw-r--r-- 1 root    root        86 30 sept.  2015 securetty
+
+			etc....
+
+			Explication:
+				-r : Trie dans l’ordre inverse (décroissant).
+
+		(3). 
+			Envoyer les résultats à un fichier
+			Pour envoyer les résultats triés à l'expéditeur, redirigons la sortie vers des fichiers.
+
+			Résultats triés par taille croissante : tail -n +2 ls-output.txt | sort -k 5 -n > sorted-by-size-ascending.txt
+			Résultats triés par taille décroissante : tail -n +2 ls-output.txt | sort -k 5 -nr > sorted-by-size-descending.txt
+
+	2. 
+		Trier find-output.txt par date de dernière modification:
+		Nous pouvons utiliser sort pour trier par date.
+
+		(1) Trier par date de la plus récente à la moins récente
+			
+			[dialloa@archlinux TP7]$ sort -k 3,5 -r find-output.txt 
+			/etc/ld.so.cache         : 2018/08/30 :    83501
+			/etc                     : 2018/08/30 :     4096
+			/etc/resolv.conf.bak     : 2018/07/18 :       80
+			/etc/resolv.conf         : 2018/07/18 :       49
+			/etc/shadow              : 2018/07/17 :      843
+			/etc/vimrc               : 2017/09/11 :      912
+			/etc/localtime           : 2017/07/06 :       25
+			/etc/whois.conf          : 2017/03/15 :      382
+			/etc/gdb                 : 2017/01/25 :     4096
+			/etc/xinetd.d            : 2016/11/23 :     4096
+			/etc/skel                : 2016/11/23 :     4096
+			/etc/pacman.d            : 2016/11/23 :     4096
+			/etc/mkinitcpio.d        : 2016/11/23 :     4096
+			/etc/ImageMagick-6       : 2016/11/23 :     4096
+
+			etc...
+
+			Explication:
+				-k 3,5 : Trie sur les colonnes 3 et 5 (AAAA, MM, et JJ).
+				-r : Trie en ordre décroissant (de la plus récente à la moins récente).
+
+
+		(2) Trier par date de la plus ancienne à la moins ancienne
+			
+			[dialloa@archlinux TP7]$ sort -k 3,5 find-output.txt
+			/etc/pcmcia              : 2013/05/13 :     4096
+			/etc/gssapi_mech.conf    : 2013/10/21 :      918
+			/etc/request-key.conf    : 2014/03/01 :     1814
+			/etc/pam_ldap.conf.ori   : 2014/07/01 :     8678
+			/etc/nsswitch.ldap       : 2014/07/03 :     1300
+			/etc/updatedb.conf       : 2014/12/14 :      558
+			/etc/trusted-key.key     : 2015/04/21 :      376
+			/etc/ODBCDataSources     : 2015/09/02 :     4096
+
+			etc...
+
+
+			Explication:
+				Retirons simplement l'option -r pour un tri croissant (de la plus ancienne à la plus récente).
+
+
+
+	Resumer de sort et tail:
+		Supprimer la première ligne d'un fichier : tail -n +2 <fichier>
+		Trier par une colonne spécifique : sort -k <colonne>
+		Trier en ordre croissant : sort -n
+		Trier en ordre décroissant : sort -nr
+
+
+
+
+
+
 
 
 
