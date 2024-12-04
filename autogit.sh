@@ -19,9 +19,9 @@ function se_placer_dans_repertoire() {
     if [[ -z "$REPO_DIR" ]]; then
         # Si aucun répertoire n'est spécifié, vérifier si on est déjà à la racine d'un dépôt Git
         if [ -d "$CURRENT_DIR/.git" ]; then
-            echo "Vous êtes déjà dans la racine du dépôt Git : $CURRENT_DIR"
+            echo "Vous etes deja dans la racine du depôt Git : $CURRENT_DIR"
         else
-            echo "Erreur : Vous devez spécifier un répertoire Git valide."
+            echo "Erreur : Vous devez spécifier un repertoire Git valide."
             exit 1
         fi
     else
@@ -29,7 +29,7 @@ function se_placer_dans_repertoire() {
         verif
         echo "je fais un cd $REPO_DIR pour me placer dans le répertoire Git valide."
         # Si un répertoire est spécifié, s'y déplacer
-        cd "$REPO_DIR" || { echo "Erreur : Répertoire inexistant ou inaccessible."; exit 1; }
+        cd "$REPO_DIR" || { echo "Erreur : Repertoire inexistant ou inaccessible."; exit 1; }
     fi
 }
 

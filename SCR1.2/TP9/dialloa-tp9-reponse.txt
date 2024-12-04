@@ -1,0 +1,26 @@
+Algassimou pellel diallo TP9: 04/12/2024
+
+Creation des repertoires:
+	mkdir -p lib/kernel/config/AA/BB/CC/XX; mkdir -p lib/kernel/config/AA/BB/DD/YY
+
+I.
+	1.	des répertoires dont le nom se termine par .install
+
+		[dialloa@archlinux TREE]$ find . -name "*.install" -type d
+		./lib/krb5/plugins/custom.install
+
+		Explication:
+			Pour trouver les répertoires dont le nom se termine par .install,
+			on utilise la commande find et on precise par le . que notre repertoire courant est la racine de recherche. Ensuite  -name "*.install" permet de donner le nom du fichier que veut rechercher. Dans notre cas c'est un motif qui permet de recherher l'extention d'un fichier. Ensuite le -types d permet de spécifier que ce sont des repertoires
+
+	2.  des fichiers réguliers dont le nom se termine par .d
+
+		[dialloa@archlinux TREE]$ find . -name "*.d" -type f
+		./lib/auth/transm.d
+
+		Explication:
+			Pour trouver les fichiers réguliers dont le nom se termine par .d,
+			on utilise la commande find et on precise par le . que notre repertoire courant(~/TREE) est la racine de recherche. Ensuite  -name "*.d" permet de donner le nom du fichier que veut rechercher. Dans notre cas c'est un motif qui permet de recherher l'extention d'un fichier. Ensuite le -types f permet de spécifier que ce sont des fichiers regulier.
+
+
+

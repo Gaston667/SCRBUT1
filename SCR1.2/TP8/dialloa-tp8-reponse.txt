@@ -8,3 +8,10 @@ TP8: 20/11/2024
 2. 
 	Voir le fichier  ./mult_mat.sh
 
+3.
+	(a)
+
+
+# Ctrl d marque une fin de fichier.
+
+# Read sur une fuin de fichier renvoie un code d'éxite de different de 0.
