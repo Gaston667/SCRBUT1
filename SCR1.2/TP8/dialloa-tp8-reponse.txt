@@ -10,8 +10,40 @@ TP8: 20/11/2024
 
 3.
 	(a)
+		Voir le fichier ./bin2dot-with-for.sh 
 
+	(b)
+		La commande read et le code de retour
 
-# Ctrl d marque une fin de fichier.
+		La commande read permet de lire l'entrée de l'utilisateur à partir du terminal et de stocker cette entrée dans une variable. Le comportement de read peut varier en fonction de la manière dont l'utilisateur interagit avec l'invite de commande.
 
-# Read sur une fuin de fichier renvoie un code d'éxite de different de 0.
+		Analysons chaque cas mentionné et le code de retour de la commande read :
+
+		1. L'utilisateur saisit une valeur (par exemple, 7) :
+
+			read x
+
+			L'utilisateur entre 7 et appuie sur Entrée (CR).
+			Après cette opération, la variable $x contient la valeur 7.
+			La commande echo "$? x=$x" affiche le code de retour de la commande read (qui est 0 lorsque la lecture est réussie) et la valeur de x, soit 7.
+			Code de retour : 0
+			Affichage : 0 x=7
+
+		2. L'utilisateur appuie directement sur Entrée (CR) sans saisir de valeur:
+
+			read x
+
+			L'utilisateur appuie sur Entrée sans rien saisir.
+			Dans ce cas, la variable $x est vide, car l'utilisateur n'a rien entré.
+			Le code de retour de la commande read est également 0, car la commande a fonctionné (elle a simplement attribué une valeur vide à x).
+			Code de retour : 0
+			Affichage : 0 x=
+
+		3. L'utilisateur utilise CTRL+D pour signaler la fin de l'entrée (CR):
+
+			read x
+
+			L'utilisateur appuie sur CTRL+D. Cela envoie un signal de fin de fichier (EOF) à la commande read. Cela indique qu'il n'y a plus de données à lire.
+			Lorsque CTRL+D est utilisé, la commande read renvoie un code de retour 1 pour indiquer qu'il n'y a pas eu de lecture effectuée (car l'entrée est vide, ou la fin du fichier a été atteinte).
+			Code de retour : 1
+			Affichage : 1 x= 
