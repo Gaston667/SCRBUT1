@@ -9,14 +9,13 @@
 function verif() {
     # Vérifie si le répertoire courant ou spécifié est un dépôt Git
     if [[ $# -gt 2 ]]; then
-        echo "lolaea1"
         if [ ! -d "$REPO_DIR/.git" ]; then
         echo "Erreur : '$REPO_DIR' n'est pas un depot Git valide."
         exit 1
         echo "lolaea"
         fi
     fi
-    echo "$#"
+    echo "lolaea"
 }
 
 # Fonction pour se placer dans le répertoire du dépôt Git
@@ -159,7 +158,6 @@ if [[ $# -gt 2 ]]; then
 elif [[ $# -le 2 ]]; then
     COMMIT_MSG="$2"
 fi
-echo "$#"
 
 # Vérification de l'option d'aide
 if [[ "$1" == "h" ]] || [[ "$1" == "help" ]]; then

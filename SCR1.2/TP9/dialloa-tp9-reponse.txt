@@ -3,186 +3,289 @@ Algassimou pellel diallo TP9: 04/12/2024
 Creation des repertoires:
 	mkdir -p lib/kernel/config/AA/BB/CC/XX; mkdir -p lib/kernel/config/AA/BB/DD/YY
 
-I.
-	1.	des répertoires dont le nom se termine par .install
+Rep:
+	I.
+		1.	des répertoires dont le nom se termine par .install
 
-		[dialloa@archlinux TREE]$ find . -name "*.install" -type d
-		./lib/krb5/plugins/custom.install
+			[dialloa@archlinux TREE]$ find . -name "*.install" -type d
+			./lib/krb5/plugins/custom.install
 
-		Explication:
+			Explication:
 			Pour trouver les répertoires dont le nom se termine par .install,
-			on utilise la commande find et on precise par le . que notre repertoire courant est la racine de recherche. Ensuite  -name "*.install" permet de donner le nom du fichier que veut rechercher. Dans notre cas c'est un motif qui permet de recherher l'extention d'un fichier. Ensuite le -types d permet de spécifier que ce sont des repertoires
+			on utilise la commande find et on precise par le . (optionel car par defaut find part du repertoir courant) que notre repertoire courant est la racine de recherche. Ensuite  -name "*.install" permet de donner le nom du fichier que veut rechercher. Dans notre cas c'est un motif qui permet de recherher l'extention d'un fichier. Ensuite le -types d permet de spécifier que ce sont des repertoires
 
-	2.  des fichiers réguliers dont le nom se termine par .d
+		2.  des fichiers réguliers dont le nom se termine par .d
 
-		[dialloa@archlinux TREE]$ find . -name "*.d" -type f
-		./lib/auth/transm.d
+			[dialloa@archlinux TREE]$ find . -name "*.d" -type f
+			./lib/auth/transm.d
 
-		Explication:
+			Explication:
 			Pour trouver les fichiers réguliers dont le nom se termine par .d,
 			on utilise la commande find et on precise par le . que notre repertoire courant(~/TREE) est la racine de recherche. Ensuite  -name "*.d" permet de donner le nom du fichier que veut rechercher. Dans notre cas c'est un motif qui permet de recherher l'extention d'un fichier. Ensuite le -types f permet de spécifier que ce sont des fichiers regulier.
 
 
 
-### 3. Des répertoires vides
+	 	3. Des répertoires vides
 
-```bash
-[dialloa@archlinux TREE]$ find . -type d -empty
-```
+			[dialloa@archlinux TREE]$ find . -type d -empty
+			./lib/kernel/config/AA/BB/DD/YY
+			./lib/kernel/config/AA/BB/CC/XX
+			./lib/krb5/plugins/custom.install
 
-**Explication :**
-Pour trouver les répertoires vides, on utilise la commande `find` et on spécifie que la recherche doit commencer à partir du répertoire courant `.`. Le motif `-type d` permet de rechercher uniquement des répertoires, tandis que l'option `-empty` permet de lister uniquement les répertoires qui ne contiennent aucun fichier ou sous-répertoire.
 
----
+			Explication :
+			Pour trouver les répertoires vides, on utilise la commande `find` et on spécifie que la recherche doit commencer à partir du répertoire courant `.`. Le motif `-type d` permet de rechercher uniquement des répertoires, tandis que l'option `-empty` permet de lister uniquement les répertoires qui ne contiennent aucun fichier ou sous-répertoire.
 
-### 4. Des fichiers réguliers dont la taille est inférieure à 1000 octets
+		4. Des fichiers réguliers dont la taille est inférieure à 1000 octets
 
-```bash
-[dialloa@archlinux TREE]$ find . -type f -size -1000c
-```
+			[diailoa@archlinux TREE]$ find . -type f -size -1000c
+			./lib/kernel/install.d/50-depmod.install
+			./lib/kernel/install.d/50-mkinitcpio.install
+			./lib/krb5/synch/atom.install
+			./lib/krb5/synch/settings.sh
+			./lib/auth/transm.d
 
-**Explication :**
-Pour trouver des fichiers réguliers dont la taille est inférieure à 1000 octets, on utilise `find` avec l'option `-type f` pour rechercher uniquement des fichiers réguliers. Le motif `-size -1000c` spécifie que la taille des fichiers recherchés doit être inférieure à 1000 octets (le `c` indique que la taille est donnée en octets).
+			Explication :
+			Pour trouver des fichiers réguliers dont la taille est inférieure à 1000 octets, on utilise `find` avec l'option `-type f` pour rechercher uniquement des fichiers réguliers. Le motif `-size -1000c` spécifie que la taille des fichiers recherchés doit être inférieure à 1000 octets (le `c` indique que la taille est donnée en octets).
 
----
 
-### 5. Des fichiers réguliers dont la taille est supérieure à 30000 octets
+ 		5. Des fichiers réguliers dont la taille est supérieure à 30000 octets
 
-```bash
-[dialloa@archlinux TREE]$ find . -type f -size +30000c
-```
+			[dialloa@archlinux TREE]$ find . -type f -size +30000c
+			./lib/krb5/plugins/preauth/pkinit.so
+			./lib/krb5/plugins/kdb/db2.so
 
-**Explication :**
-Cette commande permet de trouver tous les fichiers réguliers dont la taille est supérieure à 30 000 octets. L'option `-size +30000c` permet de spécifier que l'on cherche des fichiers dont la taille est supérieure à 30 000 octets. Le `c` désigne les octets.
+			Explication :
+			Cette commande permet de trouver tous les fichiers réguliers dont la taille est supérieure à 30 000 octets. L'option `-size +30000c` permet de spécifier que l'on cherche des fichiers dont la taille est supérieure à 30 000 octets. Le `c` désigne les octets.
 
----
 
-### 6. Des fichiers réguliers dont la taille est exactement de 1024 octets
+		6. Des fichiers réguliers dont la taille est exactement de 1024 octets
 
-```bash
-[dialloa@archlinux TREE]$ find . -type f -size 1024c
-```
+			[dialloa@archlinux TREE]$ find . -type f -size 1024c
+			./lib/krb5/plugins/play.in
 
-**Explication :**
-Ici, nous recherchons des fichiers réguliers dont la taille est exactement de 1024 octets. La commande `find` avec l'option `-type f` permet de spécifier que nous recherchons des fichiers réguliers, tandis que l'option `-size 1024c` indique que la taille des fichiers recherchés doit être exactement de 1024 octets.
+			Explication :
+			Ici, nous recherchons des fichiers réguliers dont la taille est exactement de 1024 octets. La commande `find` avec l'option `-type f` permet de spécifier que nous 	recherchons des fichiers réguliers, tandis que l'option `-size 1024c` indique que la taille des fichiers recherchés doit être exactement de 1024 octets.
 
----
+		7. Des fichiers réguliers dont le contenu occupe 2 blocs
 
-### 7. Des fichiers réguliers dont le contenu occupe 2 blocs
+			[dialloa@archlinux TREE]$ find . -type f -size 2b
+			./lib/krb5/plugins/play.in
+			./lib/krb5/synch/settings.sh
 
-```bash
-[dialloa@archlinux TREE]$ find . -type f -size 2k
-```
+			Explication :
+			Pour trouver des fichiers réguliers dont le contenu occupe exactement 2 blocs, on utilise l'option `-size 2b`. Le `b` représente les blocs, ce qui permet de spécifier le nombre de blocs. Cette commande listera les fichiers dont la taille est égale à 2 blocs.
 
-**Explication :**
-Pour trouver des fichiers réguliers dont le contenu occupe exactement 2 blocs, on utilise l'option `-size 2k`. Le `k` représente des kilooctets (1024 octets), ce qui permet de spécifier la taille en blocs. Cette commande listera les fichiers dont la taille est égale à 2 048 octets.
+		8. Des fichiers réguliers dont le contenu occupe plus de 30 blocs
 
----
+			[dialloa@archlinux TREE]$ find . -type f -size +30b
+			./lib/krb5/plugins/preauth/pkinit.so
+			./lib/krb5/plugins/preauth/otp.so
+			./lib/krb5/plugins/kdb/db2.so
 
-### 8. Des fichiers réguliers dont le contenu occupe plus de 30 blocs
 
-```bash
-[dialloa@archlinux TREE]$ find . -type f -size +30k
-```
+			Explication :
+			Cette commande recherche des fichiers réguliers dont le contenu occupe plus de 30 blocs. Le `+30b` spécifie que la taille des fichiers doit être supérieure à 30 blocs.
 
-**Explication :**
-Cette commande recherche des fichiers réguliers dont le contenu occupe plus de 30 blocs. Le `+30k` spécifie que la taille des fichiers doit être supérieure à 30 000 octets (soit plus de 30 blocs de 1024 octets).
+		9. Des fichiers réguliers dont le contenu occupe moins de 3 blocs
 
----
+			[dialloa@archlinux TREE]$ find . -type f -size -3b
+			./lib/kernel/install.d/50-depmod.install
+			./lib/kernel/install.d/50-mkinitcpio.install
+			./lib/krb5/plugins/play.in
+			./lib/krb5/synch/atom.install
+			./lib/krb5/synch/settings.sh
+			./lib/auth/transm.d
 
-### 9. Des fichiers réguliers dont le contenu occupe moins de 3 blocs
 
-```bash
-[dialloa@archlinux TREE]$ find . -type f -size -3k
-```
+			Explication :
+			Ici, la recherche est limitée aux fichiers réguliers dont le contenu occupe moins de 3 blocs. L'option `-size -3b` permet de spécifier une taille inférieure à 3 blocs.
 
-**Explication :**
-Ici, la recherche est limitée aux fichiers réguliers dont le contenu occupe moins de 3 blocs (c'est-à-dire moins de 3 072 octets). L'option `-size -3k` permet de spécifier une taille inférieure à 3 kilooctets.
+ 	
+ 		10. Des fichiers réguliers dont le contenu occupe plus d'un bloc et moins de 4 blocs
 
----
+			[dialloa@archlinux TREE]$ find . -type f -size +1b -size -4b
+			./lib/krb5/plugins/inout.dev
+			./lib/krb5/plugins/play.in
+			./lib/krb5/synch/settings.sh
 
-### 10. Des fichiers réguliers dont le contenu occupe plus d'un bloc et moins de 4 blocs
 
-```bash
-[dialloa@archlinux TREE]$ find . -type f -size +1k -size -4k
-```
+			Explication :
+			Cette commande permet de trouver des fichiers réguliers dont le contenu occupe plus d'un bloc mais moins de 4 blocs. Les options `-size +1b` et `-size -4b` permettent de spécifier ces intervalles de taille.
 
-**Explication :**
-Cette commande permet de trouver des fichiers réguliers dont le contenu occupe plus d'un bloc (1024 octets) mais moins de 4 blocs (soit moins de 4 096 octets). Les options `-size +1k` et `-size -4k` permettent de spécifier ces intervalles de taille.
+		11. Des éléments qui ont une date de dernière modification postérieure à celle du fichier `atom.install`
 
----
+			[dialloa@archlinux TREE]$  
+			./lib/kernel/config
+			./lib/kernel/config/AA
+			./lib/kernel/config/AA/BB
+			./lib/kernel/config/AA/BB/DD
+			./lib/kernel/config/AA/BB/DD/YY
+			./lib/kernel/config/AA/BB/CC
+			./lib/kernel/config/AA/BB/CC/XX
+			./lib/krb5/plugins
+			./lib/krb5/plugins/inout.dev
+			./lib/krb5/plugins/play.in
+			./lib/krb5/synch
+			./lib/krb5/synch/settings.sh
 
-### 11. Des éléments qui ont une date de dernière modification postérieure à celle du fichier `atom.install`
+			Explication :
+			La commande `find` avec l'option `-newer` permet de lister tous les fichiers et répertoires dont la date de dernière modification est plus récente que celle du fichier `atom.install`. Cette recherche est effectuée dans toute l'arborescence à partir du répertoire courant (`.`, optionel pas obligatoire).
 
-```bash
-[dialloa@archlinux TREE]$ find . -newer ./atom.install
-```
+		12. Des éléments dans l’arborescence commençant à partir de `lib/krb5/syn/` qui ont été modifiés il y a moins de 4 jours
 
-**Explication :**
-La commande `find` avec l'option `-newer` permet de lister tous les fichiers et répertoires dont la date de dernière modification est plus récente que celle du fichier `atom.install`. Cette recherche est effectuée dans toute l'arborescence à partir du répertoire courant (`.`).
+			[dialloa@archlinux TREE]$ find ./lib/krb5/syn/ -mtime -4
+			find: './lib/krb5/syn/': No such file or director
 
----
+			Explication :
+			Cette commande recherche tous les éléments (fichiers et répertoires) dans l'arborescence `lib/krb5/syn/` qui ont été modifiés dans les 4 derniers jours. L'option `-mtime -4` permet de spécifier que la modification doit dater de moins de 4 jours.
+			Mais command find retourne une erreur qui nous indique que le repertoire n'existe pas.
 
-### 12. Des éléments dans l’arborescence commençant à partir de `lib/krb5/syn/` qui ont été modifiés il y a moins de 4 jours
+		13. Des éléments dans l’arborescence commençant à partir de `lib/kernel/install.d` qui ont été modifiés il y a plus de 3 jours
 
-```bash
-[dialloa@archlinux TREE]$ find ./lib/krb5/syn/ -mtime -4
-```
+			[dialloa@archlinux TREE]$ find ./lib/kernel/install.d -mtime +3
+			./lib/kernel/install.d
+			./lib/kernel/install.d/50-depmod.install
+			./lib/kernel/install.d/90-loaderentry.install
+			./lib/kernel/install.d/50-mkinitcpio.install
 
-**Explication :**
-Cette commande recherche tous les éléments (fichiers et répertoires) dans l'arborescence `lib/krb5/syn/` qui ont été modifiés dans les 4 derniers jours. L'option `-mtime -4` permet de spécifier que la modification doit dater de moins de 4 jours.
 
----
+			Explication :
+			Ici, nous recherchons les éléments dans l'arborescence `lib/kernel/install.d` qui ont été modifiés il y a plus de 3 jours. L'option `-mtime +3` indique que l'on recherche les fichiers ou répertoires modifiés il y a plus de 3 jours.
 
-### 13. Des éléments dans l’arborescence commençant à partir de `lib/kernel/install.d` qui ont été modifiés il y a plus de 3 jours
 
-```bash
-[dialloa@archlinux TREE]$ find ./lib/kernel/install.d -mtime +3
-```
 
-**Explication :**
-Ici, nous recherchons les éléments dans l'arborescence `lib/kernel/install.d` qui ont été modifiés il y a plus de 3 jours. L'option `-mtime +3` indique que l'on recherche les fichiers ou répertoires modifiés il y a plus de 3 jours.
+ 		14. Des éléments modifiés il y a 3 jours et dont le temps de dernier accès remonte à 2 jours
 
----
+			[dialloa@archlinux TREE]$ find . -mtime 3 -atime 2
 
-### 14. Des éléments modifiés il y a 3 jours et dont le temps de dernier accès remonte à 2 jours
 
-```bash
-[dialloa@archlinux TREE]$ find . -mtime 3 -atime 2
-```
+			Explication :
+			Cette commande recherche les éléments qui ont été modifiés exactement il y a 3 jours et dont le dernier accès remonte à 2 jours. 	L'option `-mtime 3` permet de rechercher des éléments modifiés il y a 3 jours, tandis que `-atime 2` spécifie que le dernier accès doit dater de 2 jours.
 
-**Explication :**
-Cette commande recherche les éléments qui ont été modifiés exactement il y a 3 jours et dont le dernier accès remonte à 2 jours. L'option `-mtime 3` permet de rechercher des éléments modifiés il y a 3 jours, tandis que `-atime 2` spécifie que le dernier accès doit dater de 2 jours.
 
----
 
-### 15. Des répertoires modifiables par le groupe ou par les autres utilisateurs
+ 		15. Des répertoires modifiables par le groupe ou par les autres utilisateurs
 
-```bash
-[dialloa@archlinux TREE]$ find . -type d -perm -002
-```
+			[dialloa@archlinux TREE]$ find . -type d -perm /g=w, o=w
 
-**Explication :**
-Cette commande permet de trouver tous les répertoires modifiables par le groupe ou par les autres utilisateurs. L'option `-perm -002` spécifie que le répertoire doit avoir les permissions d'écriture pour le groupe ou les autres utilisateurs (les deux derniers chiffres du mode de permission correspondant aux permissions du groupe et des autres utilisateurs).
 
----
+			Explication :
+			Cette commande permet de trouver tous les répertoires modifiables par le groupe ou par les autres utilisateurs. L'option `-perm -002` spécifie que le répertoire doit avoir les permissions d'écriture pour le groupe ou les autres utilisateurs (les deux derniers chiffres du mode de permission correspondant aux permissions du groupe et des autres utilisateurs).
 
-### 16. Des répertoires dont le contenu est lisible par tous
+		16. Des répertoires dont le contenu est lisible par tous
 
-```bash
-[dialloa@archlinux TREE]$ find . -type d -perm -444
-```
+			[dialloa@archlinux TREE]$ find . -type d -perm -444
 
-**Explication :**
-Cette commande liste les répertoires dont le contenu est lisible par tous les utilisateurs. L'option `-perm -444` spécifie que les répertoires doivent être lisibles par le propriétaire, le groupe et les autres utilisateurs.
+			Explication :
+			Cette commande liste les répertoires dont le contenu est lisible par tous les utilisateurs. L'option `-perm -444` spécifie que les répertoires doivent être lisibles par le propriétaire, le groupe et les autres utilisateurs.
 
----
+		17. Des fichiers réguliers dont les permissions sont exactement : lisibles et modifiables par le propriétaire, et seulement lisibles par les autres utilisateurs
 
-### 17. Des fichiers réguliers dont les permissions sont exactement : lisibles et modifiables par le propriétaire, et seulement lisibles par les autres utilisateurs
+			[dialloa@archlinux TREE]$ find . -type f -perm -644
 
-```bash
-[dialloa@archlinux TREE]$ find . -type f -perm 644
-```
+			Explication :
+			Cette commande recherche les fichiers réguliers dont les permissions sont exactement `-644`, c'est-à-dire lisibles et modifiables par le propriétaire, et seulement lisibles par les autres utilisateurs.
 
-**Explication :**
-Cette commande recherche les fichiers réguliers dont les permissions sont exactement `644`, c'est-à-dire lisibles et modifiables par le propriétaire, et seulement lisibles par les autres utilisateurs.
+
+	II.
+		1.  On copie, dans chacun des répertoires  tous les fichiers réguliers de toute l’arborescence TREE
+			dont le nom commence par un chiffre, et qui se trouvent à une profondeur d’au plus 4
+			(donc moins de 5.)
+
+			[dialloa@archlinux TREE]$ find . -maxdepth 4 -type f -name "[:digit:]*" -exec cp {} lib/kernel/config/AA/BB/CC \;
+		 	[dialloa@archlinux TREE]$ find . -maxdepth 4 -type f -name "[:digit:]*" -exec cp {} lib/kernel/config/AA/BB/CC\XX \;
+		 	[dialloa@archlinux TREE]$ find . -maxdepth 4 -type f -name "[:digit:]*" -exec cp {} lib/kernel/config/AA/BB/DD \;
+		 	[dialloa@archlinux TREE]$ find . -maxdepth 4 -type f -name "[:digit:]*" -exec cp {} lib/kernel/config/AA/BB/DD/YY \;	
+		 	[dialloa@archlinux TREE]$
+
+		2. 
+			[dialloa@archlinux TREE]$ find -amin +29
+			.
+			./lib
+			./lib/kernel
+			./lib/kernel/install.d
+			./lib/kernel/install.d/50-depmod.install
+			./lib/kernel/install.d/90-loaderentry.install
+			./lib/kernel/install.d/50-mkinitcpio.install
+			./lib/kernel/config
+			./lib/kernel/config/AA
+			./lib/kernel/config/AA/BB
+			./lib/kernel/config/AA/BB/CCXX
+			./lib/kernel/config/AA/BB/DD
+			./lib/kernel/config/AA/BB/DD/transm.d
+			./lib/kernel/config/AA/BB/DD/inout.dev
+			./lib/kernel/config/AA/BB/DD/YY
+			./lib/kernel/config/AA/BB/DD/YY/transm.d
+			./lib/kernel/config/AA/BB/DD/YY/inout.dev
+			./lib/kernel/config/AA/BB/CC
+			./lib/kernel/config/AA/BB/CC/transm.d
+			./lib/kernel/config/AA/BB/CC/XX
+			./lib/kernel/config/AA/BB/CC/inout.dev
+			./lib/krb5
+			./lib/krb5/plugins
+			./lib/krb5/plugins/inout.dev
+			./lib/krb5/plugins/preauth
+			./lib/krb5/plugins/preauth/pkinit.so
+			./lib/krb5/plugins/preauth/otp.so
+			./lib/krb5/plugins/custom.install
+			./lib/krb5/plugins/kdb
+			./lib/krb5/plugins/kdb/kldap.so
+			./lib/krb5/plugins/kdb/db2.so
+			./lib/krb5/plugins/play.in
+			./lib/krb5/synch
+			./lib/krb5/synch/atom.install
+			./lib/krb5/synch/settings.sh
+			./lib/auth
+			./lib/auth/transm.d
+
+
+		3. 
+			[dialloa@archlinux TREE]$  find . -mindepth 6 -type d -name "[:upper:]*" -exec chmod 0700 '{}' \;
+			[dialloa@archlinux TREE]$ 
+			
+
+		4. 
+			dialloa@archlinux TREE]$ [dialloa@archlinux TREE]$ find . -cmin +14
+			.
+			./lib
+			./lib/kernel
+			./lib/kernel/install.d
+			./lib/kernel/install.d/50-depmod.install
+			./lib/kernel/install.d/90-loaderentry.install
+			./lib/kernel/install.d/50-mkinitcpio.install
+			./lib/kernel/config
+			./lib/kernel/config/AA
+			./lib/kernel/config/AA/BB
+			./lib/kernel/config/AA/BB/CCXX
+			./lib/kernel/config/AA/BB/DD
+			./lib/kernel/config/AA/BB/DD/transm.d
+			./lib/kernel/config/AA/BB/DD/inout.dev
+			./lib/kernel/config/AA/BB/DD/YY
+			./lib/kernel/config/AA/BB/DD/YY/transm.d
+			./lib/kernel/config/AA/BB/DD/YY/inout.dev
+			./lib/kernel/config/AA/BB/CC
+			./lib/kernel/config/AA/BB/CC/transm.d
+			./lib/kernel/config/AA/BB/CC/XX
+			./lib/kernel/config/AA/BB/CC/inout.dev
+			./lib/krb5
+			./lib/krb5/plugins
+			./lib/krb5/plugins/inout.dev
+			./lib/krb5/plugins/preauth
+			./lib/krb5/plugins/preauth/pkinit.so
+			./lib/krb5/plugins/preauth/otp.so
+			./lib/krb5/plugins/custom.install
+			./lib/krb5/plugins/kdb
+			./lib/krb5/plugins/kdb/kldap.so
+			./lib/krb5/plugins/kdb/db2.so
+			./lib/krb5/plugins/play.in
+			./lib/krb5/synch
+			./lib/krb5/synch/atom.install
+			./lib/krb5/synch/settings.sh
+			./lib/auth
+			./lib/auth/transm.d
+
+	III.
+
+		1.
+			

@@ -13,12 +13,14 @@ if [[ $1 -lt 2 || $1 -gt 36 ]]
 	echo "The radix is a decimal between 2 and 36"
 	exit
 fi
+
+#Initialisation des Variables 
 DIGITS=0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ
 LEGAL_DIGITS=$(expr substr $DIGITS 1 $1)
 decimal=0
 l=$(expr length $2)
 
-# Pas besoin de ça dans le cas 2
+#	Pas besoin de ce code ci-dessous car il etatit utiliser dans la première version de any2dec-2.sh 
 #	pow_radix=1;
 #	for ((i=0;i<l;i++))
 
