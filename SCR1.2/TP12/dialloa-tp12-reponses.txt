@@ -1,0 +1,47 @@
+Algassumou Pellel DIALLO (dialloa): 18/12/2024 TP12
+
+
+
+
+
+
+III.
+	1.
+		grep "[.]ipv[46][.]" syschl.conf
+			   \.        \.
+
+		Explication: ici il faut echaper le .
+
+	2. grep -v "^#" syschl.conf
+
+		Explication: -v permet de 
+
+	grep -E "^([^#]|$)" syschl.conf
+
+	explication: Les ligne vide sont representer par ^$ et le -E
+
+
+
+
+Note: 
+
+	les expression regulière:
+
+		grep "^A .*" toto
+
+		le ^ indique le debut de ligne 
+		le $ indique la fin de ligne 
+		le . indique n'importe quel charactère 
+		le [...] 1 parmi
+		le [^...] tout sauf 
+		le a* a est repété 0,1 ou plusieur fois 
+
+	Expression regulière étendue:
+		a +   a est repété au moin une fois
+		a{m, n} a est répété au moins m fois au plus n fois 
+			exemple a{,4} au plus 4
+					a{4,} au moin 4
+		(a | b) c'est un choix, sois a ou b
+
+	
+

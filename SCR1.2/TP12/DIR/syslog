@@ -1,0 +1,847 @@
+Sep 25 06:25:15 RP2-13 rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="2014" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 25 07:17:01 RP2-13 /USR/SBIN/CRON[4204]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 25 07:21:29 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 07:21:29 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 07:21:29 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.85 with invalid source port 55544 on interface 'eth0.0'
+Sep 25 07:21:29 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 07:21:30 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.85 with invalid source port 55544 on interface 'eth0.0'
+Sep 25 08:03:23 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:03:23 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:03:23 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:03:23 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:03:24 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:03:26 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:03:30 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:03:38 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:03:54 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:04:26 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:09:25 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:09:25 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:09:26 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:09:26 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:09:27 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:09:29 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:09:33 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:09:41 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:09:57 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:10:29 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:17:01 RP2-13 /USR/SBIN/CRON[4271]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 25 09:17:01 RP2-13 /USR/SBIN/CRON[4547]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 25 09:29:55 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:55 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:56 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:56 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:29:57 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:29:58 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:58 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:59 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:59 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:29:59 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:30:00 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:30:02 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:30:03 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:30:06 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:30:11 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:30:14 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:30:27 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:30:30 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:30:59 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:31:02 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:45:08 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:45:08 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:45:09 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:45:09 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:45:10 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:45:12 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:45:16 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:45:24 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:45:40 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:46:12 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:17:11 RP2-13 kernel: imklog 5.8.11, log source = /proc/kmsg started.
+Sep 25 09:17:11 RP2-13 rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="2049" x-info="http://www.rsyslog.com"] start
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Booting Linux on physical CPU 0xf00
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Initializing cgroup subsys cpu
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Linux version 3.18.11-v7+ (dc4@dc4-XPS13-9333) (gcc version 4.8.3 20140303 (prerelease) (crosstool-NG linaro-1.13.1+bzr2650 - Linaro GCC 2014.03) ) #781 SMP PREEMPT Tue Apr 21 18:07:59 BST 2015
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Machine model: Raspberry Pi 2 Model B
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] cma: Reserved 8 MiB at 0x3a800000
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Memory policy: Data cache writealloc
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] On node 0 totalpages: 241664
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] free_area_init_node: node 0, pgdat 8080f480, node_mem_map ba093000
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]   Normal zone: 1888 pages used for memmap
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]   Normal zone: 0 pages reserved
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]   Normal zone: 241664 pages, LIFO batch:31
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] [bcm2709_smp_init_cpus] enter (8620->f3003010)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] [bcm2709_smp_init_cpus] ncores=4
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] PERCPU: Embedded 10 pages/cpu @ba061000 s11456 r8192 d21312 u40960
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] pcpu-alloc: s11456 r8192 d21312 u40960 alloc=10*4096
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 239776
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Kernel command line: dma.dmachans=0x7f35 bcm2708_fb.fbwidth=1824 bcm2708_fb.fbheight=984 bcm2709.boardrev=0xa01041 bcm2709.serial=0x55ad5fb2 smsc95xx.macaddr=B8:27:EB:AD:5F:B2 bcm2708_fb.fbswap=1 bcm2709.disk_led_gpio=47 bcm2709.disk_led_active_low=0 sdhci-bcm2708.emmc_clock_freq=250000000 vc_mem.mem_base=0x3dc00000 vc_mem.mem_size=0x3f000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Memory: 940832K/966656K available (5722K kernel code, 397K rwdata, 1748K rodata, 384K init, 763K bss, 25824K reserved)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Virtual kernel memory layout:
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xffe00000   (2048 kB)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]     vmalloc : 0xbb800000 - 0xff000000   (1080 MB)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]     lowmem  : 0x80000000 - 0xbb000000   ( 944 MB)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]     modules : 0x7f000000 - 0x80000000   (  16 MB)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]       .text : 0x80008000 - 0x80753a48   (7471 kB)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]       .init : 0x80754000 - 0x807b4000   ( 384 kB)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]       .data : 0x807b4000 - 0x808174bc   ( 398 kB)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000]        .bss : 0x808174bc - 0x808d6254   ( 764 kB)
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Preemptible hierarchical RCU implementation.
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] NR_IRQS:608
+Sep 25 09:17:11 RP2-13 kernel: [    0.000000] Architected cp15 timer(s) running at 19.20MHz (virt).
+Sep 25 09:17:11 RP2-13 kernel: [    0.000014] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 3579139424256ns
+Sep 25 09:17:11 RP2-13 kernel: [    0.000037] Switching to timer-based delay loop, resolution 52ns
+Sep 25 09:17:11 RP2-13 kernel: [    0.000332] Console: colour dummy device 80x30
+Sep 25 09:17:11 RP2-13 kernel: [    0.001757] console [tty1] enabled
+Sep 25 09:17:11 RP2-13 kernel: [    0.001807] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+Sep 25 09:17:11 RP2-13 kernel: [    0.001891] pid_max: default: 32768 minimum: 301
+Sep 25 09:17:11 RP2-13 kernel: [    0.002294] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Sep 25 09:17:11 RP2-13 kernel: [    0.002352] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Sep 25 09:17:11 RP2-13 kernel: [    0.003633] Initializing cgroup subsys memory
+Sep 25 09:17:11 RP2-13 kernel: [    0.003727] Initializing cgroup subsys devices
+Sep 25 09:17:11 RP2-13 kernel: [    0.003780] Initializing cgroup subsys freezer
+Sep 25 09:17:11 RP2-13 kernel: [    0.003832] Initializing cgroup subsys net_cls
+Sep 25 09:17:11 RP2-13 kernel: [    0.003892] Initializing cgroup subsys blkio
+Sep 25 09:17:11 RP2-13 kernel: [    0.004000] CPU: Testing write buffer coherency: ok
+Sep 25 09:17:11 RP2-13 kernel: [    0.004116] ftrace: allocating 19614 entries in 58 pages
+Sep 25 09:17:11 RP2-13 kernel: [    0.052589] CPU0: update cpu_capacity 1024
+Sep 25 09:17:11 RP2-13 kernel: [    0.052667] CPU0: thread -1, cpu 0, socket 15, mpidr 80000f00
+Sep 25 09:17:11 RP2-13 kernel: [    0.052706] [bcm2709_smp_prepare_cpus] enter
+Sep 25 09:17:11 RP2-13 kernel: [    0.052859] Setting up static identity map for 0x528478 - 0x5284ac
+Sep 25 09:17:11 RP2-13 kernel: [    0.112518] [bcm2709_boot_secondary] cpu:1 started (0) 17
+Sep 25 09:17:11 RP2-13 kernel: [    0.112829] CPU1: Booted secondary processor
+Sep 25 09:17:11 RP2-13 kernel: [    0.112838] [bcm2709_secondary_init] enter cpu:1
+Sep 25 09:17:11 RP2-13 kernel: [    0.112892] CPU1: update cpu_capacity 1024
+Sep 25 09:17:11 RP2-13 kernel: [    0.112902] CPU1: thread -1, cpu 1, socket 15, mpidr 80000f01
+Sep 25 09:17:11 RP2-13 kernel: [    0.132488] [bcm2709_boot_secondary] cpu:2 started (0) 17
+Sep 25 09:17:11 RP2-13 kernel: [    0.132746] CPU2: Booted secondary processor
+Sep 25 09:17:11 RP2-13 kernel: [    0.132753] [bcm2709_secondary_init] enter cpu:2
+Sep 25 09:17:11 RP2-13 kernel: [    0.132784] CPU2: update cpu_capacity 1024
+Sep 25 09:17:11 RP2-13 kernel: [    0.132792] CPU2: thread -1, cpu 2, socket 15, mpidr 80000f02
+Sep 25 09:17:11 RP2-13 kernel: [    0.152558] [bcm2709_boot_secondary] cpu:3 started (0) 18
+Sep 25 09:17:11 RP2-13 kernel: [    0.152795] CPU3: Booted secondary processor
+Sep 25 09:17:11 RP2-13 kernel: [    0.152802] [bcm2709_secondary_init] enter cpu:3
+Sep 25 09:17:11 RP2-13 kernel: [    0.152831] CPU3: update cpu_capacity 1024
+Sep 25 09:17:11 RP2-13 kernel: [    0.152840] CPU3: thread -1, cpu 3, socket 15, mpidr 80000f03
+Sep 25 09:17:11 RP2-13 kernel: [    0.152933] Brought up 4 CPUs
+Sep 25 09:17:11 RP2-13 kernel: [    0.153054] SMP: Total of 4 processors activated (153.60 BogoMIPS).
+Sep 25 09:17:11 RP2-13 kernel: [    0.153087] CPU: All CPU(s) started in SVC mode.
+Sep 25 09:17:11 RP2-13 kernel: [    0.154074] devtmpfs: initialized
+Sep 25 09:17:11 RP2-13 kernel: [    0.178849] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+Sep 25 09:17:11 RP2-13 kernel: [    0.180838] pinctrl core: initialized pinctrl subsystem
+Sep 25 09:17:11 RP2-13 kernel: [    0.183950] NET: Registered protocol family 16
+Sep 25 09:17:11 RP2-13 kernel: [    0.189569] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+Sep 25 09:17:11 RP2-13 kernel: [    0.190740] bcm2709.uart_clock = 3000000
+Sep 25 09:17:11 RP2-13 kernel: [    0.193509] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+Sep 25 09:17:11 RP2-13 kernel: [    0.193562] hw-breakpoint: maximum watchpoint size is 8 bytes.
+Sep 25 09:17:11 RP2-13 kernel: [    0.193617] mailbox: Broadcom VideoCore Mailbox driver
+Sep 25 09:17:11 RP2-13 kernel: [    0.193751] bcm2708_vcio: mailbox at f300b880
+Sep 25 09:17:11 RP2-13 kernel: [    0.194114] bcm_power: Broadcom power driver
+Sep 25 09:17:11 RP2-13 kernel: [    0.194151] bcm_power_open() -> 0
+Sep 25 09:17:11 RP2-13 kernel: [    0.194176] bcm_power_request(0, 8)
+Sep 25 09:17:11 RP2-13 kernel: [    0.694855] bcm_mailbox_read -> 00000080, 0
+Sep 25 09:17:11 RP2-13 kernel: [    0.694889] bcm_power_request -> 0
+Sep 25 09:17:11 RP2-13 kernel: [    0.695032] Serial: AMBA PL011 UART driver
+Sep 25 09:17:11 RP2-13 kernel: [    0.695179] dev:f1: ttyAMA0 at MMIO 0x3f201000 (irq = 83, base_baud = 0) is a PL011 rev3
+Sep 25 09:17:11 RP2-13 kernel: [    1.203459] console [ttyAMA0] enabled
+Sep 25 09:17:11 RP2-13 kernel: [    1.275742] SCSI subsystem initialized
+Sep 25 09:17:11 RP2-13 kernel: [    1.279763] usbcore: registered new interface driver usbfs
+Sep 25 09:17:11 RP2-13 kernel: [    1.285438] usbcore: registered new interface driver hub
+Sep 25 09:17:11 RP2-13 kernel: [    1.290908] usbcore: registered new device driver usb
+Sep 25 09:17:11 RP2-13 kernel: [    1.297815] Switched to clocksource arch_sys_counter
+Sep 25 09:17:11 RP2-13 kernel: [    1.333449] FS-Cache: Loaded
+Sep 25 09:17:11 RP2-13 kernel: [    1.336681] CacheFiles: Loaded
+Sep 25 09:17:11 RP2-13 kernel: [    1.351228] NET: Registered protocol family 2
+Sep 25 09:17:11 RP2-13 kernel: [    1.356872] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+Sep 25 09:17:11 RP2-13 kernel: [    1.364128] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+Sep 25 09:17:11 RP2-13 kernel: [    1.370829] TCP: Hash tables configured (established 8192 bind 8192)
+Sep 25 09:17:11 RP2-13 kernel: [    1.377299] TCP: reno registered
+Sep 25 09:17:11 RP2-13 kernel: [    1.380576] UDP hash table entries: 512 (order: 2, 16384 bytes)
+Sep 25 09:17:11 RP2-13 kernel: [    1.386562] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+Sep 25 09:17:11 RP2-13 kernel: [    1.393292] NET: Registered protocol family 1
+Sep 25 09:17:11 RP2-13 kernel: [    1.398355] RPC: Registered named UNIX socket transport module.
+Sep 25 09:17:11 RP2-13 kernel: [    1.404297] RPC: Registered udp transport module.
+Sep 25 09:17:11 RP2-13 kernel: [    1.409066] RPC: Registered tcp transport module.
+Sep 25 09:17:11 RP2-13 kernel: [    1.413785] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Sep 25 09:17:11 RP2-13 kernel: [    1.421203] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+Sep 25 09:17:11 RP2-13 dhcpcd[1988]: all: IPv6 kernel autoconf disabled
+Sep 25 09:17:11 RP2-13 kernel: [    1.429618] bcm2708_dma: DMA manager at f3007000
+Sep 25 09:17:11 RP2-13 kernel: [    1.434411] vc-mem: phys_addr:0x00000000 mem_base=0x3dc00000 mem_size:0x3f000000(1008 MiB)
+Sep 25 09:17:11 RP2-13 dhcpcd[1988]: eth0: adding address fe80::106f:190d:8bd9:3bd1
+Sep 25 09:17:11 RP2-13 kernel: [    1.444225] futex hash table entries: 1024 (order: 4, 65536 bytes)
+Sep 25 09:17:11 RP2-13 kernel: [    1.450747] audit: initializing netlink subsys (disabled)
+Sep 25 09:17:11 RP2-13 kernel: [    1.456215] audit: type=2000 audit(1.239:1): initialized
+Sep 25 09:17:11 RP2-13 dhcpcd[1988]: if_addaddress6: Operation not supported
+Sep 25 09:17:11 RP2-13 kernel: [    1.477887] VFS: Disk quotas dquot_6.5.2
+Sep 25 09:17:11 RP2-13 kernel: [    1.482202] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Sep 25 09:17:11 RP2-13 kernel: [    1.491746] FS-Cache: Netfs 'nfs' registered for caching
+Sep 25 09:17:11 RP2-13 kernel: [    1.498174] NFS: Registering the id_resolver key type
+Sep 25 09:17:11 RP2-13 kernel: [    1.503303] Key type id_resolver registered
+Sep 25 09:17:11 RP2-13 kernel: [    1.507498] Key type id_legacy registered
+Sep 25 09:17:11 RP2-13 kernel: [    1.512694] msgmni has been set to 1853
+Sep 25 09:17:11 RP2-13 kernel: [    1.518415] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Sep 25 09:17:11 RP2-13 kernel: [    1.526016] io scheduler noop registered
+Sep 25 09:17:11 RP2-13 kernel: [    1.529995] io scheduler deadline registered (default)
+Sep 25 09:17:11 RP2-13 kernel: [    1.535463] io scheduler cfq registered
+Sep 25 09:17:11 RP2-13 kernel: [    1.541924] BCM2708FB: allocated DMA memory fac00000
+Sep 25 09:17:11 RP2-13 kernel: [    1.546937] BCM2708FB: allocated DMA channel 0 @ f3007000
+Sep 25 09:17:11 RP2-13 kernel: [    1.581714] Console: switching to colour frame buffer device 228x61
+Sep 25 09:17:11 RP2-13 kernel: [    1.606631] bcm2708-dmaengine bcm2708-dmaengine: Load BCM2835 DMA engine driver
+Sep 25 09:17:11 RP2-13 kernel: [    1.614411] uart-pl011 dev:f1: no DMA platform data
+Sep 25 09:17:11 RP2-13 kernel: [    1.619957] vc-cma: Videocore CMA driver
+Sep 25 09:17:11 RP2-13 kernel: [    1.623962] vc-cma: vc_cma_base      = 0x00000000
+Sep 25 09:17:11 RP2-13 kernel: [    1.628823] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+Sep 25 09:17:11 RP2-13 kernel: [    1.634324] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+Sep 25 09:17:11 RP2-13 kernel: [    1.651651] brd: module loaded
+Sep 25 09:17:11 RP2-13 kernel: [    1.660503] loop: module loaded
+Sep 25 09:17:11 RP2-13 kernel: [    1.664059] vchiq: vchiq_init_state: slot_zero = 0xba800000, is_master = 0
+Sep 25 09:17:11 RP2-13 kernel: [    1.671987] Loading iSCSI transport class v2.0-870.
+Sep 25 09:17:11 RP2-13 kernel: [    1.678040] usbcore: registered new interface driver smsc95xx
+Sep 25 09:17:11 RP2-13 kernel: [    1.683971] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Sep 25 09:17:11 RP2-13 kernel: [    1.890189] Core Release: 2.80a
+Sep 25 09:17:11 RP2-13 kernel: [    1.893407] Setting default values for core params
+Sep 25 09:17:11 RP2-13 kernel: [    1.898360] Finished setting default values for core params
+Sep 25 09:17:11 RP2-13 kernel: [    2.104438] Using Buffer DMA mode
+Sep 25 09:17:11 RP2-13 kernel: [    2.107845] Periodic Transfer Interrupt Enhancement - disabled
+Sep 25 09:17:11 RP2-13 kernel: [    2.113783] Multiprocessor Interrupt Enhancement - disabled
+Sep 25 09:17:11 RP2-13 kernel: [    2.119477] OTG VER PARAM: 0, OTG VER FLAG: 0
+Sep 25 09:17:11 RP2-13 kernel: [    2.123921] Dedicated Tx FIFOs mode
+Sep 25 09:17:11 RP2-13 kernel: [    2.127874] WARN::dwc_otg_hcd_init:1047: FIQ DMA bounce buffers: virt = 0xbac14000 dma = 0xfac14000 len=9024
+Sep 25 09:17:11 RP2-13 kernel: [    2.137925] FIQ FSM acceleration enabled for :
+Sep 25 09:17:11 RP2-13 kernel: [    2.137925] Non-periodic Split Transactions
+Sep 25 09:17:11 RP2-13 kernel: [    2.137925] Periodic Split Transactions
+Sep 25 09:17:11 RP2-13 kernel: [    2.137925] High-Speed Isochronous Endpoints
+Sep 25 09:17:11 RP2-13 kernel: [    2.154936] dwc_otg: Microframe scheduler enabled
+Sep 25 09:17:11 RP2-13 kernel: [    2.155004] WARN::hcd_init_fiq:412: FIQ on core 1 at 0x803d98b4
+Sep 25 09:17:11 RP2-13 kernel: [    2.165722] WARN::hcd_init_fiq:413: FIQ ASM at 0x803d9c10 length 36
+Sep 25 09:17:11 RP2-13 kernel: [    2.176721] WARN::hcd_init_fiq:438: MPHI regs_base at 0xbb80a000
+Sep 25 09:17:11 RP2-13 kernel: [    2.187462] dwc_otg bcm2708_usb: DWC OTG Controller
+Sep 25 09:17:11 RP2-13 kernel: [    2.197098] dwc_otg bcm2708_usb: new USB bus registered, assigned bus number 1
+Sep 25 09:17:11 RP2-13 kernel: [    2.209134] dwc_otg bcm2708_usb: irq 32, io mem 0x00000000
+Sep 25 09:17:11 RP2-13 kernel: [    2.219465] Init: Port Power? op_state=1
+Sep 25 09:17:11 RP2-13 kernel: [    2.228166] Init: Power Port (0)
+Sep 25 09:17:11 RP2-13 kernel: [    2.236384] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Sep 25 09:17:11 RP2-13 kernel: [    2.247939] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Sep 25 09:17:11 RP2-13 kernel: [    2.259936] usb usb1: Product: DWC OTG Controller
+Sep 25 09:17:11 RP2-13 kernel: [    2.269347] usb usb1: Manufacturer: Linux 3.18.11-v7+ dwc_otg_hcd
+Sep 25 09:17:11 RP2-13 kernel: [    2.280121] usb usb1: SerialNumber: bcm2708_usb
+Sep 25 09:17:11 RP2-13 kernel: [    2.290186] hub 1-0:1.0: USB hub found
+Sep 25 09:17:11 RP2-13 kernel: [    2.298650] hub 1-0:1.0: 1 port detected
+Sep 25 09:17:11 RP2-13 kernel: [    2.307585] dwc_otg: FIQ enabled
+Sep 25 09:17:11 RP2-13 kernel: [    2.307599] dwc_otg: NAK holdoff enabled
+Sep 25 09:17:11 RP2-13 kernel: [    2.307610] dwc_otg: FIQ split-transaction FSM enabled
+Sep 25 09:17:11 RP2-13 kernel: [    2.307650] Module dwc_common_port init
+Sep 25 09:17:11 RP2-13 kernel: [    2.308096] usbcore: registered new interface driver usb-storage
+Sep 25 09:17:11 RP2-13 kernel: [    2.319087] mousedev: PS/2 mouse device common for all mice
+Sep 25 09:17:11 RP2-13 kernel: [    2.329966] bcm2835-cpufreq: min=600000 max=900000
+Sep 25 09:17:11 RP2-13 kernel: [    2.339735] sdhci: Secure Digital Host Controller Interface driver
+Sep 25 09:17:11 RP2-13 kernel: [    2.350532] sdhci: Copyright(c) Pierre Ossman
+Sep 25 09:17:11 RP2-13 kernel: [    2.359713] DMA channels allocated for the MMC driver
+Sep 25 09:17:11 RP2-13 kernel: [    2.397859] Load BCM2835 MMC driver
+Sep 25 09:17:11 RP2-13 kernel: [    2.412872] sdhci-pltfm: SDHCI platform and OF driver helper
+Sep 25 09:17:11 RP2-13 kernel: [    2.423821] ledtrig-cpu: registered to indicate activity on CPUs
+Sep 25 09:17:11 RP2-13 kernel: [    2.434688] hidraw: raw HID events driver (C) Jiri Kosina
+Sep 25 09:17:11 RP2-13 kernel: [    2.446052] usbcore: registered new interface driver usbhid
+Sep 25 09:17:11 RP2-13 kernel: [    2.458342] usbhid: USB HID core driver
+Sep 25 09:17:11 RP2-13 kernel: [    2.469163] TCP: cubic registered
+Sep 25 09:17:11 RP2-13 kernel: [    2.479171] Initializing XFRM netlink socket
+Sep 25 09:17:11 RP2-13 kernel: [    2.488156] NET: Registered protocol family 17
+Sep 25 09:17:11 RP2-13 kernel: [    2.497407] Key type dns_resolver registered
+Sep 25 09:17:11 RP2-13 kernel: [    2.506700] Registering SWP/SWPB emulation handler
+Sep 25 09:17:11 RP2-13 kernel: [    2.507945] Indeed it is in host mode hprt0 = 00021501
+Sep 25 09:17:11 RP2-13 kernel: [    2.526759] registered taskstats version 1
+Sep 25 09:17:11 RP2-13 kernel: [    2.535724] vc-sm: Videocore shared memory driver
+Sep 25 09:17:11 RP2-13 kernel: [    2.545061] [vc_sm_connected_init]: start
+Sep 25 09:17:11 RP2-13 kernel: [    2.554443] [vc_sm_connected_init]: end - returning 0
+Sep 25 09:17:11 RP2-13 kernel: [    2.565503] Waiting for root device /dev/mmcblk0p2...
+Sep 25 09:17:11 RP2-13 kernel: [    2.579992] mmc0: host does not support reading read-only switch, assuming write-enable
+Sep 25 09:17:11 RP2-13 kernel: [    2.598879] mmc0: new high speed SDHC card at address aaaa
+Sep 25 09:17:11 RP2-13 kernel: [    2.609850] mmcblk0: mmc0:aaaa SL16G 14.8 GiB 
+Sep 25 09:17:11 RP2-13 kernel: [    2.625102]  mmcblk0: p1 p2
+Sep 25 09:17:11 RP2-13 kernel: [    2.683721] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+Sep 25 09:17:11 RP2-13 kernel: [    2.687937] usb 1-1: new high-speed USB device number 2 using dwc_otg
+Sep 25 09:17:11 RP2-13 kernel: [    2.695911] Indeed it is in host mode hprt0 = 00001101
+Sep 25 09:17:11 RP2-13 kernel: [    2.716887] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+Sep 25 09:17:11 RP2-13 kernel: [    2.888263] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+Sep 25 09:17:11 RP2-13 kernel: [    2.899837] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Sep 25 09:17:11 RP2-13 kernel: [    2.912641] hub 1-1:1.0: USB hub found
+Sep 25 09:17:11 RP2-13 kernel: [    2.921352] hub 1-1:1.0: 5 ports detected
+Sep 25 09:17:11 RP2-13 kernel: [    3.086109] EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+Sep 25 09:17:11 RP2-13 kernel: [    3.110151] EXT4-fs (mmcblk0p2): 1 orphan inode deleted
+Sep 25 09:17:11 RP2-13 kernel: [    3.120061] EXT4-fs (mmcblk0p2): recovery complete
+Sep 25 09:17:11 RP2-13 kernel: [    3.146811] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Sep 25 09:17:11 RP2-13 kernel: [    3.159714] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+Sep 25 09:17:11 RP2-13 kernel: [    3.175567] devtmpfs: mounted
+Sep 25 09:17:11 RP2-13 kernel: [    3.183877] Freeing unused kernel memory: 384K (80754000 - 807b4000)
+Sep 25 09:17:11 RP2-13 kernel: [    3.228014] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+Sep 25 09:17:11 RP2-13 kernel: [    3.338338] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+Sep 25 09:17:11 RP2-13 kernel: [    3.350164] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Sep 25 09:17:11 RP2-13 kernel: [    3.365253] smsc95xx v1.0.4
+Sep 25 09:17:11 RP2-13 kernel: [    3.432029] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-bcm2708_usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:ad:5f:b2
+Sep 25 09:17:11 RP2-13 kernel: [    3.528023] usb 1-1.2: new low-speed USB device number 4 using dwc_otg
+Sep 25 09:17:11 RP2-13 kernel: [    3.681870] usb 1-1.2: New USB device found, idVendor=413c, idProduct=2107
+Sep 25 09:17:11 RP2-13 kernel: [    3.694287] usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Sep 25 09:17:11 RP2-13 kernel: [    3.694300] usb 1-1.2: Product: Dell USB Entry Keyboard
+Sep 25 09:17:11 RP2-13 kernel: [    3.694309] usb 1-1.2: Manufacturer: Dell
+Sep 25 09:17:11 RP2-13 kernel: [    3.727381] input: Dell Dell USB Entry Keyboard as /devices/platform/bcm2708_usb/usb1/1-1/1-1.2/1-1.2:1.0/0003:413C:2107.0001/input/input0
+Sep 25 09:17:11 RP2-13 kernel: [    3.745652] hid-generic 0003:413C:2107.0001: input,hidraw0: USB HID v1.10 Keyboard [Dell Dell USB Entry Keyboard] on usb-bcm2708_usb-1.2/input0
+Sep 25 09:17:11 RP2-13 kernel: [    3.848150] usb 1-1.3: new low-speed USB device number 5 using dwc_otg
+Sep 25 09:17:11 RP2-13 kernel: [    3.963099] usb 1-1.3: New USB device found, idVendor=046d, idProduct=c077
+Sep 25 09:17:11 RP2-13 kernel: [    3.976828] usb 1-1.3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Sep 25 09:17:11 RP2-13 kernel: [    3.989977] usb 1-1.3: Product: USB Optical Mouse
+Sep 25 09:17:11 RP2-13 kernel: [    4.000759] usb 1-1.3: Manufacturer: Logitech
+Sep 25 09:17:11 RP2-13 kernel: [    4.017161] input: Logitech USB Optical Mouse as /devices/platform/bcm2708_usb/usb1/1-1/1-1.3/1-1.3:1.0/0003:046D:C077.0002/input/input1
+Sep 25 09:17:11 RP2-13 kernel: [    4.037330] hid-generic 0003:046D:C077.0002: input,hidraw1: USB HID v1.11 Mouse [Logitech USB Optical Mouse] on usb-bcm2708_usb-1.3/input0
+Sep 25 09:17:11 RP2-13 kernel: [    5.477869] random: nonblocking pool is initialized
+Sep 25 09:17:11 RP2-13 kernel: [    7.364900] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Sep 25 09:17:11 RP2-13 kernel: [    7.646199] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Sep 25 09:17:11 RP2-13 kernel: [   12.720825] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+Sep 25 09:17:11 RP2-13 kernel: [   14.325448] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x41E1
+Sep 25 09:17:11 RP2-13 kernel: [   16.695879] cfg80211: Calling CRDA to update world regulatory domain
+Sep 25 09:17:11 RP2-13 dhcpcd[1988]: DUID 00:01:00:01:1c:dd:60:74:b8:27:eb:4f:64:93
+Sep 25 09:17:11 RP2-13 dhcpcd[1988]: eth0: IAID eb:ad:5f:b2
+Sep 25 09:17:12 RP2-13 ntpd[2190]: ntpd 4.2.6p5@1.2349-o Sun Apr 12 22:37:22 UTC 2015 (1)
+Sep 25 09:17:12 RP2-13 ntpd[2236]: proto: precision = 0.781 usec
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Listen and drop on 0 v4wildcard 0.0.0.0 UDP 123
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Listen normally on 1 lo 127.0.0.1 UDP 123
+Sep 25 09:17:12 RP2-13 ntpd[2236]: peers refreshed
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Listening on routing socket on fd #18 for interface updates
+Sep 25 09:17:12 RP2-13 ntpd[2236]: restrict: error in address '::' on line 38. Ignoring...
+Sep 25 09:17:12 RP2-13 ntpd[2236]: restrict: error in address '::1' on line 42. Ignoring...
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Deferring DNS for 0.fr.pool.ntp.org 1
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Deferring DNS for 1.fr.pool.ntp.org 1
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Deferring DNS for 2.fr.pool.ntp.org 1
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Deferring DNS for 3.fr.pool.ntp.org 1
+Sep 25 09:17:12 RP2-13 ntpd[2277]: signal_no_reset: signal 17 had flags 4000000
+Sep 25 09:17:12 RP2-13 kernel: [   17.240682] Adding 102396k swap on /var/swap.  Priority:-1 extents:2 across:2134012k SSFS
+Sep 25 09:17:12 RP2-13 /usr/sbin/cron[2269]: (CRON) INFO (pidfile fd = 3)
+Sep 25 09:17:12 RP2-13 /usr/sbin/cron[2282]: (CRON) STARTUP (fork ok)
+Sep 25 09:17:12 RP2-13 /usr/sbin/cron[2282]: (CRON) INFO (Running @reboot jobs)
+Sep 25 09:17:12 RP2-13 dhcpcd[1988]: eth0: rebinding lease of 10.14.75.149
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Found user 'avahi' (UID 103) and group 'avahi' (GID 105).
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Successfully dropped root privileges.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: avahi-daemon 0.6.31 starting up.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Successfully called chroot().
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Successfully dropped remaining capabilities.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Loading service file /services/udisks.service.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: socket() failed: Address family not supported by protocol
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Failed to create IPv6 socket, proceeding in IPv4 only mode
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: socket() failed: Address family not supported by protocol
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Network interface enumeration completed.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Registering HINFO record with values 'ARMV7L'/'LINUX'.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Server startup complete. Host name is RP2-13.local. Local service cookie is 3103319824.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Service "RP2-13" (/services/udisks.service) successfully established.
+Sep 25 09:17:14 RP2-13 dbus[2342]: [system] Activating service name='org.freedesktop.ConsoleKit' (using servicehelper)
+Sep 25 09:17:14 RP2-13 ntpd_intres[2277]: host name not found EAI_NODATA: 0.fr.pool.ntp.org
+Sep 25 09:17:14 RP2-13 ntpd_intres[2277]: host name not found EAI_NODATA: 1.fr.pool.ntp.org
+Sep 25 09:17:14 RP2-13 ntpd_intres[2277]: host name not found EAI_NODATA: 2.fr.pool.ntp.org
+Sep 25 09:17:14 RP2-13 ntpd_intres[2277]: host name not found EAI_NODATA: 3.fr.pool.ntp.org
+Sep 25 09:17:14 RP2-13 dbus[2342]: [system] Activating service name='org.freedesktop.PolicyKit1' (using servicehelper)
+Sep 25 09:17:14 RP2-13 polkitd[2771]: started daemon version 0.105 using authority implementation `local' version `0.105'
+Sep 25 09:17:14 RP2-13 dbus[2342]: [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+Sep 25 09:17:14 RP2-13 dbus[2342]: [system] Successfully activated service 'org.freedesktop.ConsoleKit'
+Sep 25 09:17:16 RP2-13 dbus[2342]: [system] Activating service name='org.freedesktop.UDisks' (using servicehelper)
+Sep 25 09:17:17 RP2-13 dbus[2342]: [system] Successfully activated service 'org.freedesktop.UDisks'
+Sep 25 09:17:20 RP2-13 dhcpcd[1988]: eth0: leased 10.14.75.149 for 10800 seconds
+Sep 25 09:17:20 RP2-13 dhcpcd[1988]: eth0: adding route to 10.14.72.0/22
+Sep 25 09:17:20 RP2-13 dhcpcd[1988]: eth0: adding default route via 10.14.72.1
+Sep 25 09:17:20 RP2-13 avahi-daemon[2500]: Joining mDNS multicast group on interface eth0.IPv4 with address 10.14.75.149.
+Sep 25 09:17:20 RP2-13 avahi-daemon[2500]: New relevant interface eth0.IPv4 for mDNS.
+Sep 25 09:17:20 RP2-13 avahi-daemon[2500]: Registering new address record for 10.14.75.149 on eth0.IPv4.
+Sep 25 09:17:20 RP2-13 dhcpcd[1988]: forked to background, child pid 2910
+Sep 25 09:17:22 RP2-13 ntpd[2236]: Listen normally on 2 eth0 10.14.75.149 UDP 123
+Sep 25 09:17:22 RP2-13 ntpd[2236]: peers refreshed
+Sep 25 09:17:24 RP2-13 ntpd_intres[2277]: DNS 0.fr.pool.ntp.org -> 91.224.149.41
+Sep 25 09:17:24 RP2-13 ntpd_intres[2277]: DNS 1.fr.pool.ntp.org -> 5.196.160.139
+Sep 25 09:17:24 RP2-13 ntpd_intres[2277]: DNS 2.fr.pool.ntp.org -> 37.187.107.140
+Sep 25 09:17:24 RP2-13 ntpd_intres[2277]: DNS 3.fr.pool.ntp.org -> 37.187.104.44
+Sep 25 09:17:27 RP2-13 avahi-daemon[2500]: Received response from host 10.14.72.126 with invalid source port 36344 on interface 'eth0.0'
+Sep 25 09:18:24 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:18:24 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:18:24 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:18:25 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:18:26 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:18:28 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:18:32 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:18:40 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:18:56 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:19:28 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:22:57 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:22:57 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:22:58 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:22:58 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:22:59 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:23:01 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:23:05 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:23:13 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:23:29 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:23:36 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:37 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:37 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:37 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:23:38 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:23:40 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:23:44 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:44 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:44 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:23:44 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:45 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:23:46 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:23:48 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:23:52 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:23:52 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:24:00 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:24:01 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:24:08 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:24:16 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:24:40 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:24:48 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 10:17:01 RP2-13 /USR/SBIN/CRON[3222]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 25 10:20:33 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:20:33 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:20:34 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:20:34 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:20:34 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:20:35 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:20:35 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:20:37 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:20:37 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:20:41 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:20:49 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:21:05 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:21:37 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:30:02 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:30:02 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:30:02 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:30:03 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:30:04 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:30:06 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:30:10 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:30:18 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:30:34 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:31:06 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:34:17 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:18 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:18 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:18 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:18 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:21 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:30 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:47 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:57 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:46:34 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:34 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:34 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:35 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:46:35 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:35 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:35 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:35 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:46:36 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:46:36 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:46:38 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:46:38 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:56:57 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 55187 on interface 'eth0.0'
+Sep 25 11:00:49 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:00:50 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:00:50 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:00:50 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:00:51 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:00:53 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:00:57 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:01:05 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:01:21 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:01:53 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:17:01 RP2-13 /USR/SBIN/CRON[3493]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 25 11:36:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:36:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:36:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:36:41 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:36:42 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:36:44 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:36:48 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:36:56 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:37:12 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:37:44 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:50:09 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:50:09 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:50:09 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:50:10 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:50:11 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:50:13 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:50:17 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:50:25 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:50:41 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:51:13 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:59:13 RP2-13 kernel: [ 9738.044001] usb 1-1.4: new high-speed USB device number 6 using dwc_otg
+Sep 25 11:59:13 RP2-13 kernel: [ 9738.146503] usb 1-1.4: New USB device found, idVendor=05dc, idProduct=a81d
+Sep 25 11:59:13 RP2-13 kernel: [ 9738.146532] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Sep 25 11:59:13 RP2-13 kernel: [ 9738.146550] usb 1-1.4: Product: USB Flash Drive
+Sep 25 11:59:13 RP2-13 kernel: [ 9738.146566] usb 1-1.4: Manufacturer: Lexar
+Sep 25 11:59:13 RP2-13 kernel: [ 9738.146583] usb 1-1.4: SerialNumber: AABZJC9AAWX0FE6U
+Sep 25 11:59:13 RP2-13 kernel: [ 9738.147813] usb-storage 1-1.4:1.0: USB Mass Storage device detected
+Sep 25 11:59:13 RP2-13 kernel: [ 9738.150183] scsi host0: usb-storage 1-1.4:1.0
+Sep 25 11:59:13 RP2-13 mtp-probe: checking bus 1, device 6: "/sys/devices/platform/bcm2708_usb/usb1/1-1/1-1.4"
+Sep 25 11:59:13 RP2-13 mtp-probe: bus: 1, device: 6 was not an MTP device
+Sep 25 11:59:14 RP2-13 kernel: [ 9739.808127] scsi 0:0:0:0: Direct-Access     Lexar    USB Flash Drive  1100 PQ: 0 ANSI: 4
+Sep 25 11:59:14 RP2-13 kernel: [ 9739.809726] sd 0:0:0:0: [sda] 15659008 512-byte logical blocks: (8.01 GB/7.46 GiB)
+Sep 25 11:59:14 RP2-13 kernel: [ 9739.810368] sd 0:0:0:0: [sda] Write Protect is off
+Sep 25 11:59:14 RP2-13 kernel: [ 9739.810398] sd 0:0:0:0: [sda] Mode Sense: 43 00 00 00
+Sep 25 11:59:14 RP2-13 kernel: [ 9739.810988] sd 0:0:0:0: [sda] No Caching mode page found
+Sep 25 11:59:14 RP2-13 kernel: [ 9739.811007] sd 0:0:0:0: [sda] Assuming drive cache: write through
+Sep 25 11:59:14 RP2-13 kernel: [ 9739.815376]  sda: sda1
+Sep 25 11:59:14 RP2-13 kernel: [ 9739.818343] sd 0:0:0:0: [sda] Attached SCSI removable disk
+Sep 25 11:59:14 RP2-13 kernel: [ 9739.835806] sd 0:0:0:0: Attached scsi generic sg0 type 0
+Sep 25 11:59:15 RP2-13 kernel: [ 9740.295578] FAT-fs (sda1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+Sep 25 11:59:45 RP2-13 kernel: [ 9770.585959] usb 1-1.4: USB disconnect, device number 6
+Sep 25 12:17:01 RP2-13 /USR/SBIN/CRON[3762]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 25 12:21:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:21:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:21:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:21:42 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:21:43 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:21:45 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:21:49 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:21:57 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:22:13 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:22:45 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:36:04 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:36:04 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:36:05 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:36:05 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:36:06 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:36:08 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:36:12 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:36:20 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:36:36 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:37:08 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 13:17:01 RP2-13 /USR/SBIN/CRON[3799]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 25 14:16:58 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 14:16:58 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 14:16:59 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 14:16:59 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:17:00 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:17:01 RP2-13 /USR/SBIN/CRON[3859]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 25 14:17:02 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:17:06 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:17:14 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:17:30 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:18:02 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 15:17:01 RP2-13 /USR/SBIN/CRON[4349]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 25 16:17:01 RP2-13 /USR/SBIN/CRON[4661]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Sep 25 16:17:11 RP2-13 kernel: imklog 5.8.11, log source = /proc/kmsg started.
+Sep 25 16:17:11 RP2-13 rsyslogd: [origin software="rsyslogd" swVersion="5.8.11" x-pid="2052" x-info="http://www.rsyslog.com"] start
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Booting Linux on physical CPU 0xf00
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Initializing cgroup subsys cpu
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Linux version 3.18.11-v7+ (dc4@dc4-XPS13-9333) (gcc version 4.8.3 20140303 (prerelease) (crosstool-NG linaro-1.13.1+bzr2650 - Linaro GCC 2014.03) ) #781 SMP PREEMPT Tue Apr 21 18:07:59 BST 2015
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=10c5387d
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Machine model: Raspberry Pi 2 Model B
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] cma: Reserved 8 MiB at 0x3a800000
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Memory policy: Data cache writealloc
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] On node 0 totalpages: 241664
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] free_area_init_node: node 0, pgdat 8080f480, node_mem_map ba093000
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]   Normal zone: 1888 pages used for memmap
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]   Normal zone: 0 pages reserved
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]   Normal zone: 241664 pages, LIFO batch:31
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] [bcm2709_smp_init_cpus] enter (8620->f3003010)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] [bcm2709_smp_init_cpus] ncores=4
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] PERCPU: Embedded 10 pages/cpu @ba061000 s11456 r8192 d21312 u40960
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] pcpu-alloc: s11456 r8192 d21312 u40960 alloc=10*4096
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 239776
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Kernel command line: dma.dmachans=0x7f35 bcm2708_fb.fbwidth=1824 bcm2708_fb.fbheight=984 bcm2709.boardrev=0xa01041 bcm2709.serial=0x55ad5fb2 smsc95xx.macaddr=B8:27:EB:AD:5F:B2 bcm2708_fb.fbswap=1 bcm2709.disk_led_gpio=47 bcm2709.disk_led_active_low=0 sdhci-bcm2708.emmc_clock_freq=250000000 vc_mem.mem_base=0x3dc00000 vc_mem.mem_size=0x3f000000  dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Memory: 940832K/966656K available (5722K kernel code, 397K rwdata, 1748K rodata, 384K init, 763K bss, 25824K reserved)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Virtual kernel memory layout:
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]     fixmap  : 0xffc00000 - 0xffe00000   (2048 kB)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]     vmalloc : 0xbb800000 - 0xff000000   (1080 MB)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]     lowmem  : 0x80000000 - 0xbb000000   ( 944 MB)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]     modules : 0x7f000000 - 0x80000000   (  16 MB)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]       .text : 0x80008000 - 0x80753a48   (7471 kB)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]       .init : 0x80754000 - 0x807b4000   ( 384 kB)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]       .data : 0x807b4000 - 0x808174bc   ( 398 kB)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000]        .bss : 0x808174bc - 0x808d6254   ( 764 kB)
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Preemptible hierarchical RCU implementation.
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] NR_IRQS:608
+Sep 25 16:17:11 RP2-13 kernel: [    0.000000] Architected cp15 timer(s) running at 19.20MHz (virt).
+Sep 25 16:17:11 RP2-13 kernel: [    0.000015] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 3579139424256ns
+Sep 25 16:17:11 RP2-13 kernel: [    0.000037] Switching to timer-based delay loop, resolution 52ns
+Sep 25 16:17:11 RP2-13 kernel: [    0.000333] Console: colour dummy device 80x30
+Sep 25 16:17:11 RP2-13 kernel: [    0.001758] console [tty1] enabled
+Sep 25 16:17:11 RP2-13 kernel: [    0.001809] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+Sep 25 16:17:11 RP2-13 kernel: [    0.001892] pid_max: default: 32768 minimum: 301
+Sep 25 16:17:11 RP2-13 kernel: [    0.002297] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Sep 25 16:17:11 RP2-13 kernel: [    0.002357] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Sep 25 16:17:11 RP2-13 kernel: [    0.003630] Initializing cgroup subsys memory
+Sep 25 16:17:11 RP2-13 kernel: [    0.003720] Initializing cgroup subsys devices
+Sep 25 16:17:11 RP2-13 kernel: [    0.003773] Initializing cgroup subsys freezer
+Sep 25 16:17:11 RP2-13 kernel: [    0.003824] Initializing cgroup subsys net_cls
+Sep 25 16:17:11 RP2-13 kernel: [    0.003889] Initializing cgroup subsys blkio
+Sep 25 16:17:11 RP2-13 kernel: [    0.003994] CPU: Testing write buffer coherency: ok
+Sep 25 16:17:11 RP2-13 kernel: [    0.004111] ftrace: allocating 19614 entries in 58 pages
+Sep 25 16:17:11 RP2-13 kernel: [    0.052642] CPU0: update cpu_capacity 1024
+Sep 25 16:17:11 RP2-13 kernel: [    0.052722] CPU0: thread -1, cpu 0, socket 15, mpidr 80000f00
+Sep 25 16:17:11 RP2-13 kernel: [    0.052762] [bcm2709_smp_prepare_cpus] enter
+Sep 25 16:17:11 RP2-13 kernel: [    0.052917] Setting up static identity map for 0x528478 - 0x5284ac
+Sep 25 16:17:11 RP2-13 kernel: [    0.112540] [bcm2709_boot_secondary] cpu:1 started (0) 17
+Sep 25 16:17:11 RP2-13 kernel: [    0.112844] CPU1: Booted secondary processor
+Sep 25 16:17:11 RP2-13 kernel: [    0.112852] [bcm2709_secondary_init] enter cpu:1
+Sep 25 16:17:11 RP2-13 kernel: [    0.112905] CPU1: update cpu_capacity 1024
+Sep 25 16:17:11 RP2-13 kernel: [    0.112914] CPU1: thread -1, cpu 1, socket 15, mpidr 80000f01
+Sep 25 16:17:11 RP2-13 kernel: [    0.132514] [bcm2709_boot_secondary] cpu:2 started (0) 18
+Sep 25 16:17:11 RP2-13 kernel: [    0.132771] CPU2: Booted secondary processor
+Sep 25 16:17:11 RP2-13 kernel: [    0.132778] [bcm2709_secondary_init] enter cpu:2
+Sep 25 16:17:11 RP2-13 kernel: [    0.132808] CPU2: update cpu_capacity 1024
+Sep 25 16:17:11 RP2-13 kernel: [    0.132817] CPU2: thread -1, cpu 2, socket 15, mpidr 80000f02
+Sep 25 16:17:11 RP2-13 kernel: [    0.152587] [bcm2709_boot_secondary] cpu:3 started (0) 18
+Sep 25 16:17:11 RP2-13 kernel: [    0.152827] CPU3: Booted secondary processor
+Sep 25 16:17:11 RP2-13 kernel: [    0.152834] [bcm2709_secondary_init] enter cpu:3
+Sep 25 16:17:11 RP2-13 kernel: [    0.152865] CPU3: update cpu_capacity 1024
+Sep 25 16:17:11 RP2-13 kernel: [    0.152873] CPU3: thread -1, cpu 3, socket 15, mpidr 80000f03
+Sep 25 16:17:11 RP2-13 kernel: [    0.152967] Brought up 4 CPUs
+Sep 25 16:17:11 RP2-13 kernel: [    0.153087] SMP: Total of 4 processors activated (153.60 BogoMIPS).
+Sep 25 16:17:11 RP2-13 kernel: [    0.153120] CPU: All CPU(s) started in SVC mode.
+Sep 25 16:17:11 RP2-13 kernel: [    0.154099] devtmpfs: initialized
+Sep 25 16:17:11 RP2-13 kernel: [    0.178895] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+Sep 25 16:17:11 RP2-13 kernel: [    0.180888] pinctrl core: initialized pinctrl subsystem
+Sep 25 16:17:11 RP2-13 kernel: [    0.183997] NET: Registered protocol family 16
+Sep 25 16:17:11 RP2-13 kernel: [    0.189623] DMA: preallocated 4096 KiB pool for atomic coherent allocations
+Sep 25 16:17:11 RP2-13 kernel: [    0.190796] bcm2709.uart_clock = 3000000
+Sep 25 16:17:11 RP2-13 kernel: [    0.193568] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+Sep 25 16:17:11 RP2-13 kernel: [    0.193621] hw-breakpoint: maximum watchpoint size is 8 bytes.
+Sep 25 16:17:11 RP2-13 kernel: [    0.193676] mailbox: Broadcom VideoCore Mailbox driver
+Sep 25 16:17:11 RP2-13 kernel: [    0.193807] bcm2708_vcio: mailbox at f300b880
+Sep 25 16:17:11 RP2-13 kernel: [    0.194164] bcm_power: Broadcom power driver
+Sep 25 16:17:11 RP2-13 kernel: [    0.194202] bcm_power_open() -> 0
+Sep 25 16:17:11 RP2-13 kernel: [    0.194227] bcm_power_request(0, 8)
+Sep 25 16:17:11 RP2-13 kernel: [    0.694907] bcm_mailbox_read -> 00000080, 0
+Sep 25 16:17:11 RP2-13 kernel: [    0.694939] bcm_power_request -> 0
+Sep 25 16:17:11 RP2-13 kernel: [    0.695081] Serial: AMBA PL011 UART driver
+Sep 25 16:17:11 RP2-13 kernel: [    0.695232] dev:f1: ttyAMA0 at MMIO 0x3f201000 (irq = 83, base_baud = 0) is a PL011 rev3
+Sep 25 16:17:11 RP2-13 kernel: [    1.203512] console [ttyAMA0] enabled
+Sep 25 16:17:11 RP2-13 kernel: [    1.285757] SCSI subsystem initialized
+Sep 25 16:17:11 RP2-13 kernel: [    1.289776] usbcore: registered new interface driver usbfs
+Sep 25 16:17:11 RP2-13 kernel: [    1.295447] usbcore: registered new interface driver hub
+Sep 25 16:17:11 RP2-13 kernel: [    1.300915] usbcore: registered new device driver usb
+Sep 25 16:17:11 RP2-13 kernel: [    1.307820] Switched to clocksource arch_sys_counter
+Sep 25 16:17:11 RP2-13 kernel: [    1.343449] FS-Cache: Loaded
+Sep 25 16:17:11 RP2-13 kernel: [    1.346677] CacheFiles: Loaded
+Sep 25 16:17:11 RP2-13 kernel: [    1.361248] NET: Registered protocol family 2
+Sep 25 16:17:11 RP2-13 kernel: [    1.366905] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+Sep 25 16:17:11 RP2-13 kernel: [    1.374158] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+Sep 25 16:17:11 RP2-13 kernel: [    1.380861] TCP: Hash tables configured (established 8192 bind 8192)
+Sep 25 16:17:11 RP2-13 kernel: [    1.387331] TCP: reno registered
+Sep 25 16:17:11 RP2-13 kernel: [    1.390608] UDP hash table entries: 512 (order: 2, 16384 bytes)
+Sep 25 16:17:11 RP2-13 kernel: [    1.396593] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+Sep 25 16:17:11 RP2-13 kernel: [    1.403316] NET: Registered protocol family 1
+Sep 25 16:17:11 RP2-13 kernel: [    1.408369] RPC: Registered named UNIX socket transport module.
+Sep 25 16:17:11 RP2-13 kernel: [    1.414313] RPC: Registered udp transport module.
+Sep 25 16:17:11 RP2-13 kernel: [    1.419086] RPC: Registered tcp transport module.
+Sep 25 16:17:11 RP2-13 kernel: [    1.423805] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Sep 25 16:17:11 RP2-13 kernel: [    1.431230] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+Sep 25 16:17:11 RP2-13 kernel: [    1.439646] bcm2708_dma: DMA manager at f3007000
+Sep 25 16:17:11 RP2-13 kernel: [    1.444444] vc-mem: phys_addr:0x00000000 mem_base=0x3dc00000 mem_size:0x3f000000(1008 MiB)
+Sep 25 16:17:11 RP2-13 kernel: [    1.454261] futex hash table entries: 1024 (order: 4, 65536 bytes)
+Sep 25 16:17:11 RP2-13 kernel: [    1.460785] audit: initializing netlink subsys (disabled)
+Sep 25 16:17:11 RP2-13 kernel: [    1.466257] audit: type=2000 audit(1.249:1): initialized
+Sep 25 16:17:11 RP2-13 kernel: [    1.487864] VFS: Disk quotas dquot_6.5.2
+Sep 25 16:17:11 RP2-13 kernel: [    1.492172] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Sep 25 16:17:11 RP2-13 kernel: [    1.501719] FS-Cache: Netfs 'nfs' registered for caching
+Sep 25 16:17:11 RP2-13 kernel: [    1.508141] NFS: Registering the id_resolver key type
+Sep 25 16:17:11 RP2-13 kernel: [    1.513279] Key type id_resolver registered
+Sep 25 16:17:11 RP2-13 kernel: [    1.517474] Key type id_legacy registered
+Sep 25 16:17:11 RP2-13 kernel: [    1.522673] msgmni has been set to 1853
+Sep 25 16:17:11 RP2-13 kernel: [    1.528427] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Sep 25 16:17:11 RP2-13 kernel: [    1.536030] io scheduler noop registered
+Sep 25 16:17:11 RP2-13 kernel: [    1.540009] io scheduler deadline registered (default)
+Sep 25 16:17:11 RP2-13 kernel: [    1.545474] io scheduler cfq registered
+Sep 25 16:17:11 RP2-13 kernel: [    1.551930] BCM2708FB: allocated DMA memory fac00000
+Sep 25 16:17:11 RP2-13 kernel: [    1.556943] BCM2708FB: allocated DMA channel 0 @ f3007000
+Sep 25 16:17:11 RP2-13 kernel: [    1.591734] Console: switching to colour frame buffer device 228x61
+Sep 25 16:17:11 RP2-13 kernel: [    1.616634] bcm2708-dmaengine bcm2708-dmaengine: Load BCM2835 DMA engine driver
+Sep 25 16:17:11 RP2-13 kernel: [    1.624399] uart-pl011 dev:f1: no DMA platform data
+Sep 25 16:17:11 RP2-13 kernel: [    1.629943] vc-cma: Videocore CMA driver
+Sep 25 16:17:11 RP2-13 kernel: [    1.633950] vc-cma: vc_cma_base      = 0x00000000
+Sep 25 16:17:11 RP2-13 kernel: [    1.638811] vc-cma: vc_cma_size      = 0x00000000 (0 MiB)
+Sep 25 16:17:11 RP2-13 kernel: [    1.644312] vc-cma: vc_cma_initial   = 0x00000000 (0 MiB)
+Sep 25 16:17:11 RP2-13 kernel: [    1.661646] brd: module loaded
+Sep 25 16:17:11 RP2-13 kernel: [    1.670517] loop: module loaded
+Sep 25 16:17:11 RP2-13 kernel: [    1.674059] vchiq: vchiq_init_state: slot_zero = 0xba800000, is_master = 0
+Sep 25 16:17:11 RP2-13 kernel: [    1.681979] Loading iSCSI transport class v2.0-870.
+Sep 25 16:17:11 RP2-13 kernel: [    1.688024] usbcore: registered new interface driver smsc95xx
+Sep 25 16:17:11 RP2-13 kernel: [    1.693951] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Sep 25 16:17:11 RP2-13 kernel: [    1.900190] Core Release: 2.80a
+Sep 25 16:17:11 RP2-13 kernel: [    1.903407] Setting default values for core params
+Sep 25 16:17:11 RP2-13 kernel: [    1.908357] Finished setting default values for core params
+Sep 25 16:17:11 RP2-13 kernel: [    2.114434] Using Buffer DMA mode
+Sep 25 16:17:11 RP2-13 kernel: [    2.117843] Periodic Transfer Interrupt Enhancement - disabled
+Sep 25 16:17:11 RP2-13 kernel: [    2.123780] Multiprocessor Interrupt Enhancement - disabled
+Sep 25 16:17:11 RP2-13 kernel: [    2.129474] OTG VER PARAM: 0, OTG VER FLAG: 0
+Sep 25 16:17:11 RP2-13 kernel: [    2.133918] Dedicated Tx FIFOs mode
+Sep 25 16:17:11 RP2-13 kernel: [    2.137877] WARN::dwc_otg_hcd_init:1047: FIQ DMA bounce buffers: virt = 0xbac14000 dma = 0xfac14000 len=9024
+Sep 25 16:17:11 RP2-13 kernel: [    2.147929] FIQ FSM acceleration enabled for :
+Sep 25 16:17:11 RP2-13 kernel: [    2.147929] Non-periodic Split Transactions
+Sep 25 16:17:11 RP2-13 kernel: [    2.147929] Periodic Split Transactions
+Sep 25 16:17:11 RP2-13 kernel: [    2.147929] High-Speed Isochronous Endpoints
+Sep 25 16:17:11 RP2-13 kernel: [    2.164924] dwc_otg: Microframe scheduler enabled
+Sep 25 16:17:11 RP2-13 kernel: [    2.164990] WARN::hcd_init_fiq:412: FIQ on core 1 at 0x803d98b4
+Sep 25 16:17:11 RP2-13 kernel: [    2.175713] WARN::hcd_init_fiq:413: FIQ ASM at 0x803d9c10 length 36
+Sep 25 16:17:11 RP2-13 kernel: [    2.186706] WARN::hcd_init_fiq:438: MPHI regs_base at 0xbb80a000
+Sep 25 16:17:11 RP2-13 kernel: [    2.197440] dwc_otg bcm2708_usb: DWC OTG Controller
+Sep 25 16:17:11 RP2-13 kernel: [    2.207077] dwc_otg bcm2708_usb: new USB bus registered, assigned bus number 1
+Sep 25 16:17:11 RP2-13 kernel: [    2.219112] dwc_otg bcm2708_usb: irq 32, io mem 0x00000000
+Sep 25 16:17:11 RP2-13 kernel: [    2.229433] Init: Port Power? op_state=1
+Sep 25 16:17:11 RP2-13 kernel: [    2.238134] Init: Power Port (0)
+Sep 25 16:17:11 RP2-13 kernel: [    2.246342] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Sep 25 16:17:11 RP2-13 kernel: [    2.257905] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Sep 25 16:17:11 RP2-13 kernel: [    2.269895] usb usb1: Product: DWC OTG Controller
+Sep 25 16:17:11 RP2-13 kernel: [    2.279301] usb usb1: Manufacturer: Linux 3.18.11-v7+ dwc_otg_hcd
+Sep 25 16:17:11 RP2-13 kernel: [    2.290079] usb usb1: SerialNumber: bcm2708_usb
+Sep 25 16:17:11 RP2-13 kernel: [    2.300169] hub 1-0:1.0: USB hub found
+Sep 25 16:17:11 RP2-13 kernel: [    2.308625] hub 1-0:1.0: 1 port detected
+Sep 25 16:17:11 RP2-13 kernel: [    2.317567] dwc_otg: FIQ enabled
+Sep 25 16:17:11 RP2-13 kernel: [    2.317581] dwc_otg: NAK holdoff enabled
+Sep 25 16:17:11 RP2-13 kernel: [    2.317593] dwc_otg: FIQ split-transaction FSM enabled
+Sep 25 16:17:11 RP2-13 kernel: [    2.317633] Module dwc_common_port init
+Sep 25 16:17:11 RP2-13 kernel: [    2.318104] usbcore: registered new interface driver usb-storage
+Sep 25 16:17:11 RP2-13 kernel: [    2.329078] mousedev: PS/2 mouse device common for all mice
+Sep 25 16:17:11 RP2-13 kernel: [    2.339888] bcm2835-cpufreq: min=600000 max=900000
+Sep 25 16:17:11 RP2-13 kernel: [    2.349682] sdhci: Secure Digital Host Controller Interface driver
+Sep 25 16:17:11 RP2-13 kernel: [    2.360471] sdhci: Copyright(c) Pierre Ossman
+Sep 25 16:17:11 RP2-13 kernel: [    2.369656] DMA channels allocated for the MMC driver
+Sep 25 16:17:11 RP2-13 kernel: [    2.407864] Load BCM2835 MMC driver
+Sep 25 16:17:11 RP2-13 kernel: [    2.421875] sdhci-pltfm: SDHCI platform and OF driver helper
+Sep 25 16:17:11 RP2-13 kernel: [    2.432837] ledtrig-cpu: registered to indicate activity on CPUs
+Sep 25 16:17:11 RP2-13 kernel: [    2.443701] hidraw: raw HID events driver (C) Jiri Kosina
+Sep 25 16:17:11 RP2-13 kernel: [    2.456075] usbcore: registered new interface driver usbhid
+Sep 25 16:17:11 RP2-13 kernel: [    2.466347] usbhid: USB HID core driver
+Sep 25 16:17:11 RP2-13 kernel: [    2.476166] TCP: cubic registered
+Sep 25 16:17:11 RP2-13 kernel: [    2.486167] Initializing XFRM netlink socket
+Sep 25 16:17:11 RP2-13 kernel: [    2.495143] NET: Registered protocol family 17
+Sep 25 16:17:11 RP2-13 kernel: [    2.504409] Key type dns_resolver registered
+Sep 25 16:17:11 RP2-13 kernel: [    2.513712] Registering SWP/SWPB emulation handler
+Sep 25 16:17:11 RP2-13 kernel: [    2.517964] Indeed it is in host mode hprt0 = 00021501
+Sep 25 16:17:11 RP2-13 kernel: [    2.533788] registered taskstats version 1
+Sep 25 16:17:11 RP2-13 kernel: [    2.542736] vc-sm: Videocore shared memory driver
+Sep 25 16:17:11 RP2-13 kernel: [    2.552078] [vc_sm_connected_init]: start
+Sep 25 16:17:11 RP2-13 kernel: [    2.561431] [vc_sm_connected_init]: end - returning 0
+Sep 25 16:17:11 RP2-13 kernel: [    2.572484] Waiting for root device /dev/mmcblk0p2...
+Sep 25 16:17:11 RP2-13 kernel: [    2.587165] mmc0: host does not support reading read-only switch, assuming write-enable
+Sep 25 16:17:11 RP2-13 kernel: [    2.605776] mmc0: new high speed SDHC card at address aaaa
+Sep 25 16:17:11 RP2-13 kernel: [    2.616754] mmcblk0: mmc0:aaaa SL16G 14.8 GiB 
+Sep 25 16:17:11 RP2-13 kernel: [    2.631727]  mmcblk0: p1 p2
+Sep 25 16:17:11 RP2-13 kernel: [    2.694021] EXT4-fs (mmcblk0p2): INFO: recovery required on readonly filesystem
+Sep 25 16:17:11 RP2-13 kernel: [    2.697936] usb 1-1: new high-speed USB device number 2 using dwc_otg
+Sep 25 16:17:11 RP2-13 kernel: [    2.706204] Indeed it is in host mode hprt0 = 00001101
+Sep 25 16:17:11 RP2-13 kernel: [    2.727176] EXT4-fs (mmcblk0p2): write access will be enabled during recovery
+Sep 25 16:17:11 RP2-13 kernel: [    2.814936] EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+Sep 25 16:17:11 RP2-13 kernel: [    2.840095] EXT4-fs (mmcblk0p2): 3 orphan inodes deleted
+Sep 25 16:17:11 RP2-13 kernel: [    2.850249] EXT4-fs (mmcblk0p2): recovery complete
+Sep 25 16:17:11 RP2-13 kernel: [    2.883687] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+Sep 25 16:17:11 RP2-13 kernel: [    2.896643] VFS: Mounted root (ext4 filesystem) readonly on device 179:2.
+Sep 25 16:17:11 RP2-13 kernel: [    2.908469] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+Sep 25 16:17:11 RP2-13 kernel: [    2.912930] devtmpfs: mounted
+Sep 25 16:17:11 RP2-13 kernel: [    2.913723] Freeing unused kernel memory: 384K (80754000 - 807b4000)
+Sep 25 16:17:11 RP2-13 kernel: [    2.938720] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Sep 25 16:17:11 RP2-13 kernel: [    2.951647] hub 1-1:1.0: USB hub found
+Sep 25 16:17:11 RP2-13 kernel: [    2.960443] hub 1-1:1.0: 5 ports detected
+Sep 25 16:17:11 RP2-13 kernel: [    3.248078] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+Sep 25 16:17:11 RP2-13 kernel: [    3.358534] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+Sep 25 16:17:11 RP2-13 kernel: [    3.370433] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+Sep 25 16:17:11 RP2-13 kernel: [    3.386250] smsc95xx v1.0.4
+Sep 25 16:17:11 RP2-13 kernel: [    3.452960] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-bcm2708_usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:ad:5f:b2
+Sep 25 16:17:11 RP2-13 kernel: [    3.548122] usb 1-1.4: new low-speed USB device number 4 using dwc_otg
+Sep 25 16:17:11 RP2-13 kernel: [    3.664267] usb 1-1.4: New USB device found, idVendor=046d, idProduct=c077
+Sep 25 16:17:11 RP2-13 kernel: [    3.677694] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Sep 25 16:17:11 RP2-13 kernel: [    3.691296] usb 1-1.4: Product: USB Optical Mouse
+Sep 25 16:17:11 RP2-13 kernel: [    3.701825] usb 1-1.4: Manufacturer: Logitech
+Sep 25 16:17:11 RP2-13 kernel: [    3.719636] input: Logitech USB Optical Mouse as /devices/platform/bcm2708_usb/usb1/1-1/1-1.4/1-1.4:1.0/0003:046D:C077.0001/input/input0
+Sep 25 16:17:11 RP2-13 kernel: [    3.738747] hid-generic 0003:046D:C077.0001: input,hidraw0: USB HID v1.11 Mouse [Logitech USB Optical Mouse] on usb-bcm2708_usb-1.4/input0
+Sep 25 16:17:11 RP2-13 kernel: [    3.838168] usb 1-1.5: new low-speed USB device number 5 using dwc_otg
+Sep 25 16:17:11 RP2-13 kernel: [    3.993527] usb 1-1.5: New USB device found, idVendor=413c, idProduct=2107
+Sep 25 16:17:11 RP2-13 kernel: [    4.007598] usb 1-1.5: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Sep 25 16:17:11 RP2-13 kernel: [    4.021686] usb 1-1.5: Product: Dell USB Entry Keyboard
+Sep 25 16:17:11 RP2-13 kernel: [    4.033201] usb 1-1.5: Manufacturer: Dell
+Sep 25 16:17:11 RP2-13 kernel: [    4.069920] input: Dell Dell USB Entry Keyboard as /devices/platform/bcm2708_usb/usb1/1-1/1-1.5/1-1.5:1.0/0003:413C:2107.0002/input/input1
+Sep 25 16:17:11 RP2-13 kernel: [    4.088657] hid-generic 0003:413C:2107.0002: input,hidraw1: USB HID v1.10 Keyboard [Dell Dell USB Entry Keyboard] on usb-bcm2708_usb-1.5/input0
+Sep 25 16:17:11 RP2-13 kernel: [    6.505126] random: nonblocking pool is initialized
+Sep 25 16:17:11 RP2-13 kernel: [    6.926389] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Sep 25 16:17:11 RP2-13 kernel: [    7.205580] EXT4-fs (mmcblk0p2): re-mounted. Opts: (null)
+Sep 25 16:17:11 RP2-13 kernel: [   12.313134] smsc95xx 1-1.1:1.0 eth0: hardware isn't capable of remote wakeup
+Sep 25 16:17:11 RP2-13 kernel: [   13.853730] smsc95xx 1-1.1:1.0 eth0: link up, 100Mbps, full-duplex, lpa 0x41E1
+Sep 25 16:17:11 RP2-13 kernel: [   16.314636] cfg80211: Calling CRDA to update world regulatory domain
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: all: IPv6 kernel autoconf disabled
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: eth0: adding address fe80::106f:190d:8bd9:3bd1
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: if_addaddress6: Operation not supported
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: DUID 00:01:00:01:1c:dd:60:74:b8:27:eb:4f:64:93
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: eth0: IAID eb:ad:5f:b2
+Sep 25 16:17:12 RP2-13 ntpd[2187]: ntpd 4.2.6p5@1.2349-o Sun Apr 12 22:37:22 UTC 2015 (1)
+Sep 25 16:17:12 RP2-13 ntpd[2234]: proto: precision = 0.833 usec
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Listen and drop on 0 v4wildcard 0.0.0.0 UDP 123
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Listen normally on 1 lo 127.0.0.1 UDP 123
+Sep 25 16:17:12 RP2-13 ntpd[2234]: peers refreshed
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Listening on routing socket on fd #18 for interface updates
+Sep 25 16:17:12 RP2-13 kernel: [   16.768675] Adding 102396k swap on /var/swap.  Priority:-1 extents:2 across:2134012k SSFS
+Sep 25 16:17:12 RP2-13 /usr/sbin/cron[2265]: (CRON) INFO (pidfile fd = 3)
+Sep 25 16:17:12 RP2-13 /usr/sbin/cron[2283]: (CRON) STARTUP (fork ok)
+Sep 25 16:17:12 RP2-13 ntpd[2234]: restrict: error in address '::' on line 38. Ignoring...
+Sep 25 16:17:12 RP2-13 ntpd[2234]: restrict: error in address '::1' on line 42. Ignoring...
+Sep 25 16:17:12 RP2-13 /usr/sbin/cron[2283]: (CRON) INFO (Running @reboot jobs)
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Deferring DNS for 0.fr.pool.ntp.org 1
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Deferring DNS for 1.fr.pool.ntp.org 1
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Deferring DNS for 2.fr.pool.ntp.org 1
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Deferring DNS for 3.fr.pool.ntp.org 1
+Sep 25 16:17:12 RP2-13 ntpd[2294]: signal_no_reset: signal 17 had flags 4000000
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: eth0: rebinding lease of 10.14.75.149
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Found user 'avahi' (UID 103) and group 'avahi' (GID 105).
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Successfully dropped root privileges.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: avahi-daemon 0.6.31 starting up.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Successfully called chroot().
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Successfully dropped remaining capabilities.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Loading service file /services/udisks.service.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: socket() failed: Address family not supported by protocol
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Failed to create IPv6 socket, proceeding in IPv4 only mode
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: socket() failed: Address family not supported by protocol
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Network interface enumeration completed.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Registering HINFO record with values 'ARMV7L'/'LINUX'.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Server startup complete. Host name is RP2-13.local. Local service cookie is 1998645962.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Service "RP2-13" (/services/udisks.service) successfully established.
+Sep 25 16:17:14 RP2-13 dbus[2325]: [system] Activating service name='org.freedesktop.ConsoleKit' (using servicehelper)
+Sep 25 16:17:14 RP2-13 ntpd_intres[2294]: host name not found EAI_NODATA: 0.fr.pool.ntp.org
+Sep 25 16:17:14 RP2-13 ntpd_intres[2294]: host name not found EAI_NODATA: 1.fr.pool.ntp.org
+Sep 25 16:17:14 RP2-13 ntpd_intres[2294]: host name not found EAI_NODATA: 2.fr.pool.ntp.org
+Sep 25 16:17:14 RP2-13 ntpd_intres[2294]: host name not found EAI_NODATA: 3.fr.pool.ntp.org
+Sep 25 16:17:14 RP2-13 dbus[2325]: [system] Activating service name='org.freedesktop.PolicyKit1' (using servicehelper)
+Sep 25 16:17:14 RP2-13 polkitd[2772]: started daemon version 0.105 using authority implementation `local' version `0.105'
+Sep 25 16:17:14 RP2-13 dbus[2325]: [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+Sep 25 16:17:14 RP2-13 dbus[2325]: [system] Successfully activated service 'org.freedesktop.ConsoleKit'
+Sep 25 16:17:17 RP2-13 dbus[2325]: [system] Activating service name='org.freedesktop.UDisks' (using servicehelper)
+Sep 25 16:17:17 RP2-13 dbus[2325]: [system] Successfully activated service 'org.freedesktop.UDisks'
+Sep 25 16:17:17 RP2-13 dhcpcd[2008]: eth0: leased 10.14.75.149 for 10800 seconds
+Sep 25 16:17:17 RP2-13 avahi-daemon[2486]: Joining mDNS multicast group on interface eth0.IPv4 with address 10.14.75.149.
+Sep 25 16:17:17 RP2-13 dhcpcd[2008]: eth0: adding route to 10.14.72.0/22
+Sep 25 16:17:17 RP2-13 avahi-daemon[2486]: New relevant interface eth0.IPv4 for mDNS.
+Sep 25 16:17:17 RP2-13 dhcpcd[2008]: eth0: adding default route via 10.14.72.1
+Sep 25 16:17:17 RP2-13 avahi-daemon[2486]: Registering new address record for 10.14.75.149 on eth0.IPv4.
+Sep 25 16:17:17 RP2-13 dhcpcd[2008]: forked to background, child pid 2899
+Sep 25 16:17:19 RP2-13 ntpd[2234]: Listen normally on 2 eth0 10.14.75.149 UDP 123
+Sep 25 16:17:19 RP2-13 ntpd[2234]: peers refreshed
+Sep 25 16:17:21 RP2-13 ntpd_intres[2294]: DNS 0.fr.pool.ntp.org -> 5.135.162.217
+Sep 25 16:17:21 RP2-13 ntpd_intres[2294]: DNS 1.fr.pool.ntp.org -> 37.187.109.209
+Sep 25 16:17:24 RP2-13 ntpd_intres[2294]: DNS 2.fr.pool.ntp.org -> 94.23.32.122
+Sep 25 16:17:24 RP2-13 ntpd_intres[2294]: DNS 3.fr.pool.ntp.org -> 62.210.28.176

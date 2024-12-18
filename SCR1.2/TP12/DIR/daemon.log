@@ -1,0 +1,313 @@
+Sep 25 07:21:29 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 07:21:29 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 07:21:29 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.85 with invalid source port 55544 on interface 'eth0.0'
+Sep 25 07:21:29 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 07:21:30 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.85 with invalid source port 55544 on interface 'eth0.0'
+Sep 25 08:03:23 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:03:23 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:03:23 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:03:23 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:03:24 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:03:26 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:03:30 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:03:38 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:03:54 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:04:26 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+Sep 25 08:09:25 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:09:25 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:09:26 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 08:09:26 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:09:27 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:09:29 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:09:33 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:09:41 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:09:57 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 08:10:29 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.139 with invalid source port 46726 on interface 'eth0.0'
+Sep 25 09:29:55 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:55 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:56 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:56 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:29:57 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:29:58 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:58 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:59 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:29:59 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:29:59 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:30:00 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:30:02 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:30:03 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:30:06 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:30:11 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:30:14 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:30:27 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:30:30 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:30:59 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.133 with invalid source port 36395 on interface 'eth0.0'
+Sep 25 09:31:02 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.138 with invalid source port 48445 on interface 'eth0.0'
+Sep 25 09:45:08 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:45:08 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:45:09 RP2-13 avahi-daemon[2454]: Invalid legacy unicast query packet.
+Sep 25 09:45:09 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:45:10 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:45:12 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:45:16 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:45:24 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:45:40 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:46:12 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.137 with invalid source port 50720 on interface 'eth0.0'
+Sep 25 09:17:11 RP2-13 dhcpcd[1988]: all: IPv6 kernel autoconf disabled
+Sep 25 09:17:11 RP2-13 dhcpcd[1988]: eth0: adding address fe80::106f:190d:8bd9:3bd1
+Sep 25 09:17:11 RP2-13 dhcpcd[1988]: if_addaddress6: Operation not supported
+Sep 25 09:17:11 RP2-13 dhcpcd[1988]: DUID 00:01:00:01:1c:dd:60:74:b8:27:eb:4f:64:93
+Sep 25 09:17:11 RP2-13 dhcpcd[1988]: eth0: IAID eb:ad:5f:b2
+Sep 25 09:17:12 RP2-13 ntpd[2190]: ntpd 4.2.6p5@1.2349-o Sun Apr 12 22:37:22 UTC 2015 (1)
+Sep 25 09:17:12 RP2-13 ntpd[2236]: proto: precision = 0.781 usec
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Listen and drop on 0 v4wildcard 0.0.0.0 UDP 123
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Listen normally on 1 lo 127.0.0.1 UDP 123
+Sep 25 09:17:12 RP2-13 ntpd[2236]: peers refreshed
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Listening on routing socket on fd #18 for interface updates
+Sep 25 09:17:12 RP2-13 ntpd[2236]: restrict: error in address '::' on line 38. Ignoring...
+Sep 25 09:17:12 RP2-13 ntpd[2236]: restrict: error in address '::1' on line 42. Ignoring...
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Deferring DNS for 0.fr.pool.ntp.org 1
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Deferring DNS for 1.fr.pool.ntp.org 1
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Deferring DNS for 2.fr.pool.ntp.org 1
+Sep 25 09:17:12 RP2-13 ntpd[2236]: Deferring DNS for 3.fr.pool.ntp.org 1
+Sep 25 09:17:12 RP2-13 ntpd[2277]: signal_no_reset: signal 17 had flags 4000000
+Sep 25 09:17:12 RP2-13 dhcpcd[1988]: eth0: rebinding lease of 10.14.75.149
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Found user 'avahi' (UID 103) and group 'avahi' (GID 105).
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Successfully dropped root privileges.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: avahi-daemon 0.6.31 starting up.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Successfully called chroot().
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Successfully dropped remaining capabilities.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Loading service file /services/udisks.service.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: socket() failed: Address family not supported by protocol
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Failed to create IPv6 socket, proceeding in IPv4 only mode
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: socket() failed: Address family not supported by protocol
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Network interface enumeration completed.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Registering HINFO record with values 'ARMV7L'/'LINUX'.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Server startup complete. Host name is RP2-13.local. Local service cookie is 3103319824.
+Sep 25 09:17:12 RP2-13 avahi-daemon[2500]: Service "RP2-13" (/services/udisks.service) successfully established.
+Sep 25 09:17:14 RP2-13 dbus[2342]: [system] Activating service name='org.freedesktop.ConsoleKit' (using servicehelper)
+Sep 25 09:17:14 RP2-13 ntpd_intres[2277]: host name not found EAI_NODATA: 0.fr.pool.ntp.org
+Sep 25 09:17:14 RP2-13 ntpd_intres[2277]: host name not found EAI_NODATA: 1.fr.pool.ntp.org
+Sep 25 09:17:14 RP2-13 ntpd_intres[2277]: host name not found EAI_NODATA: 2.fr.pool.ntp.org
+Sep 25 09:17:14 RP2-13 ntpd_intres[2277]: host name not found EAI_NODATA: 3.fr.pool.ntp.org
+Sep 25 09:17:14 RP2-13 dbus[2342]: [system] Activating service name='org.freedesktop.PolicyKit1' (using servicehelper)
+Sep 25 09:17:14 RP2-13 polkitd[2771]: started daemon version 0.105 using authority implementation `local' version `0.105'
+Sep 25 09:17:14 RP2-13 dbus[2342]: [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+Sep 25 09:17:14 RP2-13 dbus[2342]: [system] Successfully activated service 'org.freedesktop.ConsoleKit'
+Sep 25 09:17:16 RP2-13 dbus[2342]: [system] Activating service name='org.freedesktop.UDisks' (using servicehelper)
+Sep 25 09:17:17 RP2-13 dbus[2342]: [system] Successfully activated service 'org.freedesktop.UDisks'
+Sep 25 09:17:20 RP2-13 dhcpcd[1988]: eth0: leased 10.14.75.149 for 10800 seconds
+Sep 25 09:17:20 RP2-13 dhcpcd[1988]: eth0: adding route to 10.14.72.0/22
+Sep 25 09:17:20 RP2-13 dhcpcd[1988]: eth0: adding default route via 10.14.72.1
+Sep 25 09:17:20 RP2-13 avahi-daemon[2500]: Joining mDNS multicast group on interface eth0.IPv4 with address 10.14.75.149.
+Sep 25 09:17:20 RP2-13 avahi-daemon[2500]: New relevant interface eth0.IPv4 for mDNS.
+Sep 25 09:17:20 RP2-13 avahi-daemon[2500]: Registering new address record for 10.14.75.149 on eth0.IPv4.
+Sep 25 09:17:20 RP2-13 dhcpcd[1988]: forked to background, child pid 2910
+Sep 25 09:17:22 RP2-13 ntpd[2236]: Listen normally on 2 eth0 10.14.75.149 UDP 123
+Sep 25 09:17:22 RP2-13 ntpd[2236]: peers refreshed
+Sep 25 09:17:24 RP2-13 ntpd_intres[2277]: DNS 0.fr.pool.ntp.org -> 91.224.149.41
+Sep 25 09:17:24 RP2-13 ntpd_intres[2277]: DNS 1.fr.pool.ntp.org -> 5.196.160.139
+Sep 25 09:17:24 RP2-13 ntpd_intres[2277]: DNS 2.fr.pool.ntp.org -> 37.187.107.140
+Sep 25 09:17:24 RP2-13 ntpd_intres[2277]: DNS 3.fr.pool.ntp.org -> 37.187.104.44
+Sep 25 09:17:27 RP2-13 avahi-daemon[2500]: Received response from host 10.14.72.126 with invalid source port 36344 on interface 'eth0.0'
+Sep 25 09:18:24 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:18:24 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:18:24 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:18:25 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:18:26 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:18:28 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:18:32 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:18:40 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:18:56 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:19:28 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 34873 on interface 'eth0.0'
+Sep 25 09:22:57 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:22:57 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:22:58 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:22:58 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:22:59 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:23:01 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:23:05 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:23:13 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:23:29 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:23:36 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:37 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:37 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:37 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:23:38 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:23:40 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:23:44 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:44 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:44 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:23:44 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 09:23:45 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:23:46 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:23:48 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:23:52 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:23:52 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:24:00 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:24:01 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.133 with invalid source port 48036 on interface 'eth0.0'
+Sep 25 09:24:08 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:24:16 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 09:24:40 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 43425 on interface 'eth0.0'
+Sep 25 09:24:48 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.4 with invalid source port 41169 on interface 'eth0.0'
+Sep 25 10:20:33 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:20:33 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:20:34 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:20:34 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:20:34 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:20:35 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:20:35 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:20:37 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:20:37 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:20:41 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:20:49 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:21:05 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:21:37 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.1 with invalid source port 47552 on interface 'eth0.0'
+Sep 25 10:30:02 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:30:02 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:30:02 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:30:03 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:30:04 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:30:06 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:30:10 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:30:18 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:30:34 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:31:06 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.138 with invalid source port 42104 on interface 'eth0.0'
+Sep 25 10:34:17 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:18 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:18 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:18 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:18 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:21 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:30 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:47 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:34:57 RP2-13 avahi-daemon[2500]: Invalid response packet from host 172.16.164.87.
+Sep 25 10:46:34 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:34 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:34 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:35 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:46:35 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:35 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:35 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 10:46:35 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:46:36 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:46:36 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:46:38 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:46:38 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 38400 on interface 'eth0.0'
+Sep 25 10:56:57 RP2-13 avahi-daemon[2500]: Received response from host 10.14.75.21 with invalid source port 55187 on interface 'eth0.0'
+Sep 25 11:00:49 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:00:50 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:00:50 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:00:50 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:00:51 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:00:53 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:00:57 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:01:05 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:01:21 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:01:53 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.134 with invalid source port 58128 on interface 'eth0.0'
+Sep 25 11:36:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:36:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:36:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:36:41 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:36:42 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:36:44 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:36:48 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:36:56 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:37:12 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:37:44 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.137 with invalid source port 39049 on interface 'eth0.0'
+Sep 25 11:50:09 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:50:09 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:50:09 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 11:50:10 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:50:11 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:50:13 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:50:17 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:50:25 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:50:41 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 11:51:13 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.135 with invalid source port 50607 on interface 'eth0.0'
+Sep 25 12:21:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:21:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:21:41 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:21:42 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:21:43 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:21:45 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:21:49 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:21:57 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:22:13 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:22:45 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.132 with invalid source port 47289 on interface 'eth0.0'
+Sep 25 12:36:04 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:36:04 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:36:05 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 12:36:05 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:36:06 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:36:08 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:36:12 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:36:20 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:36:36 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 12:37:08 RP2-13 avahi-daemon[2500]: Received response from host 10.14.74.139 with invalid source port 43968 on interface 'eth0.0'
+Sep 25 14:16:58 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 14:16:58 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 14:16:59 RP2-13 avahi-daemon[2500]: Invalid legacy unicast query packet.
+Sep 25 14:16:59 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:17:00 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:17:02 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:17:06 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:17:14 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:17:30 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 14:18:02 RP2-13 avahi-daemon[2500]: Received response from host 10.14.73.6 with invalid source port 33234 on interface 'eth0.0'
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: all: IPv6 kernel autoconf disabled
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: eth0: adding address fe80::106f:190d:8bd9:3bd1
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: if_addaddress6: Operation not supported
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: DUID 00:01:00:01:1c:dd:60:74:b8:27:eb:4f:64:93
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: eth0: IAID eb:ad:5f:b2
+Sep 25 16:17:12 RP2-13 ntpd[2187]: ntpd 4.2.6p5@1.2349-o Sun Apr 12 22:37:22 UTC 2015 (1)
+Sep 25 16:17:12 RP2-13 ntpd[2234]: proto: precision = 0.833 usec
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Listen and drop on 0 v4wildcard 0.0.0.0 UDP 123
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Listen normally on 1 lo 127.0.0.1 UDP 123
+Sep 25 16:17:12 RP2-13 ntpd[2234]: peers refreshed
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Listening on routing socket on fd #18 for interface updates
+Sep 25 16:17:12 RP2-13 ntpd[2234]: restrict: error in address '::' on line 38. Ignoring...
+Sep 25 16:17:12 RP2-13 ntpd[2234]: restrict: error in address '::1' on line 42. Ignoring...
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Deferring DNS for 0.fr.pool.ntp.org 1
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Deferring DNS for 1.fr.pool.ntp.org 1
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Deferring DNS for 2.fr.pool.ntp.org 1
+Sep 25 16:17:12 RP2-13 ntpd[2234]: Deferring DNS for 3.fr.pool.ntp.org 1
+Sep 25 16:17:12 RP2-13 ntpd[2294]: signal_no_reset: signal 17 had flags 4000000
+Sep 25 16:17:12 RP2-13 dhcpcd[2008]: eth0: rebinding lease of 10.14.75.149
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Found user 'avahi' (UID 103) and group 'avahi' (GID 105).
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Successfully dropped root privileges.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: avahi-daemon 0.6.31 starting up.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Successfully called chroot().
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Successfully dropped remaining capabilities.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Loading service file /services/udisks.service.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: socket() failed: Address family not supported by protocol
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Failed to create IPv6 socket, proceeding in IPv4 only mode
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: socket() failed: Address family not supported by protocol
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Network interface enumeration completed.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Registering HINFO record with values 'ARMV7L'/'LINUX'.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Server startup complete. Host name is RP2-13.local. Local service cookie is 1998645962.
+Sep 25 16:17:12 RP2-13 avahi-daemon[2486]: Service "RP2-13" (/services/udisks.service) successfully established.
+Sep 25 16:17:14 RP2-13 dbus[2325]: [system] Activating service name='org.freedesktop.ConsoleKit' (using servicehelper)
+Sep 25 16:17:14 RP2-13 ntpd_intres[2294]: host name not found EAI_NODATA: 0.fr.pool.ntp.org
+Sep 25 16:17:14 RP2-13 ntpd_intres[2294]: host name not found EAI_NODATA: 1.fr.pool.ntp.org
+Sep 25 16:17:14 RP2-13 ntpd_intres[2294]: host name not found EAI_NODATA: 2.fr.pool.ntp.org
+Sep 25 16:17:14 RP2-13 ntpd_intres[2294]: host name not found EAI_NODATA: 3.fr.pool.ntp.org
+Sep 25 16:17:14 RP2-13 dbus[2325]: [system] Activating service name='org.freedesktop.PolicyKit1' (using servicehelper)
+Sep 25 16:17:14 RP2-13 polkitd[2772]: started daemon version 0.105 using authority implementation `local' version `0.105'
+Sep 25 16:17:14 RP2-13 dbus[2325]: [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+Sep 25 16:17:14 RP2-13 dbus[2325]: [system] Successfully activated service 'org.freedesktop.ConsoleKit'
+Sep 25 16:17:17 RP2-13 dbus[2325]: [system] Activating service name='org.freedesktop.UDisks' (using servicehelper)
+Sep 25 16:17:17 RP2-13 dbus[2325]: [system] Successfully activated service 'org.freedesktop.UDisks'
+Sep 25 16:17:17 RP2-13 dhcpcd[2008]: eth0: leased 10.14.75.149 for 10800 seconds
+Sep 25 16:17:17 RP2-13 avahi-daemon[2486]: Joining mDNS multicast group on interface eth0.IPv4 with address 10.14.75.149.
+Sep 25 16:17:17 RP2-13 dhcpcd[2008]: eth0: adding route to 10.14.72.0/22
+Sep 25 16:17:17 RP2-13 avahi-daemon[2486]: New relevant interface eth0.IPv4 for mDNS.
+Sep 25 16:17:17 RP2-13 dhcpcd[2008]: eth0: adding default route via 10.14.72.1
+Sep 25 16:17:17 RP2-13 avahi-daemon[2486]: Registering new address record for 10.14.75.149 on eth0.IPv4.
+Sep 25 16:17:17 RP2-13 dhcpcd[2008]: forked to background, child pid 2899
+Sep 25 16:17:19 RP2-13 ntpd[2234]: Listen normally on 2 eth0 10.14.75.149 UDP 123
+Sep 25 16:17:19 RP2-13 ntpd[2234]: peers refreshed
+Sep 25 16:17:21 RP2-13 ntpd_intres[2294]: DNS 0.fr.pool.ntp.org -> 5.135.162.217
+Sep 25 16:17:21 RP2-13 ntpd_intres[2294]: DNS 1.fr.pool.ntp.org -> 37.187.109.209
+Sep 25 16:17:24 RP2-13 ntpd_intres[2294]: DNS 2.fr.pool.ntp.org -> 94.23.32.122
+Sep 25 16:17:24 RP2-13 ntpd_intres[2294]: DNS 3.fr.pool.ntp.org -> 62.210.28.176

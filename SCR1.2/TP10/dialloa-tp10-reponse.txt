@@ -1,0 +1,59 @@
+Algassumou Pellel DIALLO (dialloa): 18/12/2024 -> TP10
+
+1.
+	#include <time.h>
+	#include <stdlib.h>
+	#include <stdio.h>
+	#include <unistd.h>
+
+	int main(int argc, char const *argv[])
+	{
+		// Gestion des erreurs
+		if (argc<2)
+		{
+			printf("Usage: %s <character> \n", argv[0]);
+			exit(1);
+		}
+
+		while(1){
+			printf("%s", argv[1]);
+			usleep(100);
+		}
+		
+		exit(0);
+	}
+
+	Explication:  c'est le code contenue dans le fichier disp.c
+
+
+2.
+	BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB^Z
+	[2]+  Stopped                 ./disp B
+	[dialloa@archlinux TP10]$AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	Aetc.....
+
+	[dialloa@archlinux TP10]$ jobs -l
+	[1]+  2209 Running                 ./disp A &
+
+
+	
+	Explication: Le CTRL + Z permet de suspendre un processus avec un sigsuspend
+	on constat que jobs -l nous indique le processus qui est en avant plan.
+
+	On contaste aussi que stat change et passe de S+ à S, Tpgid bascule ..
+
+3.
+
+
+
+
+Note:
+ 
+	le & permet de lancer les processus an arrière plan.
+
+	CTRL + C (version ligne de commande kill -9 PID du process ) envoie un signal dit sig kill, le systeme alors tue le processus en avant plan
+	du coup y'a plus de process en avant plan 
+
+	une manière de recuper un process en arrière est de le suspendre avec un sigsuspend(CTRL + Z) et ensuite faire, fg forground permet de dire a un process de revenir en avant plan, du coup là peut faire un sig kill pour le tuer.

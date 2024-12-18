@@ -1,0 +1,32 @@
+/usr/share/fonts: skipping, existing cache is valid: 0 fonts, 5 dirs
+/usr/share/fonts/X11: skipping, existing cache is valid: 0 fonts, 3 dirs
+/usr/share/fonts/X11/Type1: skipping, existing cache is valid: 36 fonts, 0 dirs
+/usr/share/fonts/X11/encodings: skipping, existing cache is valid: 0 fonts, 1 dirs
+/usr/share/fonts/X11/encodings/large: skipping, existing cache is valid: 0 fonts, 0 dirs
+/usr/share/fonts/X11/util: skipping, existing cache is valid: 0 fonts, 0 dirs
+/usr/share/fonts/cmap: skipping, existing cache is valid: 0 fonts, 5 dirs
+/usr/share/fonts/cmap/adobe-cns1: skipping, existing cache is valid: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-gb1: skipping, existing cache is valid: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-janan2: skipping, existing cache is valid: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-japan1: skipping, existing cache is valid: 0 fonts, 0 dirs
+/usr/share/fonts/cmap/adobe-korea1: skipping, existing cache is valid: 0 fonts, 0 dirs
+/usr/share/fonts/opentype: skipping, existing cache is valid: 0 fonts, 1 dirs
+/usr/share/fonts/opentype/stix: skipping, existing cache is valid: 29 fonts, 0 dirs
+/usr/share/fonts/truetype: skipping, existing cache is valid: 0 fonts, 10 dirs
+/usr/share/fonts/truetype/droid: skipping, existing cache is valid: 18 fonts, 0 dirs
+/usr/share/fonts/truetype/freefont: skipping, existing cache is valid: 12 fonts, 0 dirs
+/usr/share/fonts/truetype/gentium: skipping, existing cache is valid: 4 fonts, 0 dirs
+/usr/share/fonts/truetype/gentium-basic: skipping, existing cache is valid: 8 fonts, 0 dirs
+/usr/share/fonts/truetype/liberation: skipping, existing cache is valid: 16 fonts, 0 dirs
+/usr/share/fonts/truetype/lyx: skipping, existing cache is valid: 10 fonts, 0 dirs
+/usr/share/fonts/truetype/openoffice: skipping, existing cache is valid: 1 fonts, 0 dirs
+/usr/share/fonts/truetype/roboto: skipping, existing cache is valid: 18 fonts, 0 dirs
+/usr/share/fonts/truetype/ttf-dejavu: skipping, existing cache is valid: 21 fonts, 0 dirs
+/usr/share/fonts/truetype/ttf-liberation: skipping, existing cache is valid: 16 fonts, 0 dirs
+/usr/share/fonts/type1: skipping, existing cache is valid: 0 fonts, 2 dirs
+/usr/share/fonts/type1/gsfonts: skipping, existing cache is valid: 35 fonts, 0 dirs
+/usr/share/fonts/type1/mathml: skipping, existing cache is valid: 1 fonts, 0 dirs
+/usr/X11R6/lib/X11/fonts: skipping, no such directory
+/usr/local/share/fonts: skipping, existing cache is valid: 0 fonts, 0 dirs
+/var/cache/fontconfig: cleaning cache directory
+fc-cache: succeeded
