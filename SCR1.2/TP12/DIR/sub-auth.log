@@ -1,0 +1,41 @@
+Sep 25 06:25:20  CRON[4003]: pam_unix(cron:session): session closed for user root
+Sep 25 07:17:01  CRON[4203]: pam_unix(cron:session): session opened for user root by (uid=0)
+Sep 25 07:17:01  CRON[4203]: pam_unix(cron:session): session closed for user root
+Sep 25 08:17:01  CRON[4270]: pam_unix(cron:session): session opened for user root by (uid=0)
+Sep 25 08:17:01  CRON[4270]: pam_unix(cron:session): session closed for user root
+Sep 25 09:17:01  CRON[4546]: pam_unix(cron:session): session opened for user root by (uid=0)
+Sep 25 09:17:01  CRON[4546]: pam_unix(cron:session): session closed for user root
+Sep 25 09:17:12  sshd[2452]: Server listening on 0.0.0.0 port 22.
+Sep 25 09:17:14  lightdm: pam_unix(lightdm-autologin:session): session opened for user pi by (uid=0)
+Sep 25 09:17:16  polkitd(authority=local): Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.9 [/usr/lib/arm-linux-gnueabihf/lxpolkit], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US)
+Sep 25 10:17:01  CRON[3221]: pam_unix(cron:session): session opened for user root by (uid=0)
+Sep 25 10:17:01  CRON[3221]: pam_unix(cron:session): session closed for user root
+Sep 25 11:17:01  CRON[3492]: pam_unix(cron:session): session opened for user root by (uid=0)
+Sep 25 11:17:01  CRON[3492]: pam_unix(cron:session): session closed for user root
+Sep 25 12:17:01  CRON[3761]: pam_unix(cron:session): session opened for user root by (uid=0)
+Sep 25 12:17:01  CRON[3761]: pam_unix(cron:session): session closed for user root
+Sep 25 13:17:01  CRON[3798]: pam_unix(cron:session): session opened for user root by (uid=0)
+Sep 25 13:17:01  CRON[3798]: pam_unix(cron:session): session closed for user root
+Sep 25 14:17:01  CRON[3858]: pam_unix(cron:session): session opened for user root by (uid=0)
+Sep 25 14:17:01  CRON[3858]: pam_unix(cron:session): session closed for user root
+Sep 25 15:17:01  CRON[4348]: pam_unix(cron:session): session opened for user root by (uid=0)
+Sep 25 15:17:01  CRON[4348]: pam_unix(cron:session): session closed for user root
+Sep 25 16:17:01  CRON[4660]: pam_unix(cron:session): session opened for user root by (uid=0)
+Sep 25 16:17:01  CRON[4660]: pam_unix(cron:session): session closed for user root
+Sep 25 16:30:55  sshd[4734]: Accepted password for pi from 10.14.75.147 port 41911 ssh2
+Sep 25 16:30:55  sshd[4734]: pam_unix(sshd:session): session opened for user pi by (uid=0)
+Sep 25 16:31:10  sshd[4738]: Received disconnect from 10.14.75.147: 11: disconnected by user
+Sep 25 16:31:10  sshd[4734]: pam_unix(sshd:session): session closed for user pi
+Sep 25 17:00:50  sshd[5049]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=rp2-19.local  user=pi
+Sep 25 17:00:53  sshd[5049]: Failed password for pi from 10.14.75.150 port 39801 ssh2
+Sep 25 17:00:53  sshd[5049]: Connection closed by 10.14.75.150 [preauth]
+Sep 25 17:01:47  sshd[5055]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=rp2-19.local  user=pi
+Sep 25 17:01:48  sshd[5055]: Failed password for pi from 10.14.75.150 port 39802 ssh2
+Sep 25 17:01:52  sshd[5055]: Accepted password for pi from 10.14.75.150 port 39802 ssh2
+Sep 25 17:01:52  sshd[5055]: pam_unix(sshd:session): session opened for user pi by (uid=0)
+Sep 25 17:01:52  sshd[5059]: subsystem request for sftp by user pi
+Sep 25 17:02:06  sshd[5059]: Received disconnect from 10.14.75.150: 11: disconnected by user
+Sep 25 17:02:06  sshd[5055]: pam_unix(sshd:session): session closed for user pi
+Sep 25 16:17:12  sshd[2335]: Server listening on 0.0.0.0 port 22.
+Sep 25 16:17:14  lightdm: pam_unix(lightdm-autologin:session): session opened for user pi by (uid=0)
+Sep 25 16:17:16  polkitd(authority=local): Registered Authentication Agent for unix-session:/org/freedesktop/ConsoleKit/Session1 (system bus name :1.9 [/usr/lib/arm-linux-gnueabihf/lxpolkit], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US)

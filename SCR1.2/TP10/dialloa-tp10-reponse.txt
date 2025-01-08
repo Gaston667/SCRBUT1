@@ -17,7 +17,7 @@ Algassumou Pellel DIALLO (dialloa): 18/12/2024 -> TP10
 
 		while(1){
 			printf("%s", argv[1]);
-			usleep(100);
+			usleep(75);
 		}
 		
 		exit(0);
@@ -32,19 +32,37 @@ Algassumou Pellel DIALLO (dialloa): 18/12/2024 -> TP10
 	[dialloa@archlinux TP10]$AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-	Aetc.....
+	
+	etc.....
 
 	[dialloa@archlinux TP10]$ jobs -l
 	[1]+  2209 Running                 ./disp A &
 
 
 	
-	Explication: Le CTRL + Z permet de suspendre un processus avec un sigsuspend
-	on constat que jobs -l nous indique le processus qui est en avant plan.
+	Explication: Le CTRL + Z permet de suspendre un processus avec un sig-suspend
+	on constat que jobs -l nous indique le processus qui est en avant plan. Dans mon cas c'est le processus disp A
 
-	On contaste aussi que stat change et passe de S+ à S, Tpgid bascule ..
+	On contaste aussi que stat change et passe de S+ à S.
 
-3.
+4.
+	NAME
+       bg -- run jobs in the background
+
+
+ 
+	Explication: La commande bg permet de reprendre une tâche suspendue en arrière-plan .
+
+
+5. Le CTRL + C permet de tuer un processu en envoyen un signal de type sig kill.
+
+6. la commande fg permet de renvoyer un processu arriere plan en anvant plan.
+
+7. pour terminer les processesus il faut faire un CTRL + Z pour suspendre le processus ensuite un fg pour le renvoyer en avant plan puis un CTRL + C pour tuer le procesus
+
+
+
+
 
 
 

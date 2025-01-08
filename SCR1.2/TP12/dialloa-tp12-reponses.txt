@@ -10,15 +10,144 @@ III.
 		grep "[.]ipv[46][.]" syschl.conf
 			   \.        \.
 
-		Explication: ici il faut echaper le .
+		Explication: ici il faut echaper le . soit on utilise le \ ou on le met ente le []
 
 	2. grep -v "^#" syschl.conf
 
 		Explication: -v permet de 
 
-	grep -E "^([^#]|$)" syschl.conf
+		ou utliser: grep -E "^([^#]|$)" syschl.conf
 
-	explication: Les ligne vide sont representer par ^$ et le -E
+		Explication: Les ligne vide sont representer par ^$ et le -E
+
+	3.	[dialloa@archlinux DIR]$ grep -i "_root_" ca-certificates.conf 
+		mozilla/America_Online_Root_Certification_Authority_1.crt
+		mozilla/America_Online_Root_Certification_Authority_2.crt
+		mozilla/Certum_Root_CA.crt
+		mozilla/Chambers_of_Commerce_Root_-_2008.crt
+		mozilla/DST_Root_CA_X3.crt
+		mozilla/Deutsche_Telekom_Root_CA_2.crt
+		mozilla/DigiCert_Assured_ID_Root_CA.crt
+		mozilla/DigiCert_Global_Root_CA.crt
+		mozilla/DigiCert_High_Assurance_EV_Root_CA.crt
+		mozilla/Entrust_Root_Certification_Authority.c
+
+		Explication:Affiche les lignes du fichier ca-certificates.conf qui contiennent des noms de certificats
+		avec la chaˆıne de caract`eres root entre deux symboles ”_”. Les lettres dans root
+		peuvent être en minuscule ou en majuscule. L'option -i permet de dir au grep dignorer la casse 
+
+	4.	[dialloa@archlinux DIR]$ grep "_Class_[[:digit:]]" ca-certificates.conf 
+		mozilla/Buypass_Class_2_CA_1.crt
+		mozilla/Buypass_Class_3_CA_1.crt
+		mozilla/Certplus_Class_2_Primary_CA.crt
+		mozilla/Go_Daddy_Class_2_CA.crt
+		mozilla/Sonera_Class_1_Root_CA.crt
+		mozilla/Sonera_Class_2_Root_CA.crt
+		mozilla/Starfield_Class_2_CA.crt
+
+		Explication: Affiche les lignes du fichier ca-certificates.conf qui contiennent des noms de certificats
+		avec la chaine de caracteres Class entre deux symboles ”_”, et suivie d’un chiffre. Pour representer l'ensemble des chiffres, on utilise [[:digit:]]	
+
+	5. 
+
+
+	6. [dialloa@archlinux DIR]$ grep -E "\(.+\)" Xorg.0.log 
+		[    17.433] xorg-server 2:1.12.4-6+deb7u6 (Julien Cristau <jcristau@debian.org>) 
+		[    17.433] Markers: (--) probed, (**) from config file, (==) default setting,
+			(++) from command line, (!!) notice, (II) informational,
+			(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+		[    17.434] (==) Log file: "/var/log/Xorg.0.log", Time: Fri Sep 25 16:17:13 2015
+		[    17.470] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+		[    17.480] (==) No Layout section.  Using the first Screen section.
+		[    17.480] (==) No screen section available. Using defaults.
+		[    17.480] (**) |-->Screen "Default Screen Section" (0)
+		[    17.480] (**) |   |-->Monitor "<default monitor>"
+		[    17.487] (==) No device specified for screen "Default Screen Section".
+		[    17.487] (**) |   |-->Device "Allwinner A10/A13 FBDEV"
+		[    17.488] (==) No monitor specified for screen "Default Screen Section".
+		[    17.488] (==) Automatically adding devices
+		[    17.488] (==) Automatically enabling devices
+		[    17.506] (WW) The directory "/usr/share/fonts/X11/misc" 
+
+		Explication:  Afficher les lignes du fichier Xorg.0.log qui contiennent (au moins) une expression entre
+		parentheses. le permet de de dire au grep que le cararectère ( est repeter au moin une fois.
+
+	7. [dialloa@archlinux DIR]$ grep E "(^|[[:space:]]+)[[:alnum]]+[.]([[alnum]]+[.])*([[:alnum:]]+)?($|[[:space:]]+)" krb5.conf 
+		grep: (^|[[:space:]]+)[[:alnum]]+[.]([[alnum]]+[.])*([[:alnum:]]+)?($|[[:space:]]+): No such file or directory
+		krb5.conf:	default_realm = ATHENA.MIT.EDU
+		krb5.conf:	ATHENA.MIT.EDU = {
+		krb5.conf:		admin_server = KERBEROS.MIT.EDU
+		krb5.conf:		default_domain = MIT.EDU
+		krb5.conf:	ANDREW.CMU.EDU = {
+		krb5.conf:	.mit.edu = ATHENA.MIT.EDU
+		krb5.conf:	mit.edu = ATHENA.MIT.EDU
+		krb5.conf:	.media.mit.edu = MEDIA-LAB.MIT.EDU
+		krb5.conf:	media.mit.edu = MEDIA-LAB.MIT.EDU
+		krb5.conf:	.ucsc.edu = CATS.UCSC.EDU
+		krb5.conf:#	kdc = CONSOLE
+
+		Explication:
+
+
+	8. [dialloa@archlinux DIR]$ grep -E "[[:digit:]]+([.][[:digit:]]+){3}" syslog                                                
+	Sep 25 07:21:29 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.85 with invalid source port 55544 on interface 'eth0.0'
+	Sep 25 07:21:30 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.85 with invalid source port 55544 on interface 'eth0.0'
+	Sep 25 08:03:23 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+	Sep 25 08:03:24 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+	Sep 25 08:03:26 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+	Sep 25 08:03:30 RP2-13 avahi-daemon[2454]: Received response from host 10.14.74.132 with invalid source port 40628 on interface 'eth0.0'
+
+	Explication:
+
+
+	9. [dialloa@archlinux DIR]$ grep -E "[[:digit:]]+([.][[:digit:]])? [*] [[:digit:]]+([.][[:digit:]]+)?" sensors.conf 
+	    set in2_min 3.3 * 0.95
+	    set in2_max 3.3 * 1.05
+	    set in3_min 5.0 * 0.95
+	    set in3_max 5.0 * 1.05
+	    set in4_min 12 * 0.95
+	    set in4_max 12 * 1.05
+	    set in5_min -12 * 0.95
+	    set in5_max -12 * 1.05
+	    set in6_min -5 * 0.95
+	    set in6_max -5 * 1.05
+
+	    Explication:
+
+
+    10. [dialloa@archlinux DIR]$ grep -E "^[^#][[:space:]]*[^[:space:]]+[[:space:]]+(passwd|services)" nscd.conf 
+		enable-cache		passwd		yes
+		positive-time-to-live	passwd		600
+		negative-time-to-live	passwd		20
+		suggested-size		passwd		211
+		check-files		passwd		yes
+		persistent		passwd		yes
+		shared			passwd		yes
+		max-db-size		passwd		33554432
+		auto-propagate		passwd		yes
+		enable-cache		services	yes
+		positive-time-to-live	services	28800
+		negative-time-to-live	services	20
+		suggested-size		services	211
+		check-files		services	yes
+		persistent		services	yes
+		shared			services	yes
+		max-db-size		services	33554432
+
+		Êxplication:
+
+	11. 	grep -E "^[^/]*(/[^[space]]+)+/?[[:space:]]+[^/]*(/[^/[:space:]]+)+/?[^/]*$" man_db.conf 
+
+			explication commande à revoir car ne marche pas
+
+	12. [dialloa@archlinux DIR]$ sed '/[.][[:space:]]*$/d' syslog > sub-syslog
+
+		Explication: Faire des recherches sur sed
+
+
+	13. 
+
+
 
 
 
@@ -32,9 +161,10 @@ Note:
 		le ^ indique le debut de ligne 
 		le $ indique la fin de ligne 
 		le . indique n'importe quel charactère 
-		le [...] 1 parmi
+		le [...] veut dire 1 parmi
 		le [^...] tout sauf 
 		le a* a est repété 0,1 ou plusieur fois 
+		le -v veut dire le contraire comme ! en c.
 
 	Expression regulière étendue:
 		a +   a est repété au moin une fois
