@@ -28,13 +28,80 @@ I)
 
 	2.  
 		'ip a show lo'
+		[dialloa@vm-dialloa TP13]$ ip a show lo
+		1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+		    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+		    inet 127.0.0.1/8 scope host lo
+		       valid_lft forever preferred_lft forever
+		    inet6 ::1/128 scope host noprefixroute 
+		       valid_lft forever preferred_lft forever
+
+		Explication:
+			L’interface lo (loopback) est utilisée pour la communication interne de la machine.Elle possède l’adresse IPv4 127.0.0.1/8, qui permet aux processus locaux de communiquer entre eux.
+		    Elle supporte aussi IPv6 (::1/128).
+		    Sa MTU est de 65536, ce qui est très élevé car elle ne dépend pas des limitations du réseau physique.
+
+
+	3.
+		'ip link show'
+		[dialloa@vm-dialloa TP13]$ ip link show
+		1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+		    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+		2: enp6s18: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+		    link/ether bc:24:11:ce:79:c2 brd ff:ff:ff:ff:ff:ff
+		3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default 
+		    link/ether 02:42:32:b6:09:55 brd ff:ff:ff:ff:ff:ff
+
+		Explication:
+			Cette commande affiche les interfaces réseau avec leurs paramètres de liaison de données, y compris la MTU :
+		    lo → MTU = 65536
+		    enp6s18 → MTU = 1500 (valeur standard pour Ethernet)
+		    docker0 → MTU = 1500 (utilisé pour la communication entre conteneurs)
+
+
+	4.
+		'ip link show enp6s18'
+		[dialloa@vm-dialloa TP13]$ ip link show enp6s18
+		2: enp6s18: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+		    link/ether bc:24:11:ce:79:c2 brd ff:ff:ff:ff:ff:ff
+
+		Explication:
+			L’interface enp6s18 est la principale, utilisée pour communiquer avec d'autres machines sur le réseau.
+			Elle est active (UP), possède une adresse MAC bc:24:11:ce:79:c2.
+
+	5.
+		[dialloa@vm-dialloa TP13]$ ip neigh show
+		172.16.1.21 dev enp6s18 lladdr bc:24:11:b9:46:17 STALE 
+		172.16.1.133 dev enp6s18 lladdr bc:24:11:95:43:3a STALE 
+		172.16.1.120 dev enp6s18 lladdr a2:1d:bd:16:03:b1 STALE 
+		172.16.1.2 dev enp6s18 lladdr bc:24:11:91:d0:59 STALE 
+		172.16.1.160 dev enp6s18 lladdr 42:59:8a:98:c7:80 STALE 
+		172.16.1.252 dev enp6s18 lladdr bc:24:11:ee:64:1b REACHABLE 
+		172.16.1.30 dev enp6s18 lladdr bc:24:11:bf:46:cd REACHABLE 
+		172.16.1.254 dev enp6s18 lladdr c6:74:2d:e1:04:ba REACHABLE 
+		172.16.1.31 dev enp6s18 lladdr bc:24:11:bf:46:cd STALE 
+		172.16.1.158 dev enp6s18 lladdr bc:24:11:ea:5d:e4 STALE 
+		172.16.1.165 dev enp6s18 lladdr bc:24:11:1b:bd:58 STALE 
+		172.16.1.93 dev enp6s18 lladdr bc:24:11:ee:64:1b STALE 
+		fe80::be24:11ff:fe24:8385 dev enp6s18 lladdr bc:24:11:24:83:85 STALE 
+		fe80::c474:2dff:fee1:4ba dev enp6s18 lladdr c6:74:2d:e1:04:ba router STALE 
+		fe80::be24:11ff:febf:46cd dev enp6s18 lladdr bc:24:11:bf:46:cd STALE 
+		fe80::be24:11ff:feb9:4617 dev enp6s18 lladdr bc:24:11:b9:46:17 STALE 
+		[dialloa@vm-dialloa TP13]$
+
+		Explication:
+			Le cache ARP stocke les correspondances entre adresses IP et adresses MAC des machines récentes avec lesquelles j'ai communiqué.
+	        Dans mon cas, certaines machines sont en état STALE (inactive depuis un moment) et d'autres REACHABLE (encore accessibles).
+		    Exemple : 172.16.1.254 (passerelle) est toujours accessible (REACHABLE).
+		    172.16.1.252 est également REACHABLE.
+
+
 
 
 
 	6- [dialloa@vm-dialloa TP14]$ ip -r n
 		iluvatar.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:24:83:85 REACHABLE 
 		anor.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:91:d0:59 STALE 
-		172.16.10.41 dev enp6s18 lladdr bc:24:11:f5:07:eb STALE 
 		yavanna.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:b9:46:17 STALE 
 		iluvatar.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:24:83:85 STALE 
 		maiar.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:1b:bd:58 STALE 
@@ -52,27 +119,60 @@ I)
 		_gateway dev enp6s18 lladdr c6:74:2d:e1:04:ba router STALE 
 		vm-val dev enp6s18 lladdr bc:24:11:91:25:84 STALE 
 
-		Explication: On Utilise l'option -r pour afficher les host par leur nom de domaine.
+		Explication: 
+			Cette commande affiche les hôtes du réseau en utilisant leur nom DNS au lieu de leurs adresses IP. Elle permet de voir, par exemple, que gatekeeper.iut-fbleau.fr a l'adresse MAC c6:74:2d:e1:04:ba.
+
+
+	7.
+		'ip route show' ou 'ip r'
+
+		[dialloa@vm-dialloa TP13]$ ip route show
+		default via 172.16.1.254 dev enp6s18 proto dhcp src 172.16.10.40 metric 1024 
+		172.16.0.0/16 dev enp6s18 proto kernel scope link src 172.16.10.40 metric 1024 
+		172.16.1.2 dev enp6s18 proto dhcp scope link src 172.16.10.40 metric 1024 
+		172.16.1.252 dev enp6s18 proto dhcp scope link src 172.16.10.40 metric 1024 
+		172.16.1.253 dev enp6s18 proto dhcp scope link src 172.16.10.40 metric 1024 
+		172.16.1.254 dev enp6s18 proto dhcp scope link src 172.16.10.40 metric 1024 
+		172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+		[dialloa@vm-dialloa TP13]$ 
+
+		Explication:
+			La table de routage indique comment les paquets sont envoyés sur le réseau. Dans mon cas, la ligne suivante montre la passerelle (default via), qui permet d’accéder à Internet ou à d'autres réseaux :
+			"default via 172.16.1.254 dev enp6s18 proto dhcp src 172.16.10.40 metric 1024". 
+			Passerelle (gateway) : 172.16.1.254
+    		Interface utilisée : enp6s18
+    		Adresse IP de ma machine : 172.16.10.40
+			Cela signifie que tout mon trafic vers d'autres réseaux passe par 172.16.1.254.
+
 	
 
 ----------------------------------------------------------------------------------
 
 II)
 
-	1- 
+	1.
+		Vérifions le cache ARP avant le ping
+		ip neigh show 
 
-	
+		Faire un ping sur une machine qui n'est pas dans le cache ARP
+		ping -c 1  172.16.10.41  
 
-	2- voir le 4
+		Vérifions le cache ARP après le ping
+		ip neigh show   
+
+		Explication: 
+			Je constat qu'il y'a une nouvelle ligne dans le cache arp
+			'172.16.10.41 dev enp6s18 lladdr bc:24:11:f5:07:eb STALE'
+			Cela signifie que la machine a cherché l'adresse MAC associée à 172.16.10.41 via le protocole ARP et l'a ajoutée au cache.
 
 
-		
+	2- Voir le 4
 
+	3- L’option -e permet d’afficher les en-têtes Ethernet dans la capture tcpdump. Cela inclut : L'adresse MAC source, l'adresse MAC destination, le type de protocole utilisé (IPv4, ARP, etc.)
 
-	5- C'est l'otion -e qui permet de de voir l'en tête Ethernet 
 
 	4-
-		tcpdump -i enp6s18 -netvvv host and 172.16.10.8
+		tcpdump -i enp6s18 -netvvv 172.16.10.40 and 172.16.10.8
 
 			Dans le terminal 1:
 			[dialloa@vm-dialloa TP14]$ tcpdump -i enp6s18 -netvvv host 172.16.10.40 and host 172.16.10.8
@@ -100,9 +200,14 @@ II)
 		[dialloa@vm-dialloa TP14]$
 
 		Explication:
+			Le premier paquet capturé est une requête ARP demandant "Qui a l'adresse 172.16.10.8 ?"
+			Le deuxième paquet est une réponse ARP qui dit : "Moi, 172.16.10.8, mon adresse MAC est bc:24:11:ac:eb:ef".
+			Ensuite, on voit une requête ICMP echo request (le ping envoyé).
+			Enfin, une réponse ICMP echo reply (le ping retourné).
 
 
-	5. Pour avoir le filtre de capture on utilise l'option -f 
+	5. tshark -i enp6s18 -V -f "host 172.16.10.40 and host 172.16.10.104"
+		L’option -f permet d’appliquer un filtre dès la capture, pour ne capturer que les paquets entre deux machines spécifiques. 
 
 
 	6. tshark -i enp6s18 -V -f "host 172.16.10.40 and host 172.16.10.104"
@@ -188,12 +293,20 @@ II)
 		[dialloa@vm-dialloa TP14]$
 
 
-		Explication
+		Explication:
+			tshark est l'équivalent en ligne de commande de Wireshark.
+			L’option -f "host 172.16.10.40 and host 172.16.10.8" permet de filtrer uniquement les paquets entre ces deux machines.
+			L’option -V permet d'afficher les détails complets des paquets capturés.
+			tshark affiche plus de détails sur chaque paquet, notamment les champs du protocole ICMP et ARP.
+			La sortie est plus verbeuse, avec des informations détaillées comme le TTL, les options IP, et les identifiants ICMP.
+			tcpdump est plus compact et rapide, utile pour une vision d’ensemble, alors que tshark est plus détaillé.
 
+-------------------------------------------------------------------------------------
 
 III) 
 	
 	1. 
+		Terminal 1:
 		[dialloa@vm-dialloa TP14]$ tcpdump -i lo -lnetvv | tee fichier.log
 		tcpdump: listening on lo, link-type EN10MB (Ethernet), snapshot length 262144 bytes
 		00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 9258: (tos 0x0, ttl 64, id 47871, offset 0, flags [DF], proto ICMP (1), length 9244)
@@ -202,6 +315,7 @@ III)
 		    127.0.0.1 > 127.0.0.1: ICMP echo reply, id 28, seq 1, length 9224
 
 		
+		Terminal 2
 		[dialloa@vm-dialloa TP14]$ ping -c1 -s 9216 127.0.0.1
 		PING 127.0.0.1 (127.0.0.1) 9216(9244) bytes of data.
 		9224 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.135 ms
@@ -211,9 +325,29 @@ III)
 		rtt min/avg/max/mdev = 0.135/0.135/0.135/0.000 ms
 		[dialloa@vm-dialloa TP14]$
 
-		ping -c 1 s 9216 127.0.0.1
 
-		tcpdump -i lo -netvvv "host 172.16.10.40 and 127.0.0.1"
+		Explication:
+			On envoie un seul ping (-c 1) avec une taille de 9216 octets (-s 9216).
+			Dans la capture, on voit deux paquets :
+			    Un ICMP echo request de 127.0.0.1 vers 127.0.0.1.
+			    Un ICMP echo reply de 127.0.0.1 vers 127.0.0.1.
+			Cela signifie que la machine a bien reçu et répondu au ping.
+			Sur l’interface loopback, il n’y a pas de fragmentation, donc tout passe en un seul paquet.
+
+
+	2.
+		tcpdump -i enp6s18 -netvvv | tee capture_reseau.log
+		ping -c 1 -s 9216 172.16.10.8
+
+		Explication:	
+			Contrairement au loopback, ici, le paquet est découpé en plusieurs fragments avant d’être envoyé.
+	    	Cela est dû à la MTU (Maximum Transmission Unit), qui est généralement de 1500 octets sur Ethernet.
+	    	On voit plusieurs paquets ICMP dans la capture, correspondant aux fragments. Quand un paquet est trop gros pour passer sur le réseau, il est découpé en morceaux, ce qui n’arrive pas sur loopback.
+
+
+
+
+		
 
 
 
