@@ -1,0 +1,4 @@
+00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 9258: (tos 0x0, ttl 64, id 47871, offset 0, flags [DF], proto ICMP (1), length 9244)
+    127.0.0.1 > 127.0.0.1: ICMP echo request, id 28, seq 1, length 9224
+00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 9258: (tos 0x0, ttl 64, id 47872, offset 0, flags [none], proto ICMP (1), length 9244)
+    127.0.0.1 > 127.0.0.1: ICMP echo reply, id 28, seq 1, length 9224

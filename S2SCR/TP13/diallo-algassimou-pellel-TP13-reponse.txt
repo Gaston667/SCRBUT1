@@ -1,0 +1,227 @@
+Diallo Algassimou Pellel TP14 jeudi 06 février.
+
+
+I) 
+	1- 
+		'ip address show' ou ip a  
+		[dialloa@vm-dialloa TP14]$ ip address show
+		1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    	link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+   		inet 127.0.0.1/8 scope host lo
+      		valid_lft forever preferred_lft forever
+    	inet6 ::1/128 scope host noprefixroute 
+       		valid_lft forever preferred_lft forever
+		2: enp6s18: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    	link/ether bc:24:11:ce:79:c2 brd ff:ff:ff:ff:ff:ff
+    	inet 172.16.10.40/16 metric 1024 brd 172.16.255.255 scope global dynamic enp6s18
+       	valid_lft 2939sec preferred_lft 2939sec
+	    inet6 fe80::be24:11ff:fece:79c2/64 scope link proto kernel_ll 
+	       valid_lft forever preferred_lft forever
+		3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+		    link/ether 02:42:4e:4b:ca:66 brd ff:ff:ff:ff:ff:ff
+		    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+		       valid_lft forever preferred_lft forever
+ 
+
+		Explication:
+			Cette commande permet d'afficher toutes les interfaces réseau de la machine, avec leurs adresses IP et MAC, leur état (UP/DOWN), et d'autres informations comme la MTU et les protocoles supportés. Dans mon cas je possede 3 iterface qui sont: lo, enp6s18, docker0.
+
+	2.  
+		'ip a show lo'
+
+
+
+	6- [dialloa@vm-dialloa TP14]$ ip -r n
+		iluvatar.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:24:83:85 REACHABLE 
+		anor.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:91:d0:59 STALE 
+		172.16.10.41 dev enp6s18 lladdr bc:24:11:f5:07:eb STALE 
+		yavanna.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:b9:46:17 STALE 
+		iluvatar.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:24:83:85 STALE 
+		maiar.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:1b:bd:58 STALE 
+		machine6.iut-fbleau.fr dev enp6s18 lladdr 42:59:8a:98:c7:80 STALE 
+		gatekeeper.iut-fbleau.fr dev enp6s18 lladdr c6:74:2d:e1:04:ba STALE 
+		vm-boulalam dev enp6s18 lladdr bc:24:11:36:39:ac STALE 
+		ns3.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:ee:64:1b STALE 
+		eru.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:ea:5d:e4 STALE 
+		ns3.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:ee:64:1b STALE 
+		vm-anhdire dev enp6s18 lladdr bc:24:11:ac:eb:ef STALE 
+		anarion.ssh.iut-fbleau.fr dev enp6s18 lladdr bc:24:11:95:43:3a STALE 
+		fe80::be24:11ff:fe24:8385 dev enp6s18 lladdr bc:24:11:24:83:85 STALE 
+		fe80::be24:11ff:feb9:4617 dev enp6s18 lladdr bc:24:11:b9:46:17 REACHABLE 
+		fe80::be24:11ff:febf:46cd dev enp6s18 lladdr bc:24:11:bf:46:cd STALE 
+		_gateway dev enp6s18 lladdr c6:74:2d:e1:04:ba router STALE 
+		vm-val dev enp6s18 lladdr bc:24:11:91:25:84 STALE 
+
+		Explication: On Utilise l'option -r pour afficher les host par leur nom de domaine.
+	
+
+----------------------------------------------------------------------------------
+
+II)
+
+	1- 
+
+	
+
+	2- voir le 4
+
+
+		
+
+
+	5- C'est l'otion -e qui permet de de voir l'en tête Ethernet 
+
+	4-
+		tcpdump -i enp6s18 -netvvv host and 172.16.10.8
+
+			Dans le terminal 1:
+			[dialloa@vm-dialloa TP14]$ tcpdump -i enp6s18 -netvvv host 172.16.10.40 and host 172.16.10.8
+			tcpdump: listening on enp6s18, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+
+			bc:24:11:ce:79:c2 > ff:ff:ff:ff:ff:ff, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Request who-has 172.16.10.8 tell 172.16.10.40, length 28
+			bc:24:11:ac:eb:ef > bc:24:11:ce:79:c2, ethertype ARP (0x0806), length 60: Ethernet (len 6), IPv4 (len 4), Reply 172.16.10.8 is-at bc:24:11:ac:eb:ef, length 46
+
+			bc:24:11:ce:79:c2 > bc:24:11:ac:eb:ef, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 23313, offset 0, flags [DF], proto ICMP (1), length 84)
+			    172.16.10.40 > 172.16.10.8: ICMP echo request, id 5, seq 1, length 64
+			bc:24:11:ac:eb:ef > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 98: (tos 0x0, ttl 64, id 18910, offset 0, flags [none], proto ICMP (1), length 84)
+			    172.16.10.8 > 172.16.10.40: ICMP echo reply, id 5, seq 1, length 64
+
+			bc:24:11:ac:eb:ef > bc:24:11:ce:79:c2, ethertype ARP (0x0806), length 60: Ethernet (len 6), IPv4 (len 4), Request who-has 172.16.10.40 tell 172.16.10.8, length 46
+			bc:24:11:ce:79:c2 > bc:24:11:ac:eb:ef, ethertype ARP (0x0806), length 42: Ethernet (len 6), IPv4 (len 4), Reply 172.16.10.40 is-at bc:24:11:ce:79:c2, length 28
+
+		Dans le terminal 2:
+		[dialloa@vm-dialloa TP14]$ ping -c 1 172.16.10.8
+		PING 172.16.10.8 (172.16.10.8) 56(84) bytes of data.
+		64 bytes from 172.16.10.8: icmp_seq=1 ttl=64 time=1.16 ms
+
+		--- 172.16.10.8 ping statistics ---
+		1 packets transmitted, 1 received, 0% packet loss, time 0ms
+		rtt min/avg/max/mdev = 1.160/1.160/1.160/0.000 ms
+		[dialloa@vm-dialloa TP14]$
+
+		Explication:
+
+
+	5. Pour avoir le filtre de capture on utilise l'option -f 
+
+
+	6. tshark -i enp6s18 -V -f "host 172.16.10.40 and host 172.16.10.104"
+
+		Terminal 1:
+		[dialloa@vm-dialloa TP14]$ tshark -i enp6s18 -V -f "host 172.16.10.40 and host 172.16.10.104"
+		Running as user "dialloa" and group "info-etu-but-2024".
+		Capturing on 'enp6s18'
+		Frame 1: 98 bytes on wire (784 bits), 98 bytes captured (784 bits) on interface enp6s18, id 0
+		    Section number: 1
+		    Interface id: 0 (enp6s18)
+		        Interface name: enp6s18
+		    Encapsulation type: Ethernet (1)
+		    Arrival Time: Feb  6, 2025 11:12:49.892502195 CET
+		    UTC Arrival Time: Feb  6, 2025 10:12:49.892502195 UTC
+		    Epoch Arrival Time: 1738836769.892502195
+		    [Time shift for this packet: 0.000000000 seconds]
+		    [Time delta from previous captured frame: 0.000000000 seconds]
+		    [Time delta from previous displayed frame: 0.000000000 seconds]
+		    [Time since reference or first frame: 0.000000000 seconds]
+		    Frame Number: 1
+		    Frame Length: 98 bytes (784 bits)
+		    Capture Length: 98 bytes (784 bits)
+		    [Frame is marked: False]
+		    [Frame is ignored: False]
+		    [Protocols in frame: eth:ethertype:ip:icmp:data]
+		Ethernet II, Src: ProxmoxServe_ce:79:c2 (bc:24:11:ce:79:c2), Dst: ProxmoxServe_91:4d:3c (bc:24:11:91:4d:3c)
+		    Destination: ProxmoxServe_91:4d:3c (bc:24:11:91:4d:3c)
+		        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+		        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+		    Source: ProxmoxServe_ce:79:c2 (bc:24:11:ce:79:c2)
+		        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+		        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+		    Type: IPv4 (0x0800)
+		    [Stream index: 0]
+		Internet Protocol Version 4, Src: 172.16.10.40, Dst: 172.16.10.104
+		    0100 .... = Version: 4
+		    .... 0101 = Header Length: 20 bytes (5)
+		    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+		        0000 00.. = Differentiated Services Codepoint: Default (0)
+		        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+		    Total Length: 84
+		    Identification: 0x442d (17453)
+		    010. .... = Flags: 0x2, Don't fragment
+		        0... .... = Reserved bit: Not set
+		        .1.. .... = Don't fragment: Set
+		        ..0. .... = More fragments: Not set
+		    ...0 0000 0000 0000 = Fragment Offset: 0
+		    Time to Live: 64
+		    Protocol: ICMP (1)
+		    Header Checksum: 0x89cb [validation disabled]
+		    [Header checksum status: Unverified]
+		    Source Address: 172.16.10.40
+		    Destination Address: 172.16.10.104
+		    [Stream index: 0]
+		Internet Control Message Protocol
+		    Type: 8 (Echo (ping) request)
+		    Code: 0
+		    Checksum: 0x4f84 [correct]
+		    [Checksum Status: Good]
+		    Identifier (BE): 23 (0x0017)
+		    Identifier (LE): 5888 (0x1700)
+		    Sequence Number (BE): 1 (0x0001)
+		    Sequence Number (LE): 256 (0x0100)
+		    Timestamp from icmp data: Feb  6, 2025 11:12:49.892438000 CET
+		    [Timestamp from icmp data (relative): 0.000064195 seconds]
+		    Data (40 bytes)
+
+		0000  10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f   ................
+		0010  20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f    !"#$%&'()*+,-./
+		0020  30 31 32 33 34 35 36 37                           01234567
+		        Data: 101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f3031323334353637
+		        [Length: 40]
+
+		Terminal 2
+		[dialloa@vm-dialloa TP14]$ ping -c 1 172.16.10.104
+		PING 172.16.10.104 (172.16.10.104) 56(84) bytes of data.
+		64 bytes from 172.16.10.104: icmp_seq=1 ttl=64 time=0.962 ms
+
+		--- 172.16.10.104 ping statistics ---
+		1 packets transmitted, 1 received, 0% packet loss, time 0ms
+		rtt min/avg/max/mdev = 0.962/0.962/0.962/0.000 ms
+		[dialloa@vm-dialloa TP14]$
+
+
+		Explication
+
+
+III) 
+	
+	1. 
+		[dialloa@vm-dialloa TP14]$ tcpdump -i lo -lnetvv | tee fichier.log
+		tcpdump: listening on lo, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+		00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 9258: (tos 0x0, ttl 64, id 47871, offset 0, flags [DF], proto ICMP (1), length 9244)
+		    127.0.0.1 > 127.0.0.1: ICMP echo request, id 28, seq 1, length 9224
+		00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 9258: (tos 0x0, ttl 64, id 47872, offset 0, flags [none], proto ICMP (1), length 9244)
+		    127.0.0.1 > 127.0.0.1: ICMP echo reply, id 28, seq 1, length 9224
+
+		
+		[dialloa@vm-dialloa TP14]$ ping -c1 -s 9216 127.0.0.1
+		PING 127.0.0.1 (127.0.0.1) 9216(9244) bytes of data.
+		9224 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.135 ms
+
+		--- 127.0.0.1 ping statistics ---
+		1 packets transmitted, 1 received, 0% packet loss, time 0ms
+		rtt min/avg/max/mdev = 0.135/0.135/0.135/0.000 ms
+		[dialloa@vm-dialloa TP14]$
+
+		ping -c 1 s 9216 127.0.0.1
+
+		tcpdump -i lo -netvvv "host 172.16.10.40 and 127.0.0.1"
+
+
+
+
+
+		
+
+
+
+	
+
