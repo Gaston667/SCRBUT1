@@ -1,0 +1,32 @@
+TP14 : 
+
+1.[anhdire@vm-anhdire ~]$ ncat -u 127.0.0.1 50000
+[anhdire@vm-anhdire TP14]$ ss -u
+Recv-Q     Send-Q          Local Address:Port            Peer Address:Port      
+0          0                   127.0.0.1:56176              127.0.0.1:50000     
+0          0                 172.16.10.8:48096             0.0.156.64:eldim     
+0          0                   127.0.0.1:44350              127.0.0.1:eldim     
+0          0                 172.16.10.8:52906             0.0.195.80:eldim     
+0          0                   127.0.0.1:40995              127.0.0.1:40000     
+0          0                   127.0.0.1:51281              127.0.0.1:eldim     
+0          0                   127.0.0.1:55386              127.0.0.1:40000  
+
+2.[anhdire@vm-anhdire TP14]$ dd if=/dev/urandom of=ft-file.dat count=18 
+18+0 records in
+18+0 records out
+9216 bytes (9.2 kB, 9.0 KiB) copied, 0.00271225 s, 3.4 MB/s
+
+
+ncat -u 172.16.10.39 4000 < ft-file.dat
+
+tcpdump -i lo -lnetvvv udp and not arp  | tee filtulo.log
+
+[anhdire@vm-anhdire TP14]$ tcpdump -i lo -lnetvvv udp and not arp  | tee filtulo.log
+tcpdump: listening on lo, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 8234: (tos 0x0, ttl 64, id 14074, offset 0, flags [DF], proto UDP (17), length 8220)
+    127.0.0.1.44625 > 127.0.0.1.40000: [bad udp cksum 0x1e1c -> 0xba43!] UDP, length 8192
+00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 1066: (tos 0x0, ttl 64, id 14075, offset 0, flags [DF], proto UDP (17), length 1052)
+    127.0.0.1.44625 > 127.0.0.1.40000: [bad udp cksum 0x021c -> 0x3455!] UDP, length 1024
+
+4.a Il faut passer l'option -t;
+b.Il faut passer l'option dire not arp and not udp

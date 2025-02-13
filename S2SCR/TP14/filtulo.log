@@ -1,0 +1,4 @@
+00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 8234: (tos 0x0, ttl 64, id 14074, offset 0, flags [DF], proto UDP (17), length 8220)
+    127.0.0.1.44625 > 127.0.0.1.40000: [bad udp cksum 0x1e1c -> 0xba43!] UDP, length 8192
+00:00:00:00:00:00 > 00:00:00:00:00:00, ethertype IPv4 (0x0800), length 1066: (tos 0x0, ttl 64, id 14075, offset 0, flags [DF], proto UDP (17), length 1052)
+    127.0.0.1.44625 > 127.0.0.1.40000: [bad udp cksum 0x021c -> 0x3455!] UDP, length 1024

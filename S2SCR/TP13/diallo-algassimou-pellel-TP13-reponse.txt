@@ -350,6 +350,8 @@ III)
 		
 
 
+cpdump -i enp6s18 -lnetvvv "host 172.16.10.40 and 172.16.10.8" | tee capture_reseau.log
+tcpdump: listening on enp6s18, link-type EN10MB (Ethernet), snapshot length 262144 bytes
 
 
 
