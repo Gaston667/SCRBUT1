@@ -1,3 +1,58 @@
+Algassimou pelle diallo  TP14
+
+
+1.1 [dialloa@vm-dialloa TP14]$ ncat -lu 50000
+    explication: 
+
+
+1.2 cmd: [dialloa@vm-dialloa ~]$ ncat -u 127.0.0.1 50000
+    Explication:
+        Dans une seconde fenetre
+
+2-  cmd: [dialloa@vm-dialloa TP14]$ dd if=/dev/urandom of=ft-file.dat bs=1K count=9
+        9+0 records in
+        9+0 records out
+        9216 bytes (9.2 kB, 9.0 KiB) copied, 0.00416161 s, 2.2 MB/s
+    
+    Explication: 
+    Dans un troisième terminal on construit par dd un fichier de taille 9K k=1024
+    J'ai fait un ls pour verifier que le fichier à bien été contruit et il contient bien des donnée aleatoire
+    
+    voici les 80 premier octet:
+        a330 aecd 1eb6 7412 e0bb 91fb 9387 51ad
+        d042 0bdc 4d31 8455 d0cc 684b e6f3 4614
+        6d10 0e8d 87ba 0290 71fb 7c06 d80a c756
+        92f9 e25b c873 1c11 8558 26bc d2e3 8e6e
+        dcd8 6643 e1b6 c269 961d 0cad 8fb8 f7b8
+
+3- [dialloa@vm-dialloa TP14]$ tcpdump -i lo -ntlv udp port 50000
+
+    Explication: Dans le troisième terminal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 TP14 : 
 
 1.[anhdire@vm-anhdire ~]$ ncat -u 127.0.0.1 50000
