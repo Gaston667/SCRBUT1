@@ -1,0 +1,17 @@
+tcpdump: listening on enp6s18, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+bc:24:11:d0:5a:5d > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 64, id 4174, offset 0, flags [+], proto UDP (17), length 1500)
+    172.16.10.19.53338 > 172.16.10.40.50000: UDP, length 8192
+bc:24:11:d0:5a:5d > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 64, id 4174, offset 1480, flags [+], proto UDP (17), length 1500)
+    172.16.10.19 > 172.16.10.40: ip-proto-17
+bc:24:11:d0:5a:5d > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 64, id 4174, offset 2960, flags [+], proto UDP (17), length 1500)
+    172.16.10.19 > 172.16.10.40: ip-proto-17
+bc:24:11:d0:5a:5d > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 64, id 4174, offset 4440, flags [+], proto UDP (17), length 1500)
+    172.16.10.19 > 172.16.10.40: ip-proto-17
+bc:24:11:d0:5a:5d > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 64, id 4174, offset 5920, flags [+], proto UDP (17), length 1500)
+    172.16.10.19 > 172.16.10.40: ip-proto-17
+bc:24:11:d0:5a:5d > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 834: (tos 0x0, ttl 64, id 4174, offset 7400, flags [none], proto UDP (17), length 820)
+    172.16.10.19 > 172.16.10.40: ip-proto-17
+bc:24:11:d0:5a:5d > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 1066: (tos 0x0, ttl 64, id 4175, offset 0, flags [DF], proto UDP (17), length 1052)
+    172.16.10.19.53338 > 172.16.10.40.50000: [bad udp cksum 0x7075 -> 0xda06!] UDP, length 1024
+bc:24:11:ce:79:c2 > bc:24:11:d0:5a:5d, ethertype IPv4 (0x0800), length 43: (tos 0x0, ttl 64, id 16050, offset 0, flags [DF], proto UDP (17), length 29)
+    172.16.10.40.50000 > 172.16.10.19.53338: [bad udp cksum 0x6c76 -> 0xf5d4!] UDP, length 1

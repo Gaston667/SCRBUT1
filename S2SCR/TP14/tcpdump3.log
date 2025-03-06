@@ -1,0 +1,5 @@
+tcpdump: listening on lo, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+        IP (tos 0x0, ttl 64, id 21888, offset 0, flags [DF], proto UDP (17), length 8220)
+            127.0.0.1.56743 > 127.0.0.1.50000: UDP, length 8192
+        IP (tos 0x0, ttl 64, id 21889, offset 0, flags [DF], proto UDP (17), length 1052)
+            127.0.0.1.56743 > 127.0.0.1.50000: UDP, length 1024
