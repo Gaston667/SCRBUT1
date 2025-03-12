@@ -3,20 +3,30 @@ Algassimou pelle diallo  TP14
 
 1.1 [dialloa@vm-dialloa TP14]$ ncat -lu 50000
     Explication: 
-        ncat est un service(programe) qui d’envoyer et de recevoir des données sur un réseau,
-     en mode client ou serveur
+        La commande ncat -lu 50000 démarre un serveur UDP (-u) qui 
+        écoute en mode listen (-l) sur le port 50000. 
+        Cela veut dire qu'il est prêt à recevoir des données sur ce port.
 
     Cmd2: [dialloa@vm-dialloa ~]$ ss -unlp | grep 50000
     UNCONN 0      0                                  0.0.0.0:50000      0.0.0.0:*    users:(("ncat",pid=5542,fd=4))
     UNCONN 0      0                                     [::]:50000         [::]:*    users:(("ncat",pid=5542,fd=3))
 
-    Explication: la commande ss nous permet de  .... ses argument unlp avec le filtre grep
-    le resultat montre que le serveur est bien lancer
+    Explication: La commande ss est utilisée pour afficher les connexions réseau. 
+    Les options -u, -n, -l, et -p signifient respectivement :
+    -u : afficher les sockets UDP.
+    -n : ne pas résoudre les noms d'hôtes ou les ports (affichage sous forme numérique).
+    -l : afficher uniquement les sockets en écoute.
+    -p : afficher les processus associés à chaque socket.
+    Le résultat montre que ncat est bien en écoute sur le port 50000 
+    sur toutes les interfaces (0.0.0.0:50000 pour IPv4 et [::]:50000 pour IPv6).
 
     Cmd3: [dialloa@vm-dialloa ~]$ ncat -u 127.0.0.1 50000
     
     Explication:
-        Dans une seconde fenetre on lance cette commande pour lancer le mode client sur l'ip du lookback en mode udp
+        Dans une seconde fenetre on lance Cette commande qui lance un client UDP en envoyant 
+        des données au serveur ncat qui écoute sur 127.0.0.1 (loopback) sur le port 50000.
+        Le -u indique que la communication est en mode UDP.
+
 
 ----------------------------------------------------------------------------------------
 2-  cmd1: [dialloa@vm-dialloa TP14]$ dd if=/dev/urandom of=ft-file.dat bs=1K count=9
@@ -41,12 +51,21 @@ Algassimou pelle diallo  TP14
 
     Cmd3: [dialloa@vm-dialloa TP14]$ tcpdump -i lo -ntlv udp port 50000
 
-    Explication: Dans le troisième terminal on prepare la capture du traficque avec tcpdump 
-    et les filtre necessaire.
+    Explication: 
+    La commande tcpdump permet de capturer le trafic réseau. Ici, nous utilisons :
+    -i lo : pour capturer les paquets sur l'interface de boucle locale (loopback).
+    -ntlv : pour ne pas résoudre les noms d'hôtes (-n), afficher les paquets avec plus de détails (-v),
+            et afficher les timestamps (-t).
+    udp port 50000 : pour ne capturer que les paquets UDP sur le port 50000.
+
+    Cela permet de vérifier les paquets UDP échangés.
+
 
 --------------------------------------------------------------------------------------------
-
 3- Cmd: [dialloa@vm-dialloa TP14]$ ncat -u 127.0.0.1 50000 < ft-file.dat 
+        Cette commande envoie le fichier ft-file.dat au serveur ncat qui écoute sur le port UDP 50000. 
+        Le fichier est envoyé via UDP à 127.0.0.1 (localhost).
+
 
     Resultat du tcpdump: 
         [dialloa@vm-dialloa TP14]$ tcpdump -i lo -ntlv udp port 50000
@@ -57,19 +76,28 @@ Algassimou pelle diallo  TP14
             127.0.0.1.56743 > 127.0.0.1.50000: UDP, length 1024
         
     Explication:
-        On a deux paquet de length1 = 8192 et de length2 = 1024 la somme donne 9216.
-        il ne sagit pas d'une fragmentation parce que MF flag n'est pas postionné il s'agit 
-        de la taille du tampon utilisé par le programe ncat pour stocker les octets lus depuis des fichiers
+        Le trafic capture montre deux paquets UDP :
+            Le premier paquet a une taille de 8192 octets.
+            Le second paquet a une taille de 1024 octets.
+        La somme de ces deux paquets est égale à 9216 octets, la taille du fichier.
+        Ce n'est pas une fragmentation, car le flag MF (More Fragments) n'est pas activé, 
+        ce qui signifie que les paquets sont envoyés séparément selon la taille du tampon d'envoi de ncat.
 
 
 4-  Cmd1: ncat -lu 50000 > toto
         Explication1:
+        Lance un serveur UDP sur le port 50000, et les données reçues sur ce port sont enregistrées dans le fichier toto.
 
     Cmd2: [dialloa@vm-dialloa TP14]$ tcpdump -i enp6s18 -netvvv host 172.16.10.19 and host 172.16.10.40 and udp and not arp
         Explication2:
+        La commande tcpdump capture le trafic réseau entre les hôtes 172.16.10.19 et 172.16.10.40 
+        en filtrant les paquets UDP et en excluant les paquets ARP. 
+        Cela permet de surveiller les échanges UDP entre ces deux machines.
 
     Cmd3: ncat -u 172.16.10.40 < ft-file.data(sur la machine du voiosin)
         Explication3:
+        Cette commande envoie le fichier ft-file.dat via UDP à l'adresse IP 172.16.10.40. La machine source envoie les données, 
+        et la machine cible reçoit les données sur le port UDP 50000, où ncat est en écoute.
 
 
     Resultat du TCPDUMP:
@@ -90,5 +118,8 @@ Algassimou pelle diallo  TP14
             172.16.10.19.53338 > 172.16.10.40.50000: [bad udp cksum 0x7075 -> 0xda06!] UDP, length 1024
 
     Explication du TCPDUMP: 
-
+    Le tcpdump montre que les paquets UDP envoyés par 172.16.10.19 vers 172.16.10.40 sont de taille 1500 octets (maximum de la MTU Ethernet). 
+    Cela signifie que les données sont fragmentées en plusieurs paquets UDP, car chaque paquet UDP est limité à 1500 octets dans ce cas.
+    Les paquets suivants sont envoyés avec des offsets différents, indiquant qu'il s'agit d'une 
+    fragmentation (le flag + indique la présence de fragments supplémentaires).
 
