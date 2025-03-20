@@ -1,7 +1,7 @@
 Algassimou pelle diallo  TP14
 
-
-1.1 [dialloa@vm-dialloa TP14]$ ncat -lu 50000
+---------------------------------- Question 1----------------------------------------------
+    CMD1: [dialloa@vm-dialloa TP14]$ ncat -lu 50000
     Explication: 
         La commande ncat -lu 50000 démarre un serveur UDP (-u) qui 
         écoute en mode listen (-l) sur le port 50000. 
@@ -28,8 +28,8 @@ Algassimou pelle diallo  TP14
         Le -u indique que la communication est en mode UDP.
 
 
-----------------------------------------------------------------------------------------
-2-  cmd1: [dialloa@vm-dialloa TP14]$ dd if=/dev/urandom of=ft-file.dat bs=1K count=9
+---------------------------------- Question 2 ----------------------------------------------
+    cmd1: [dialloa@vm-dialloa TP14]$ dd if=/dev/urandom of=ft-file.dat bs=1K count=9
         9+0 records in
         9+0 records out
         9216 bytes (9.2 kB, 9.0 KiB) copied, 0.00416161 s, 2.2 MB/s
@@ -61,8 +61,8 @@ Algassimou pelle diallo  TP14
     Cela permet de vérifier les paquets UDP échangés.
 
 
---------------------------------------------------------------------------------------------
-3- Cmd: [dialloa@vm-dialloa TP14]$ ncat -u 127.0.0.1 50000 < ft-file.dat 
+---------------------------------- Question 3- ----------------------------------------------
+Cmd: [dialloa@vm-dialloa TP14]$ ncat -u 127.0.0.1 50000 < ft-file.dat 
         Cette commande envoie le fichier ft-file.dat au serveur ncat qui écoute sur le port UDP 50000. 
         Le fichier est envoyé via UDP à 127.0.0.1 (localhost).
 
@@ -83,8 +83,8 @@ Algassimou pelle diallo  TP14
         Ce n'est pas une fragmentation, car le flag MF (More Fragments) n'est pas activé, 
         ce qui signifie que les paquets sont envoyés séparément selon la taille du tampon d'envoi de ncat.
 
-
-4-  Cmd1: ncat -lu 50000 > toto
+---------------------------------- Question 4 -----------------------------------------------
+    Cmd1: ncat -lu 50000 > toto
         Explication1:
         Lance un serveur UDP sur le port 50000, et les données reçues sur ce port sont enregistrées dans le fichier toto.
 
@@ -122,4 +122,31 @@ Algassimou pelle diallo  TP14
     Cela signifie que les données sont fragmentées en plusieurs paquets UDP, car chaque paquet UDP est limité à 1500 octets dans ce cas.
     Les paquets suivants sont envoyés avec des offsets différents, indiquant qu'il s'agit d'une 
     fragmentation (le flag + indique la présence de fragments supplémentaires).
+
+
+------------------------------------ EXO 2 (II) -------------------------------------------
+
+---------------------------------- Question 1 (II) ----------------------------------------
+[dialloa@vm-dialloa ~]$ traceroute
+bash: traceroute: command not found
+[dialloa@vm-dialloa ~]$ tracepath
+
+Usage
+  tracepath [options] <destination>
+
+Options:
+  -4             use IPv4
+  -6             use IPv6
+  -b             print both name and IP
+  -l <length>    use packet <length>
+  -m <hops>      use maximum <hops>
+  -n             no reverse DNS name resolution
+  -p <port>      use destination <port>
+  -V             print version and exit
+  <destination>  DNS name or IP address
+
+For more details see tracepath(8).
+
+Explication: On remarque que traceroute n'est pas intaller car on a une sortie "commande not found".
+
 
