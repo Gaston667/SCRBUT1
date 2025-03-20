@@ -1,0 +1,6 @@
+Algassimou Pellel Diallo TP15
+
+---------------- Question 1 ------------------
+
+
+Explication:  =on dois verifer dans /etc/resolv.conf
