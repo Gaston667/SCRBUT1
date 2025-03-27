@@ -1,0 +1,43 @@
+[dialloa@vm-dialloa ~]$ dig iluvatar.arda.lan
+
+; <<>> DiG 9.20.1 <<>> iluvatar.arda.lan
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 27066
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 80ad7171c218373f0100000067e50cf1de082f851aff050c (good)
+;; QUESTION SECTION:
+;iluvatar.arda.lan.		IN	A
+
+;; ANSWER SECTION:
+iluvatar.arda.lan.	3600	IN	A	172.16.1.30
+
+;; Query time: 3 msec
+;; SERVER: 172.16.1.252#53(172.16.1.252) (UDP)
+;; WHEN: Thu Mar 27 09:31:45 CET 2025
+;; MSG SIZE  rcvd: 90
+
+[dialloa@vm-dialloa ~]$ dig iluvatar.arda.lan
+
+; <<>> DiG 9.20.1 <<>> iluvatar.arda.lan
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 30082
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: 9813ba7ebed804280100000067e50d260d194282694090df (good)
+;; QUESTION SECTION:
+;iluvatar.arda.lan.		IN	A
+
+;; ANSWER SECTION:
+iluvatar.arda.lan.	3600	IN	A	172.16.1.30
+
+;; Query time: 3 msec
+;; SERVER: 172.16.1.252#53(172.16.1.252) (UDP)
+;; WHEN: Thu Mar 27 09:32:38 CET 2025
+;; MSG SIZE  rcvd: 90

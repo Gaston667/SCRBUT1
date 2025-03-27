@@ -150,3 +150,7 @@ For more details see tracepath(8).
 Explication: On remarque que traceroute n'est pas intaller car on a une sortie "commande not found".
 
 
+---------------------------------- Question 2 (II) ----------------------------------------
+
+
+tcpdump -i any -w tracepath-trace.txt -vvv '(src host <votre-IP> or dst host <votre-IP>)'

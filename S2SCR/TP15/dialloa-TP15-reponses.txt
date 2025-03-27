@@ -1,6 +1,97 @@
 Algassimou Pellel Diallo TP15
 
----------------- Question 1 ------------------
+---------------- Question 1 (I)  ------------------
+    nameserver 172.16.1.252
+    nameserver 172.16.1.253
+    Explication:  On dois verifer dans /etc/resolv.conf
+
+---------------- Question 2 (I)  ------------------
+
+---------------------- II ------------------------
+---------------- Question 1 (II)  ------------------
+    
+    [dialloa@vm-dialloa ~]$ tshark -i enp6s18 -nlV -f "host 172.16.10.40 and host 172.16.1.252  and not arp" | tee traceDNS.txt
+
+    Explication: 
 
 
-Explication:  =on dois verifer dans /etc/resolv.conf
+---------------- Question 2 (II)  ------------------
+
+    [dialloa@vm-dialloa ~]$ dig iluvatar.arda.lan
+    
+    Queries
+        iluvatar.arda.lan: type A, class IN
+            Name: iluvatar.arda.lan
+            [Name Length: 17]
+            [Label Count: 3]
+            Type: A (1) (Host Address)
+            Class: IN (0x0001)
+    Answers
+        iluvatar.arda.lan: type A, class IN, addr 172.16.1.30
+            Name: iluvatar.arda.lan
+            Type: A (1) (Host Address)
+            Class: IN (0x0001)
+            Time to live: 3600 (1 hour)
+            Data length: 4
+            Address: 172.16.1.30
+
+    Pour voir +, verifie le fichier traceDNS.log
+   
+
+---------------- Question 3 (II)  ------------------
+    Explication: En analysant le resultat de la trace de la commande "dig iluvatar.arda.lan", si on s'interesse
+    a la frame 2 dans la section Domain Name System (response) dans Answers on peut voir une ligne 
+    qui contient le type A cela veut dire que le serveur nous donne  l'IPV4 de la machine qui coredpond a iluvatar.arda.lan. 
+    iluvatar.arda.lan: type A, class IN, addr 172.16.1.30
+
+---------------- Question 4 (II)  ------------------
+    Transaction ID: 0x7582
+    Flags: 0x8580 Standard query response, No error
+        1... .... .... .... = Response: Message is a response
+        .000 0... .... .... = Opcode: Standard query (0)
+        .... .1.. .... .... = Authoritative: Server is an authority for domain
+        .... ..0. .... .... = Truncated: Message is not truncated
+        .... ...1 .... .... = Recursion desired: Do query recursively
+        .... .... 1... .... = Recursion available: Server can do recursive queries
+        .... .... .0.. .... = Z: reserved (0)
+        .... .... ..0. .... = Answer authenticated: Answer/authority portion was not authenticated by the server
+        .... .... ...0 .... = Non-authenticated data: Unacceptable
+        .... .... .... 0000 = Reply code: No error (0)
+    Questions: 1
+    Answer RRs: 1
+    Authority RRs: 0
+    Additional RRs: 1
+    Pour voir +, verifie le fichier traceDNS.log
+
+    Explication: 
+
+
+---------------- Question 5 (II)  ------------------
+
+Explication:  Dans l'affichage fourni par dig, le serveur precise qu'il est ou non une autorité
+sur le nom de domaine soumis dans la question en marquant dans ;; flags: qr aa rd ra; le flag aa
+
+
+---------------- Question 6 (II)  ------------------
+
+    Answers
+        iluvatar.arda.lan: type A, class IN, addr 172.16.1.30
+            Name: iluvatar.arda.lan
+            Type: A (1) (Host Address)
+            Class: IN (0x0001)
+            Time to live: 3600 (1 hour)
+            Data length: 4
+            Address: 172.16.1.30
+
+    Explication: Dans la section Answers dans la Frame 2 on peut voir que le temps de vie (Time to live) est egale à 3600 (1 heur).
+        Ce temps de vie corrpond au temps que la ressource doit passer dans le cache du DNS local (172.16.1.252). Ce systeme de temps
+        de vie permet au serveur de local de repondre rapidement et aussi permet de ne pas surcharger les serveur de nom avec les meme requete tout le temps 
+
+
+
+
+
+note:
+le fai que le serveur a l'hautorité est indique par la flag aa 
+
+la section hautorité le 0 est juste le nombre de ligne dans cette section
