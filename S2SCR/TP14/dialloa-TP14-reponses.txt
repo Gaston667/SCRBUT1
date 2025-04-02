@@ -154,3 +154,127 @@ Explication: On remarque que traceroute n'est pas intaller car on a une sortie "
 
 
 tcpdump -i any -w tracepath-trace.txt -vvv '(src host <votre-IP> or dst host <votre-IP>)'
+
+
+ici:
+
+Question 1 (II)
+
+[dialloa@vm-dialloa ~]$ traceroute
+bash: traceroute: command not found
+
+[dialloa@vm-dialloa ~]$ tracepath
+Usage
+  tracepath [options] <destination>
+
+Options:
+  -4             use IPv4
+  -6             use IPv6
+  -b             print both name and IP
+  -l <length>    use packet <length>
+  -m <hops>      use maximum <hops>
+  -n             no reverse DNS name resolution
+  -p <port>      use destination <port>
+  -V             print version and exit
+  <destination>  DNS name or IP address
+
+Explication :
+La commande traceroute n'est pas installée sur le système, on obtient une erreur "command not found".
+On utilise donc tracepath, qui est une alternative intégrée sur certaines distributions Linux. Elle permet aussi de tracer le chemin des paquets vers une destination IP ou un nom DNS.
+✅ Question 2 (II)
+
+[dialloa@vm-dialloa ~]$ sudo tcpdump -i any -w tracepath-trace.txt -vvv '(src host 172.16.10.19 or dst host 172.16.10.19)'
+
+Explication :
+Cette commande lance tcpdump pour capturer tout le trafic réseau impliquant l'adresse IP 172.16.10.19, c’est-à-dire la machine de Diallo.
+
+    -i any : capture sur toutes les interfaces réseau (ethernet, loopback, wifi, etc.).
+
+    -w tracepath-trace.txt : sauvegarde la capture dans un fichier pour analyse ultérieure.
+
+    -vvv : affiche un niveau de détail maximal.
+
+    Le filtre (src host ... or dst host ...) : sélectionne uniquement les paquets où Diallo est soit l’émetteur soit le récepteur.
+
+Cette étape est préparatoire, elle permet d’enregistrer les paquets qui vont être générés par tracepath dans la question suivante.
+
+Tu veux que je continue à traiter les questions 3 et 4 (II) aussi dans ce format ?
+You said:
+continue sur tout le II
+ChatGPT said:
+
+Super ! Je continue tout le reste de l'EXO 2 (II) dans le même format clair : commande + explication, jusqu’à la fin.
+------------------------------------ EXO 2 (II) (suite) -------------------------------------------
+✅ Question 3 (II)
+
+[dialloa@vm-dialloa ~]$ tracepath -n www.google.fr
+
+Explication :
+On lance la commande tracepath vers la destination www.google.fr.
+
+    L’option -n permet d’afficher uniquement les adresses IP, sans essayer de résoudre les noms de domaine (c’est plus rapide et plus lisible).
+
+Cette commande envoie plusieurs paquets IP avec des TTL croissants pour découvrir le chemin (les routeurs) que prend un paquet pour atteindre Google.
+C’est une alternative légère à traceroute.
+✅ Question 4 (II)
+Étape 1 – Lire les paquets capturés dans tcpdump
+
+[dialloa@vm-dialloa ~]$ tcpdump -r tracepath-trace.txt -vvv
+
+Explication :
+On lit le fichier tracepath-trace.txt qui contient le trafic capturé pendant l’exécution de tracepath.
+Le flag -vvv permet d’obtenir un affichage très détaillé, utile pour voir les paquets ICMP (qui signalent les erreurs comme TTL expiré).
+Étape 2 – Aérer le fichier pour faciliter la lecture avec sed
+
+[dialloa@vm-dialloa ~]$ sed '/^IP /G' tracepath-trace.txt > tracepath-clean.txt
+
+Explication :
+Cette commande insère une ligne vide entre chaque ligne commençant par "IP " dans le fichier. Cela permet de rendre la lecture du fichier plus claire, surtout quand on a beaucoup de paquets ICMP.
+Étape 3 – Rechercher les messages ICMP TTL exceeded (temps expiré)
+
+[dialloa@vm-dialloa ~]$ grep "ICMP time exceeded in-transit" tracepath-clean.txt
+
+Explication :
+Cette commande extrait uniquement les paquets ICMP qui disent :
+
+    "Le TTL du paquet est arrivé à zéro chez moi, donc je l’ai supprimé."
+
+Chaque message correspond à un routeur rencontré par tracepath. On peut ainsi identifier les routeurs qui ont répondu pendant le trajet.
+🧪 Sous-questions d’analyse
+✅ (a) Identifier le routeur H (celui qui n’apparaît qu’une seule fois)
+
+[dialloa@vm-dialloa ~]$ grep "ICMP time exceeded in-transit" tracepath-clean.txt | cut -d ' ' -f 3 | sort | uniq -c
+
+Explication :
+On compte combien de fois chaque adresse IP apparaît dans les réponses ICMP.
+Le routeur H est celui qui n’apparaît qu’une seule fois, donc qui n’a répondu qu’à un seul TTL.
+✅ (b) Avec quel TTL ces paquets ont-ils été émis ?
+
+[dialloa@vm-dialloa ~]$ grep ttl tracepath-clean.txt
+
+Explication :
+On cherche les valeurs ttl dans les paquets envoyés.
+Chaque paquet tracepath est envoyé avec un TTL différent (1, puis 2, puis 3…), pour que chaque routeur réponde à un moment différent.
+Comparer le TTL avec la position du routeur H dans la sortie tracepath.
+✅ (c) Quelle valeur de TTL à l’arrivée en H ?
+
+Pas besoin de commande, on le déduit :
+
+Explication :
+Si le routeur H renvoie "ICMP time exceeded", c’est que le paquet est arrivé avec TTL = 0.
+C’est automatique : ICMP time exceeded = TTL expiré = valeur de TTL à l’arrivée = 0.
+✅ (d) Autres messages ICMP visibles
+
+[dialloa@vm-dialloa ~]$ grep "ICMP" tracepath-clean.txt
+
+Explication :
+On cherche tous les paquets ICMP visibles dans la trace.
+On peut voir :
+
+    ICMP echo reply → réponse à un ping
+
+    ICMP destination unreachable → machine inaccessible
+
+    ICMP redirect → autre chemin suggéré
+
+Chaque message ICMP a une signification spécifique. Tu peux te référer au RFC 792 si tu veux aller plus loin.

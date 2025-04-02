@@ -3,16 +3,31 @@ Algassimou Pellel Diallo TP15
 ---------------- Question 1 (I)  ------------------
     nameserver 172.16.1.252
     nameserver 172.16.1.253
-    Explication:  On dois verifer dans /etc/resolv.conf
+    
+    Explication: 
+        Cette commande affiche le contenu du fichier /etc/resolv.conf, qui liste les serveurs DNS 
+        utilisés par le système. Cela permet de vérifier à quelles adresses IP les requêtes DNS seront envoyées.
 
 ---------------- Question 2 (I)  ------------------
+    [dialloa@vm-dialloa S2SCR]$ host 172.16.1.252
+    252.1.16.172.in-addr.arpa domain name pointer ns3.iut-fbleau.fr.
 
+    Explication:
+        La commande host permet de faire une résolution inverse : elle prend une adresse IP et cherche
+        le nom de domaine associé (s'il existe). Ici, on demande au système : " Quel est le nom associé 
+        à l'adresse IP du serveur DNS 172.16.1.252 ". Cela permet de vérifier si ce serveur DNS a bien un nom, 
+        ce qui peut être utile pour diagnostiquer ou comprendre l’organisation du réseau.
+        
 ---------------------- II ------------------------
 ---------------- Question 1 (II)  ------------------
     
-    [dialloa@vm-dialloa ~]$ tshark -i enp6s18 -nlV -f "host 172.16.10.40 and host 172.16.1.252  and not arp" | tee traceDNS.txt
+    [dialloa@vm-dialloa ~]$ tshark -i enp6s18 -nlV -f "host 172.16.10.40 and host 172.16.1.252  and not arp" | tee traceDNS.log
 
     Explication: 
+    La commande tshark capture le trafic réseau sur l'interface enp6s18 entre la machine
+    locale (172.16.10.40) et le serveur DNS (172.16.1.252), en ignorant les paquets ARP.
+    Le résultat montre les détails du paquet DNS, comme l'adresse source/destination, les ports UDP, et les données DNS.
+    Le fichier traceDNS.log garde une copie complète de cette trace.
 
 
 ---------------- Question 2 (II)  ------------------
@@ -39,10 +54,11 @@ Algassimou Pellel Diallo TP15
    
 
 ---------------- Question 3 (II)  ------------------
-    Explication: En analysant le resultat de la trace de la commande "dig iluvatar.arda.lan", si on s'interesse
-    a la frame 2 dans la section Domain Name System (response) dans Answers on peut voir une ligne 
-    qui contient le type A cela veut dire que le serveur nous donne  l'IPV4 de la machine qui coredpond a iluvatar.arda.lan. 
-    iluvatar.arda.lan: type A, class IN, addr 172.16.1.30
+    Explication: En analysant le résultat de la commande dig iluvatar.arda.lan, 
+    si l’on observe la frame 2 dans la section Domain Name System (response) puis Answers, 
+    on y trouve une ligne indiquant le type A.
+    Cela signifie que le serveur a renvoyé l’adresse IPv4 correspondant au nom iluvatar.arda.lan, 
+    soit : iluvatar.arda.lan: type A, class IN, addr 172.16.1.30.
 
 ---------------- Question 4 (II)  ------------------
     Transaction ID: 0x7582
@@ -64,12 +80,31 @@ Algassimou Pellel Diallo TP15
     Pour voir +, verifie le fichier traceDNS.log
 
     Explication: 
+        Dans la section header de la réponse dig, on trouve plusieurs informations importantes :
+
+    Transaction ID: 0x7582 : identifiant de la requête DNS.
+
+    Flags: 0x8580 indique plusieurs choses :
+
+        qr = 1 c’est une réponse (pas une requête),
+
+        aa = 1 le serveur est autoritaire pour le domaine demandé,
+
+        rd = 1 la récursivité était demandée,
+
+        ra = 1 le serveur accepte les requêtes récursives,
+
+        rcode = 0 pas d’erreur.
 
 
 ---------------- Question 5 (II)  ------------------
 
-Explication:  Dans l'affichage fourni par dig, le serveur precise qu'il est ou non une autorité
-sur le nom de domaine soumis dans la question en marquant dans ;; flags: qr aa rd ra; le flag aa
+Explication:  
+    Dans la sortie de la commande dig, on peut voir la ligne suivante :
+    ;; flags: qr aa rd ra;
+    Le flag aa (Authoritative Answer) indique que le serveur est autoritaire 
+    pour le nom de domaine iluvatar.arda.lan. Cela signifie que le serveur possède directement
+    l’information et ne l’a pas obtenue via une autre source ou par cache.
 
 
 ---------------- Question 6 (II)  ------------------
@@ -83,11 +118,104 @@ sur le nom de domaine soumis dans la question en marquant dans ;; flags: qr aa r
             Data length: 4
             Address: 172.16.1.30
 
-    Explication: Dans la section Answers dans la Frame 2 on peut voir que le temps de vie (Time to live) est egale à 3600 (1 heur).
-        Ce temps de vie corrpond au temps que la ressource doit passer dans le cache du DNS local (172.16.1.252). Ce systeme de temps
-        de vie permet au serveur de local de repondre rapidement et aussi permet de ne pas surcharger les serveur de nom avec les meme requete tout le temps 
+    Explication: 
+        Dans la section Answers de la frame 2, on voit que le champ Time to live (TTL)
+        est égal à 3600 secondes (soit 1 heure). Ce TTL indique la durée pendant laquelle
+        l’adresse IP 172.16.1.30 peut rester en cache dans le DNS local (172.16.1.252),
+        sans refaire de requête.
+        Cela permet :
+            d’accélérer les prochaines résolutions,
+            d’éviter de surcharger les serveurs DNS avec les mêmes questions répétées.
 
+---------------- Question 7 (II)  -----------------------
+    tcpdump -i enp6s18 -n -vvv port 53 and host 172.16.1.252 -w tcpdumpDNS.log
 
+    Explication: 
+        Cette commande capture le trafic DNS (port 53) entre ta machine et le serveur 172.16.1.252, via tcpdump.log
+        Les options :
+
+            -i enp6s18 : interface réseau,
+
+            -n : pas de résolution de noms,
+
+            -vvv : affichage très détaillé,
+
+            -w traceTCPDNS.log : sauvegarde dans un fichier log pour analyse.
+
+---------------- Question 7 (II)  ----------------------
+    tcpdump -i enp6s18 -n -vvv port 53 and host 172.16.1.252 -w traceTCPDNS.pcap
+
+    Explication :
+    Cette commande capture le trafic DNS (port 53) entre ta machine et le serveur 172.16.1.252, via tcpdump.
+    Les options :
+
+    -i enp6s18 : interface réseau,
+
+    -n : pas de résolution de noms,
+
+    -vvv : affichage très détaillé,
+
+    -w traceTCPDNS.pcap : sauvegarde dans un fichier .pcap pour analyse avec Wireshark.
+    Dans ce fichier, on pourra retrouver les mêmes infos que dans tshark : type de requête, adresse IP, TTL, flags, etc.
+
+---------------- Question 8 (II)  ----------------------
+dig arda.com
+
+Explication :
+Quand on interroge arda.com avec dig, on refait comme pour iluvatar.arda.lan les questions 1, 2 et 5.
+Mais cette fois, dans le header, on remarque que le flag aa n’est pas présent.
+Différence principale :
+
+    Pour iluvatar.arda.lan, le serveur est autoritaire → flag aa présent.
+
+    Pour arda.com, le serveur n’est pas autoritaire → flag aa absent.
+
+Cela signifie que le serveur DNS a dû obtenir la réponse via un autre serveur (résolution récursive).
+
+----------------   (III)  ----------------------
+------------ Question 1 (III) ----------------------
+Question 1 (III)
+
+dig vintage.com
+
+Explication :
+Quand tu exécutes dig vintage.com, tu verras dans la section Answer un champ TTL (Time To Live), par exemple :
+
+vintage.com.  3210  IN  A  93.184.216.34
+
+Le nombre 3210 correspond au temps (en secondes) pendant lequel cette information reste valide en cache.
+
+👉 Si tu relances dig juste après, tu remarqueras que le TTL a diminué (ex. : 3197), ce qui signifie que la donnée a été récupérée depuis le cache local.
+
+Conclusion :
+Le TTL diminue à chaque seconde, ce qui montre que la réponse est en cache et qu’elle expire progressivement.
+🔹 Question 2 (III)
+
+dig iluvatar.arda.lan
+
+Explication :
+Lorsque tu interroges iluvatar.arda.lan plusieurs fois, tu peux remarquer deux comportements :
+
+    Cas 1 : Si la réponse vient du cache local, le TTL diminue comme dans l'exemple précédent.
+
+    Cas 2 : Si le serveur est autoritaire et redonne la réponse à chaque fois, le TTL est réinitialisé (ex. : toujours 3600).
+
+Conclusion :
+Pour un domaine comme iluvatar.arda.lan, si le TTL reste constant à chaque requête, c’est que le resolver refait la requête au serveur à chaque fois, donc pas de cache utilisé.
+🔹 Question 3 (III)
+
+Réponse :
+Oui, il est possible de forcer une requête DNS à ignorer le cache.
+
+Pour cela, on utilise l’option suivante dans dig :
+
+dig +norecurse
+
+Mais attention :
+
+    Cela empêche l'utilisation de la résolution récursive, donc le serveur contacté ne va pas interroger d'autres serveurs si l'info n’est pas en cache ou dans sa zone.
+
+    Le RFC 1035 (spécification DNS) n’interdit pas de forcer ou ignorer le cache, mais c’est au client ou au serveur de choisir selon les options envoyées (comme +norecurse ou +nocache avec certains outils).
 
 
 
@@ -95,3 +223,4 @@ note:
 le fai que le serveur a l'hautorité est indique par la flag aa 
 
 la section hautorité le 0 est juste le nombre de ligne dans cette section
+
