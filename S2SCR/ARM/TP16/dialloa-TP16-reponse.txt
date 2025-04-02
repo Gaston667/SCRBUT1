@@ -1,0 +1,36 @@
+------- SCR.2.1 TP 16 -------
+
+------- Question 1 ----------
+------- Question 2 ----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rappe: 
+    +Le descripteur de ficher  associe à 
+        -> la sortie standar des erreurs est le numero 2 (2>/dev/null).
+        -> la sortie standar des résultat est le numero 1.
+        -> la sortie standar est le numero 0.
+
+Sémentique de l'appelle systeme write qui est codé en c.
+On fais man 2 write pour voir la doc
+pourquoi le 2 car c'est le write de la section 2 de la page manuelle qui nous interesse, le write codé en c.
+
+    write(x; y; z)
+        x -> entier: on met ici le descripteur de ficher qu'il faut
+        y -> buf qii continet l'adresse dans la memoire du processus, adresser où se trouve les octets à écrire
+        z -> le nombre d'octet a ecrire en les considerant à partir du buf.

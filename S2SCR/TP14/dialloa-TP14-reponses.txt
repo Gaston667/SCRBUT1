@@ -256,14 +256,13 @@ Explication :
 On cherche les valeurs ttl dans les paquets envoyés.
 Chaque paquet tracepath est envoyé avec un TTL différent (1, puis 2, puis 3…), pour que chaque routeur réponde à un moment différent.
 Comparer le TTL avec la position du routeur H dans la sortie tracepath.
-✅ (c) Quelle valeur de TTL à l’arrivée en H ?
+(c) Quelle valeur de TTL à l’arrivée en H ?
 
 Pas besoin de commande, on le déduit :
 
 Explication :
 Si le routeur H renvoie "ICMP time exceeded", c’est que le paquet est arrivé avec TTL = 0.
 C’est automatique : ICMP time exceeded = TTL expiré = valeur de TTL à l’arrivée = 0.
-✅ (d) Autres messages ICMP visibles
 
 [dialloa@vm-dialloa ~]$ grep "ICMP" tracepath-clean.txt
 
@@ -271,10 +270,10 @@ Explication :
 On cherche tous les paquets ICMP visibles dans la trace.
 On peut voir :
 
-    ICMP echo reply → réponse à un ping
+    ICMP echo reply > réponse à un ping
 
-    ICMP destination unreachable → machine inaccessible
+    ICMP destination unreachable > machine inaccessible
 
-    ICMP redirect → autre chemin suggéré
+    ICMP redirect > autre chemin suggéré
 
 Chaque message ICMP a une signification spécifique. Tu peux te référer au RFC 792 si tu veux aller plus loin.
