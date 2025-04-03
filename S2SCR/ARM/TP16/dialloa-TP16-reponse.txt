@@ -1,7 +1,31 @@
 ------- SCR.2.1 TP 16 -------
 
 ------- Question 1 ----------
+
+    dialloa@rp70:~/SCR/S2SCR/ARM/TP16$ uname -m
+    aarch64
+
+    Explication: On constate que la machine a un os de 64 bits
+
 ------- Question 2 ----------
+    dialloa@rp70:~/SCR/S2SCR/ARM/TP16$ lscpu
+    Architecture:                    aarch64
+    CPU op-mode(s):                  32-bit, 64-bit
+    Byte Order:                      Little Endian
+    CPU(s):                          4
+    On-line CPU(s) list:             0-3
+    Thread(s) per core:              1
+    Core(s) per socket:              4
+    Socket(s):                       1
+    Vendor ID:                       ARM
+    Model:                           4
+    Model name:                      Cortex-A53
+    Stepping:                        r0p4
+    CPU max MHz:                     1200.0000
+    CPU min MHz:                     600.0000
+
+
+    Explication: On constate
 
 
 
@@ -11,12 +35,30 @@
 
 
 
+Ficher miniml:
 
+/*
+Lines enclosed here are comments
+A small program: prints "Hello World!"
+*/
 
+// From // to the end of this line is a comment: next are directives to the assembler
+    .equ SYS_EXIT, 93
+    .equ SYS_WRITE, 64
 
+    .data // tells assembler to assemble the following in the data section
 
+    // in the text (code) section
+    .globl _start // _start is there where the program starts,
+                  // .globl makes it visible to the linker
 
+_start:
+       
 
+mov x0, #0     // in x0 put the value you want to exit with
+mov w8,#SYS_EXIT
+svc #0
+.end
 
 
 
@@ -26,6 +68,9 @@ Rappe:
         -> la sortie standar des résultat est le numero 1.
         -> la sortie standar est le numero 0.
 
+Note:
+    Pensez à placer dans un répertoire ARM tous les fichiers concernant des programmes ARM.
+    Pour les commande ld, gdb et les execution de programmes ARM, il faut se connecte par ssh à 172.16.3.170
 Sémentique de l'appelle systeme write qui est codé en c.
 On fais man 2 write pour voir la doc
 pourquoi le 2 car c'est le write de la section 2 de la page manuelle qui nous interesse, le write codé en c.

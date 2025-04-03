@@ -1,0 +1,9 @@
+
+
+
+
+
+Note: 
+    les addr sont toujours codé sur 64 bits donc on use des x
+    .word reserve des addr de 32 bits
+    .quad fais sur 64 bits
