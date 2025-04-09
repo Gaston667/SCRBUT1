@@ -1,0 +1,49 @@
+note:
+
+asr: permet de completer par le bite de signe  or que lsl lui ne complete pas
+
+    .equ SYS_EXIT, 93
+
+    .data // tells assembler to assemble the following in the data section
+int1:.quad 1 //Pour les addr en 64 bits
+int2:.quad -8 //Pour les addr en 64 bits
+    .text
+
+    // in the text (code) section
+    .globl _start // _start is there where the program starts,
+                  // .globl makes it visible to the linker
+
+_start:
+    adr x1,int1
+    ldr x0,[x1] 
+    lsl x0,x0,#3
+    lsr x0,x0,#1
+
+    adr x1,int2
+    ldr x0,[x1]
+    asr x0,x0,#1
+
+mov x0, #0     // in x0 put the value you want to exit with
+mov w8,#SYS_EXIT
+svc #0
+.end
+
+
+
+
+
+dialloa@rp70:~/SCR/S2SCR/ARM/TP18$ as -gstabs -o shift-experiment.o shift-experiment.s 
+dialloa@rp70:~/SCR/S2SCR/ARM/TP18$ ld -O0 shift-experiment.o
+dialloa@rp70:~/SCR/S2SCR/ARM/TP18$ objdump -d a.out 
+
+a.out:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+00000000004000b0 <_start>:
+  4000b0:	8b001001 	add	x1, x0, x0, lsl #4
+  4000b4:	d2800000 	mov	x0, #0x0                   	// #0
+  4000b8:	52800ba8 	mov	w8, #0x5d                  	// #93
+  4000bc:	d4000001 	svc	#0x0
+dialloa@rp70:~/SCR/S2SCR/ARM/TP18$ 

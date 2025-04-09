@@ -1,9 +1,137 @@
+/*
+Lines enclosed here are comments
+A small program: prints "Hello World!"
+*/
+
+// From // to the end of this line is a comment: next are directives to the assembler
+    .equ SYS_EXIT, 93
+
+    .data // tells assembler to assemble the following in the data section
+    int:.quad //Pour les addr en 64 bits
+    int32:.word //Pour les addr en 32 bits
+    .text
+
+    // in the text (code) section
+    .globl _start // _start is there where the program starts,
+                  // .globl makes it visible to the linker
+
+_start:
+    adr x1,int
+    ldr x0, [x1] // Charge les 64 bits dans x0
+
+    ldr x1, =int32        // Adresse de int32 dans x1  
+    ldr w0, [x1]          // (**) Charge 32 bits dans w0 (modifie seulement les 32 bits bas de x0)
+
+
+       
+
+mov x0, #0     // in x0 put the value you want to exit with
+mov w8,#SYS_EXIT
+svc #0
+.end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------- II -------------------------------
+-------------------- 1. -------------------------------
+
+    .equ SYS_EXIT, 93
+
+    .data // tells assembler to assemble the following in the data section
+    int1:.quad 2 //Pour les addr en 64 bits
+    int2:.quad -3 //Pour les addr en 64 bits
+    .text
+
+    // in the text (code) section
+    .globl _start // _start is there where the program starts,
+                  // .globl makes it visible to the linker
+
+_start:
+    adr x3,int1
+    ldr x0, [x3] 
+
+    ldr x3, =int2       
+    ldr x1, [x3]
+
+    add x2,x0,x1  
+
+
+       
+
+mov x0, #0     // in x0 put the value you want to exit with
+mov w8,#SYS_EXIT
+svc #0
+.end
+
+
+
+(gdb) b 14
+Breakpoint 1 at 0x4000b4: file add-int.s, line 14.
+(gdb) run
+Starting program: /export/home/info-but24/dialloa/SCR/S2SCR/ARM/TP17/a.out 
+
+Breakpoint 1, _start () at add-int.s:14
+14	    ldr x0, [x3] 
+(gdb) i r x0 x1 x2 x3
+x0             0x0                 0
+x1             0x0                 0
+x2             0x0                 0
+x3             0x4100d8            4260056
+(gdb) s
+16	    ldr x3, =int2       
+(gdb) i r x0 x1 x2 x3
+x0             0x2                 2
+x1             0x0                 0
+x2             0x0                 0
+x3             0x4100d8            4260056
+(gdb) s
+17	    ldr x1, [x3]
+(gdb) i r x0 x1 x2 x3
+x0             0x2                 2
+x1             0x0                 0
+x2             0x0                 0
+x3             0x4100e0            4260064
+(gdb) s
+19	    add x2,x0,x1  
+(gdb) i r x0 x1 x2 x3
+x0             0x2                 2
+x1             0xfffffffffffffffd  -3
+x2             0x0                 0
+x3             0x4100e0            4260064
+(gdb) s              
+24	mov x0, #0     // in x0 put the value you want to exit with
+(gdb) s
+25	mov w8,#SYS_EXIT
+(gdb) i r x0 x1 x2 x3
+x0             0x0                 0
+x1             0xfffffffffffffffd  -3
+x2             0xffffffffffffffff  -1
+x3             0x4100e0            4260064
+(gdb) s
+
 
 
 
 
 
 Note: 
-    les addr sont toujours codé sur 64 bits donc on use des x
-    .word reserve des addr de 32 bits
-    .quad fais sur 64 bits
+les registres ont deux formes :
+    Xn : registre 64 bits
+    Wn : les 32 bits bas du registre Xn
+
+Extentions signe veut dire je propage le bite de signe utilise par exemple l'addition
+
+h half 2 octes 
+b octes 1
+w word 4 octets

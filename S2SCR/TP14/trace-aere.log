@@ -1,0 +1,46 @@
+
+bc:24:11:ce:79:c2 > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 255: (tos 0x0, ttl 64, id 42025, offset 0, flags [DF], proto UDP (17), length 241)
+    172.16.10.40.138 > 172.16.255.255.138: [bad udp cksum 0x6337 -> 0x4744!] UDP, length 213
+
+bc:24:11:ce:79:c2 > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 92: (tos 0x0, ttl 64, id 42026, offset 0, flags [DF], proto UDP (17), length 78)
+    172.16.10.40.137 > 172.16.255.255.137: [bad udp cksum 0x6294 -> 0x3c4e!] UDP, length 50
+
+bc:24:11:ce:79:c2 > c6:74:2d:e1:04:ba, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 1, id 0, offset 0, flags [DF], proto UDP (17), length 1500)
+    172.16.10.40.40672 > 142.250.179.99.44444: [bad udp cksum 0xfe6f -> 0x84d2!] UDP, length 1472
+
+c6:74:2d:e1:04:ba > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 590: (tos 0xc0, ttl 64, id 53955, offset 0, flags [none], proto ICMP (1), length 576)
+    172.16.1.254 > 172.16.10.40: ICMP time exceeded in-transit, length 556
+	(tos 0x0, ttl 1, id 0, offset 0, flags [DF], proto UDP (17), length 1500)
+    172.16.10.40.40672 > 142.250.179.99.44444: UDP, length 1472
+
+bc:24:11:ce:79:c2 > c6:74:2d:e1:04:ba, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 1, id 0, offset 0, flags [DF], proto UDP (17), length 1500)
+    172.16.10.40.40672 > 142.250.179.99.44445: [bad udp cksum 0xfe6f -> 0x41b5!] UDP, length 1472
+
+c6:74:2d:e1:04:ba > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 590: (tos 0xc0, ttl 64, id 53956, offset 0, flags [none], proto ICMP (1), length 576)
+    172.16.1.254 > 172.16.10.40: ICMP time exceeded in-transit, length 556
+	(tos 0x0, ttl 1, id 0, offset 0, flags [DF], proto UDP (17), length 1500)
+    172.16.10.40.40672 > 142.250.179.99.44445: UDP, length 1472
+
+bc:24:11:ce:79:c2 > c6:74:2d:e1:04:ba, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 2, id 0, offset 0, flags [DF], proto UDP (17), length 1500)
+    172.16.10.40.40672 > 142.250.179.99.44446: [bad udp cksum 0xfe6f -> 0x5ad2!] UDP, length 1472
+
+c6:74:2d:e1:04:ba > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 70: (tos 0x0, ttl 254, id 0, offset 0, flags [none], proto ICMP (1), length 56)
+    37.58.131.238 > 172.16.10.40: ICMP time exceeded in-transit, length 36
+	(tos 0x0, ttl 1, id 0, offset 0, flags [DF], proto UDP (17), length 1500)
+    172.16.10.40.40672 > 142.250.179.99.44446: UDP, length 1472
+
+bc:24:11:ce:79:c2 > c6:74:2d:e1:04:ba, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 3, id 0, offset 0, flags [DF], proto UDP (17), length 1500)
+    172.16.10.40.40672 > 142.250.179.99.44447: [bad udp cksum 0xfe6f -> 0xe555!] UDP, length 1472
+
+c6:74:2d:e1:04:ba > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 110: (tos 0x0, ttl 253, id 14077, offset 0, flags [none], proto ICMP (1), length 96)
+    100.65.0.27 > 172.16.10.40: ICMP time exceeded in-transit, length 76
+	(tos 0x0, ttl 1, id 0, offset 0, flags [DF], proto UDP (17), length 1500)
+    172.16.10.40.40672 > 142.250.179.99.44447: UDP, length 1472
+
+bc:24:11:ce:79:c2 > c6:74:2d:e1:04:ba, ethertype IPv4 (0x0800), length 1514: (tos 0x0, ttl 4, id 0, offset 0, flags [DF], proto UDP (17), length 1500)
+    172.16.10.40.40672 > 142.250.179.99.44448: [bad udp cksum 0xfe6f -> 0x0185!] UDP, length 1472
+
+c6:74:2d:e1:04:ba > bc:24:11:ce:79:c2, ethertype IPv4 (0x0800), length 110: (tos 0x0, ttl 252, id 41810, offset 0, flags [none], proto ICMP (1), length 96)
+    100.121.1.230 > 172.16.10.40: ICMP time exceeded in-transit, length 76
+	(tos 0x0, ttl 1, id 0, offset 0, flags [DF], proto UDP (17), length 1500)
+    172.16.10.40.40672 > 142.250.179.99.44448: UDP, length 1472

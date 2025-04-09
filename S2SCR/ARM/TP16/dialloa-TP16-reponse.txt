@@ -25,7 +25,77 @@
     CPU min MHz:                     600.0000
 
 
-    Explication: On constate
+    Explication: On constate que le système est 64 bits, et qu’il utilise l’architecture ARM64 (aarch64).
+
+
+#include <unistd.h>
+#include <stdlib.h>
+
+int main(void){
+    write(1, "Hello World!\n", 13);
+    exit(0);
+}
+
+
+Explication:    
+    write(1, ...) : appelle le système pour écrire dans la sortie standard (1).
+    "Hello World!\n" : la chaîne à écrire
+    13 : le nombre d’octets à écrire (13 caractères)
+    exit(0) : termine proprement le programme
+    Ce programme c appelle directement les syscalls (write et exit) sans utiliser la bibliothèque standard comme printf.
+
+
+L’équivalent assembleur est :
+
+.equ SYS_EXIT, 93
+.equ SYS_WRITE, 64
+
+.data
+msg: .asciz "Hello World!\n"
+
+.text
+.globl _start
+_start:
+    mov x0, #1         // 1 sortie standard (stdout)
+    adr x1, msg        // x1 contient l’adresse de la chaîne
+    mov x2, #13        // longueur du message
+    mov w8, #SYS_WRITE // appel système WRITE (numéro 64)
+    svc #0             // exécute le syscall
+
+    mov x0, #0         // code de retour
+    mov w8, #SYS_EXIT  // appel système EXIT (numéro 93)
+    svc #0
+
+Explication :
+    x0, x1, x2 sont les registres où l’on place les arguments du syscall
+    w8 contient le numéro du syscall
+    svc #0 déclenche le supervise call (appel système)
+
+--------- Question 3 --------------------
+
+    $ as -gstabs -o printHW.o printHW.s
+    Utilise l’assembleur pour générer un fichier objet printHW.o
+    gstabs inclut les symboles de debug (pour GDB)
+
+    $ld -O0 printHW.o
+    Utilise le linker pour générer l’exécutable a.out
+
+
+-------- Question 4 -------------------------
+
+Lancement de GDB :
+gdb a.out
+
+run : lance l'exécution
+b 12 : pose un breakpoint à la ligne 12 (mov x0, #1)
+i r x0 x1 x2 w8 : affiche le contenu des registres
+x /s adresse : affiche la chaîne de caractères à une adresse mémoire
+s / step : exécute une instruction
+c / continue : continue l’exécution jusqu’à la fin
+
+Registres x0, x1, x2 contiennent respectivement : descripteur de fichier (1), adresse de la chaîne, longueur (13).
+w8 contient le numéro du syscall
+svc #0 déclenche l’appel système (WRITE ou EXIT)
 
 
 
@@ -34,7 +104,7 @@
 
 
 
-
+------------------------------------------------
 Ficher miniml:
 
 /*
@@ -59,6 +129,8 @@ mov x0, #0     // in x0 put the value you want to exit with
 mov w8,#SYS_EXIT
 svc #0
 .end
+
+
 
 
 
