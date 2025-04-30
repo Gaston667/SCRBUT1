@@ -1,0 +1,24 @@
+4. oui les trace sont coherente
+5.[dialloa@vm-dialloa TP20]$ sudo himage -l
+i13f0 (simple1.imn - Wed Apr 30 14:21:07 CEST 2025)
+[dialloa@vm-dialloa TP20]$ sudo imunes -b -e i13f0   // pour stoper correctement le processus bloquer  et que le terminate ne fonctionne pas correctment //
+Using experiment ID 'i13f0'.
+Stopping ngraphs and vimages...
+100.0%                                          
+Destroying links...
+100.0%                                          
+Shutting down netgraph nodes...
+100.0%                                          
+Shutting down vimages...
+100.0%                                          
+Cleanup completed in 1.569 seconds.
+[dialloa@vm-dialloa TP20]$ 
+
+
+II. avec une passerelle
+
+Enfaite il fallait configurer le custom roure static et desactiver le Enable automatic default route.
+
+
+
+III.
