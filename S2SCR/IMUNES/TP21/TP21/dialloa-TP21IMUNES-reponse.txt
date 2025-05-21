@@ -1,0 +1,20 @@
+
+
+Pour lancer imune il faut faire: sudo imunes &;
+
+Quand la case enable du bas n'est pas cocher il faut faire comme le tp20 pour la route par defaut 
+
+si elle est cocher il faut aller dans editor et rentrer une commande sous cette forme:
+ip route add x.x.x.x/x via x.x.x.x equivaut au premier  like x.x.x.x/x x.x.x.x .
+
+
+Configuration:
+ S3 peut cominuquer avec s4 selon l'enoncer  10.32.0.0/17 10.16.0.254
+ S4 peut cominuquer avec s3 et S5 selon l'enoncer 10.48.0.0/17 10.32.0.255 je les ip sont faut voir dasns imune
+ S5 peut cominuquer avec s6 et S7 selon l'enoncer 10.64.0.0/17 10.48.0.254
+
+
+
+
+
+ Warning: pour la comunication sur les passerelle on attend la fin de configuration sur les segments

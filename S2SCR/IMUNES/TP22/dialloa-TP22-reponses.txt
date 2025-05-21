@@ -1,0 +1,172 @@
+
+
+
+Objectif. Mise en œuvre d’un serveur DNS primaire sur une zone.
+
+
+3. Depuis un nœud, passer un ping vers un nœud en donnant le nom comme argument.
+Expliquer le résulat.
+
+
+root@eno:/# ping ruof
+ping: ruof: Temporary failure in name resolution
+
+
+
+
+I. Introduction.
+
+
+[yilmazk@vm-yilmazk TP22]$ uname -r
+6.6.50-1-lts
+
+
+[yilmazk@vm-yilmazk TP22]$ uname -a
+Linux vm-yilmazk 6.6.50-1-lts #1 SMP PREEMPT_DYNAMIC Sun, 08 Sep 2024 12:27:02 +0000 x86_64 GNU/Linux
+
+
+III. Configuration de osiris. La zone s’appelle tp.scr
+
+
+
+aller sur un terminal connecte toi a 
+sudo himage osiris apres avoir executer ton ds1.imn
+
+
+
+2)
+
+root@osiris:/etc/bind# named-checkzone tp.scr db.tp.scr     
+zone tp.scr/IN: loaded serial 2
+OK
+root@osiris:/etc/bind# 
+
+
+fichier tp.scr
+    
+root@osiris:/etc/bind# cat db.tp.scr
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	osiris.tp.scr. root.tp.scr. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	osiris.tp.scr.
+@	IN	A	192.168.1.158
+eno     IN      A       192.168.1.1
+owt     IN      A       192.168.1.2
+eerht   IN      A       192.168.1.3
+ruof    IN      A       192.168.1.4
+osiris  IN      A       192.168.1.158
+
+
+
+
+
+
+fichier tp.scr.inv
+
+root@osiris:/etc/bind# cat db.tp.scr.inv 
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	osiris.tp.scr. root.tp.scr. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	osiris.tp.scr.
+@	IN	A	192.168.1.158
+1       IN      PTR     eno.tp.scr.
+2       IN      PTR     otw.tp.scr.
+3       IN      PTR     eerht.tp.scr.
+4       IN      PTR     ruof.tp.scr.
+5       IN      PTR     osiris.tp.scr.
+
+
+
+
+3)
+
+root@osiris:/etc/bind# named-checkzone tp.scr db.tp.scr     
+zone tp.scr/IN: loaded serial 2
+OK
+root@osiris:/etc/bind# 
+
+
+
+root@osiris:/etc/bind# named-checkzone 1.168.192.in-addr.arpa db.tp.scr.inv
+zone 1.168.192.in-addr.arpa/IN: loaded serial 2
+OK
+
+
+
+4)
+Selon les recommandations en commentaire dans le fichier named.conf on place la declaration des zones dans named.conf.local
+
+
+
+5)
+
+root@osiris:/etc/bind# cat named.conf.local 
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "tp.scr" {
+type master;
+file "/etc/bind/db.tp.scr";
+}
+
+
+zone "1.168.192.in-addr.arpa" {
+type master;
+file "/etc/bind/db.tp.scr.inv";
+};
+
+
+
+
+
+
+
+6)
+
+root@osiris:/etc/bind# named-checkconf named.conf.local
+root@osiris:/etc/bind# 
+
+
+7)
+root@osiris:~# /etc/init.d/bind9 start 
+Starting domain name service...: bind9.
+
+
+8)
+nameserver 192.168.1.158
+domain tp.scr
+
+il faut faire ca dans le /etc/resolv.conf de root@eno
+
+
+
+9)
+root@eno:/# ping osiris
+PING osiris.tp.scr (192.168.1.158) 56(84) bytes of data.
+64 bytes from 192.168.1.158 (192.168.1.158): icmp_seq=1 ttl=64 time=0.365 ms
+64 bytes from 192.168.1.158 (192.168.1.158): icmp_seq=2 ttl=64 time=0.241 ms
+64 bytes from 192.168.1.158 (192.168.1.158): icmp_seq=3 ttl=64 time=0.134 ms
+64 bytes from 192.168.1.158 (192.168.1.158): icmp_seq=4 ttl=64 time=0.187 ms
+^Z
+[1]+  Stopped                 ping osiris

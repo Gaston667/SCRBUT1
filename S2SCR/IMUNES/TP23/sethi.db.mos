@@ -1,0 +1,21 @@
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	sethi.mos. root.tp.scr. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	sethi.mos.
+@	IN	NS  khepos.mos.
+
+sethi         IN      A       80.80.0.20
+kheops        IN      A       80.80.0.10
+host1         IN      A       80.80.0.1
+host2         IN      A       80.80.0.2
+host3         IN      A       80.80.0.3
+host4         IN      A       80.80.0.4
+host5         IN      A       80.80.0.5
+
