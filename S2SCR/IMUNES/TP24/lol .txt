@@ -1,0 +1,74 @@
+Voici une proposition claire et structurée pour expliquer la **démarche de recherche que tu as suivie** pour comprendre et utiliser les options DHCP, en te basant sur la page de manuel et la documentation officielle. Tu peux l’utiliser telle quelle dans un rapport ou une évaluation :
+
+---
+
+### Démarche de recherche et d’analyse – Options DHCP
+
+Pour mieux comprendre comment les options DHCP permettent de configurer les clients sur un réseau, j’ai adopté une **démarche progressive, méthodique et documentée**, structurée en plusieurs étapes :
+
+#### 1. **Consultation de la documentation locale (commande `man`)**
+
+Dans un premier temps, j’ai utilisé la commande suivante dans le terminal :
+
+```bash
+man dhcp-options
+```
+
+Cette commande m’a permis d’accéder à la **page de manuel** officielle des options DHCP fournies avec le paquet ISC DHCP. Ce manuel présente toutes les options standard déjà prises en charge par défaut par le serveur DHCP (par exemple `option routers`, `option domain-name-servers`, etc.), avec leur syntaxe et leur objectif.
+
+Exemple rencontré :
+
+```conf
+option routers 192.168.1.1;
+```
+
+Cette ligne indique que l’adresse IP du routeur par défaut à transmettre au client est 192.168.1.1. La documentation précise également que les adresses peuvent être listées dans un ordre de préférence.
+
+#### 2. **Compréhension de la structure des options DHCP**
+
+Grâce au `man`, j’ai compris que chaque option DHCP possède :
+
+* un **nom lisible** (ex. : `routers`, `domain-name-servers`)
+* un **code numérique** standardisé par l’IANA (Internet Assigned Numbers Authority), utilisé en interne par le protocole
+
+#### 3. **Recherche avancée pour les options non prédéfinies**
+
+Certaines options ne sont pas automatiquement disponibles dans le fichier de configuration. Pour ces cas, j’ai poursuivi ma recherche sur la **documentation officielle d’ISC DHCP**.
+
+J’ai consulté la page :
+
+```
+https://kb.isc.org/docs/isc-dhcp-41-manual-pages-dhcp-options
+```
+
+Et plus précisément la section intitulée **"DEFINING NEW OPTIONS"**.
+
+Cette section explique comment définir manuellement une nouvelle option à l’aide de la directive `option space` et d’un code numérique. Exemple :
+
+```conf
+option space myspace;
+option myspace.mycustomopt code 224 = text;
+```
+
+Cela permet d’ajouter des options personnalisées non présentes par défaut.
+
+#### 4. **Lien avec les standards RFC**
+
+J’ai également vérifié que les codes utilisés pour les options standards sont documentés dans les RFC, notamment dans :
+
+* RFC 2132 : DHCP Options and BOOTP Vendor Extensions
+* Site IANA : [https://www.iana.org/assignments/bootp-dhcp-parameters/bootp-dhcp-parameters.xhtml](https://www.iana.org/assignments/bootp-dhcp-parameters/bootp-dhcp-parameters.xhtml)
+
+---
+
+### Conclusion
+
+Cette démarche m’a permis :
+
+* de comprendre comment lire, écrire et modifier des options DHCP dans un fichier de configuration
+* de savoir comment ajouter des options personnalisées si elles ne sont pas supportées par défaut
+* d'utiliser des ressources fiables comme `man`, les RFC et la documentation officielle d’ISC
+
+---
+
+Souhaites-tu que je t’aide à intégrer ça dans un rapport ou à le présenter oralement ?

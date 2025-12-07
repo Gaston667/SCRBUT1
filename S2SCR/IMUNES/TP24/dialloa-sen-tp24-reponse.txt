@@ -1,0 +1,414 @@
+I. 
+    1. 
+        Commande:
+            root@DHCPsrv:/# apt list --installed | grep dhcp
+
+            WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+            isc-dhcp-client/oldoldstable,now 4.3.5-3+deb9u1 amd64 [installed]
+            isc-dhcp-common/oldoldstable,now 4.3.5-3+deb9u1 amd64 [installed,automatic]
+            isc-dhcp-relay/oldoldstable,now 4.3.5-3+deb9u1 amd64 [installed]
+            isc-dhcp-server/oldoldstable,now 4.3.5-3+deb9u1 amd64 [installed]
+            udhcpd/oldoldstable,now 1:1.22.0-19+b3 amd64 [installed]
+            root@DHCPsrv:/# 
+        Explication:
+            on remarque que le fichier est bien installer 
+    2.
+        Commande:
+
+
+        Explication:
+    3.
+        Commande:
+            root@DHCPsrv:/# whereis dhcpd
+            dhcpd: /usr/sbin/dhcpd /usr/share/man/man8/dhcpd.8.gz
+            root@DHCPsrv:/# 
+        Explication:
+            Le chemin de l'executable qui doit etre lancer est /usr/share/man/man8/dhcpd.8.gz
+            il s'apelle dchpd
+
+
+
+II.
+    1.
+        j'apprend que les option dejà definie dans le deamon du dhcp
+        s'utilisent comme suit "option {nom de l'option} {la vigule permet de separer les differente valeur}".
+        J'aprend aussi que L'option "routeurs" spécifie une liste d'adresses IP pour les routeurs du sous-réseau du client.
+        et les routeurs sont classés par ordre de préférence.
+
+    2.
+        Grace qu man j'ai comprs que chaque option du dhcp possède :
+         - une nom lisible ex(: routers, domain-name-serveur).
+            un code numerique unique standadisé par l'iana
+            utilisé en internen par les protocole 
+
+    3.
+        Certaines options ne sont pas automatiquement disponibles dans le fichier de configuration. Pour ces cas, j’ai poursuivi ma recherche sur la documentation officielle d’ISC DHCP.
+
+        J’ai consulté la page :
+
+        https://kb.isc.org/docs/isc-dhcp-41-manual-pages-dhcp-options
+
+        Et plus précisément la section intitulée "DEFINING NEW OPTIONS".
+
+        Cette section explique comment créer une option personnalisée dans le cas où une option définie dans une RFC n’est pas directement disponible par son nom dans les fichiers de configuration.
+        Cela peut arriver par exemple si :
+
+            Le serveur DHCP utilisé est ancien
+
+            L’option est récente ou peu utilisée
+
+            Le serveur ne connaît que son code numérique (et non son nom symbolique)
+
+        Dans ce cas, on peut définir soi-même une nouvelle option dans la configuration du serveur DHCP, en précisant :
+
+            Un espace de nommage personnalisé (option space)
+
+            Le nom de l’option
+
+            Son code numérique (attribué par l’IANA)
+
+            Et son type de données (texte, adresse IP, entier, etc.)
+
+        Dans la section du DEFINING NEW OPTIONS de la page manulle on apprend aussi:
+        Pour définir une nouvelle option, on doit lui choisir un nom qui n'est pas utilisé
+        pour une autre option. Par exemple, on ne peux pas choisir « host-name » comme nom d'option,
+        car le protocole DHCP définit déjà une option pour le host name,
+        Mai si le nom de notre option n'a parait pas deans la page manuelle on peut l'utiliser
+
+        Une fois que le nom est choisi on doit definir un code qui se situe hors de [224;254].
+
+        Exemple de définition personnalisée :
+
+        option space monreseau;
+        option monreseau.mycustomoption code 224 = text;
+
+        Puis, pour l’utiliser :
+
+        option monreseau.mycustomoption "Bienvenue sur le réseau de test";
+
+        Cela permet donc au serveur DHCP d’envoyer des informations spécifiques aux clients, même si elles ne font pas partie des
+        options standards gérées automatiquement.
+        Ce mécanisme de définition manuelle m’a permis de comprendre que le protocole DHCP est 
+        extensible, et que l’administrateur a la liberté d’ajouter des options selon les
+        besoins du réseau,
+        à condition de connaître le code associé à l’option selon l’IANA ou la RFC correspondante.
+
+        Les options sont declarer comme suit:
+
+        option "nom-de-optin" code "code-option" = definition ;
+
+        La définition doit correspondre à la structure de l'option.
+
+III
+    1.
+        Dans la section "DHCP Option Codes", j’ai recherché les options en lien avec CIDR.
+        Résultat :
+        Option 121 – Classless Static Route Option (aussi appelée "Classless Static Route Option for DHCPv4")
+
+            Code : 121
+
+            Nom : Classless Static Route
+
+            RFC associée : RFC 3442
+            Titre : "The Classless Static Route Option for Dynamic Host Configuration Protocol (DHCP) version 4"
+
+        Cette option permet d’envoyer aux clients des routes statiques avec notation CIDR,
+        pour permettre une meilleure configuration du routage que l’ancienne option routers.
+
+Cette démarche m’a permis :
+de comprendre comment lire, écrire et modifier des options DHCP dans un fichier de configuration
+De savoir comment ajouter des options personnalisées si elles ne sont pas supportées par défaut
+D'utiliser des ressources fiables comme `man`, les RFC et la documentation officielle d’ISC
+
+
+
+
+
+option rfc-3442-classless-static-routes code 121 = array of unsigned integer 8;
+Exemple concret d'utilisation appliqué a notre TP:
+
+    
+
+
+IV.
+    1.
+        aplication pour notre tp ce qui doit etre code dans le dchp code len data 
+        121 24 {172 16 2} {192 168 10 254} 0 {192 168 10 253}
+
+        # Déclaration de l'option RFC3442 (routes CIDR)
+        option rfc3442-classless-static-routes code 121 = array of unsigned integer 8;
+        option rfc-3442-classless-static-routes 24,172,16,2,192,168,10,254,0,192,168,10,253;
+
+        # Sous-réseau
+        subnet 192.168.0.0 netmask 255.255.240.0 {
+            range 192.168.10.20 192.168.10.40;
+            option rfc3442-classless-static-routes 24,172,16,2,192,168,10,254,0,192,168,10,253;
+        } 
+    2.
+
+    3. On place eth0 comme interface 
+
+V.
+    1. pour repoàndre à cette question il faut lancer deux commande ss -a pour voir le nom du proocessus et -na pour avoir le port
+        root@DHCPsrv:/etc/default# ss -a
+        Netid  State      Recv-Q Send-Q             Local Address:Port                              Peer Address:Port                
+        nl     UNCONN     0      0                           rtnl:kernel                                        *                     
+        nl     UNCONN     0      0                           rtnl:453                                           *                     
+        nl     UNCONN     4352   0                        tcpdiag:ss/176                                        *                     
+        nl     UNCONN     896    0                        tcpdiag:kernel                                        *                     
+        nl     UNCONN     0      0                           xfrm:kernel                                        *                     
+        nl     UNCONN     0      0                          audit:kernel                                        *                     
+        nl     UNCONN     0      0                      fiblookup:kernel                                        *                     
+        nl     UNCONN     0      0                            nft:kernel                                        *                     
+        nl     UNCONN     0      0                         uevent:kernel                                        *                     
+        nl     UNCONN     0      0                           genl:kernel                                        *                     
+        p_raw  UNCONN     0      0                              *:eth0                                          *                     
+        u_str  ESTAB      0      0                              * 28794                                        * 28793                
+        u_str  ESTAB      0      0                              * 28793                                        * 28794                
+        u_str  LISTEN     0      128            /run/rpcbind.sock 28026                                        * 0                    
+        raw    UNCONN     0      0                              *:icmp                                         *:*                    
+        udp    UNCONN     0      0                              *:bootps                                       *:*   
+
+        Netid  State      Recv-Q Send-Q               Local Address:Port                              Peer Address:Port              
+        nl     UNCONN     0      0                                0:0                                             *                   
+        nl     UNCONN     0      0                                0:453                                           *                   
+        nl     UNCONN     4352   0                                4:175                                           *                   
+        nl     UNCONN     896    0                                4:0                                             *                   
+        nl     UNCONN     0      0                                6:0                                             *                   
+        nl     UNCONN     0      0                                9:0                                             *                   
+        nl     UNCONN     0      0                               10:0                                             *                   
+        nl     UNCONN     0      0                               12:0                                             *                   
+        nl     UNCONN     0      0                               15:0                                             *                   
+        nl     UNCONN     0      0                               16:0                                             *                   
+        p_raw  UNCONN     0      0                                *:eth0                                          *                   
+        u_str  ESTAB      0      0                                * 28794                                        * 28793              
+        u_str  ESTAB      0      0                                * 28793                                        * 28794              
+        u_str  LISTEN     0      128              /run/rpcbind.sock 28026                                        * 0                  
+        raw    UNCONN     0      0                                *:1                                            *:*                  
+        udp    UNCONN     0      0                                *:67                                           *:*     
+
+    Explication: le nurmero de port est le 67 et le processus s'appele bootps.
+
+
+    2.
+        Commande:
+            root@DHCPsrv:/etc/default# ps aux | grep dhcp
+            root         164  0.0  0.2  35560 10644 ?        Ss   12:28   0:00 /usr/sbin/dhcpd -4 -q -cf /etc/dhcp/dhcpd.conf eth0
+            
+
+        Explication:
+        Le PID est l'identifiant du processus et c'est 164 
+        Le nom du prossecus est /usr/sbin/dhcpd 
+        Le bom du fichier est /etc/dhcp/dhcpd.conf 
+
+    3. les options -4 -q -cf
+
+    4.
+        Commande:
+            dhclient eth0
+            puis ip r
+
+        Explication: Avant le dhclient on a rien dans ip r car on a pas d'ip pour faire la configuration
+        et après le dhclient ip r fonction et on voit aussi que le la machine a une ip fournit par le dhcp.
+
+
+    5.
+        commande:
+            root@DHCPsrv:~# cd /
+            root@DHCPsrv:/# cd var/lib
+            root@DHCPsrv:/var/lib# ls
+            apt  bind  dhcp  dovecot  dpkg	man-db	misc  pam  postfix  python  strongswan	systemd  ucf  vim
+            root@DHCPsrv:/var/lib# cd dhcp
+            root@DHCPsrv:/var/lib/dhcp# ls
+            dhcpd.leases  dhcpd.leases~
+            root@DHCPsrv:/var/lib/dhcp# cat dhcpd.leases
+                # The format of this file is documented in the dhcpd.leases(5) manual page.
+                # This lease file was written by isc-dhcp-4.3.5
+
+                # authoring-byte-order entry is generated, DO NOT DELETE
+                authoring-byte-order little-endian;
+
+                server-duid "\000\001\000\001/\3342\343B\000\252\000\000\003";
+
+                lease 192.168.10.20 {
+                starts 3 2025/06/11 13:23:38;
+                ends 3 2025/06/11 13:33:38;
+                cltt 3 2025/06/11 13:23:38;
+                binding state active;
+                next binding state free;
+                rewind binding state free;
+                hardware ethernet 42:00:aa:00:00:00;
+                client-hostname "pc1-1";
+                }
+                lease 192.168.10.20 {
+                starts 3 2025/06/11 13:28:12;
+                ends 3 2025/06/11 13:38:12;
+                cltt 3 2025/06/11 13:28:12;
+                binding state active;
+                next binding state free;
+                rewind binding state free;
+                hardware ethernet 42:00:aa:00:00:00;
+                client-hostname "pc1-1";
+                }
+
+
+        Explication:
+            Le nom du fichier est dhcpd.leases sans le tild  bien sûr. et il contient le bails assigner au pc1-1
+
+    6. 
+        commande:
+            [dialloa@vm-dialloa ~]$ sudo himage pc1-1
+            root@pc1-1:/# cd var/lib/dhcp/
+            root@pc1-1:/var/lib/dhcp# cat dhclient.leases 
+            lease {
+            interface "eth0";
+            fixed-address 192.168.10.20;
+            option subnet-mask 255.255.240.0;
+            option routers 192.168.10.254,192.168.10.253;
+            option dhcp-lease-time 600;
+            option dhcp-message-type 5;
+            option dhcp-server-identifier 192.168.10.10;
+            option rfc3442-classless-static-routes 24,172,16,2,192,168,10,254,0,192,168,10,253;
+            option domain-name "example.org";
+            renew 3 2025/06/11 13:28:12;
+            rebind 3 2025/06/11 13:32:23;
+            expire 3 2025/06/11 13:33:38;
+            }
+            lease {
+            interface "eth0";
+            fixed-address 192.168.10.20;
+            option subnet-mask 255.255.240.0;
+            option routers 192.168.10.254,192.168.10.253;
+            option dhcp-lease-time 600;
+            option dhcp-message-type 5;
+            option dhcp-server-identifier 192.168.10.10;
+            option rfc3442-classless-static-routes 24,172,16,2,192,168,10,254,0,192,168,10,253;
+            option domain-name "example.org";
+            renew 3 2025/06/11 13:32:26;
+            rebind 3 2025/06/11 13:36:57;
+            expire 3 2025/06/11 13:38:12;
+            }
+            lease {
+            interface "eth0";
+            fixed-address 192.168.10.20;
+            option subnet-mask 255.255.240.0;
+            option routers 192.168.10.254,192.168.10.253;
+            option dhcp-lease-time 600;
+            option dhcp-message-type 5;
+            option dhcp-server-identifier 192.168.10.10;
+            option rfc3442-classless-static-routes 24,172,16,2,192,168,10,254,0,192,168,10,253;
+            option domain-name "example.org";
+            renew 3 2025/06/11 13:36:22;
+            rebind 3 2025/06/11 13:41:12;
+            expire 3 2025/06/11 13:42:27;
+            }
+            lease {
+            interface "eth0";
+            fixed-address 192.168.10.20;
+            option subnet-mask 255.255.240.0;
+            option routers 192.168.10.254,192.168.10.253;
+            option dhcp-lease-time 600;
+            option dhcp-message-type 5;
+            option dhcp-server-identifier 192.168.10.10;
+            option rfc3442-classless-static-routes 24,172,16,2,192,168,10,254,0,192,168,10,253;
+            option domain-name "example.org";
+            renew 3 2025/06/11 13:40:53;
+            rebind 3 2025/06/11 13:45:07;
+            expire 3 2025/06/11 13:46:22;
+            }
+            lease {
+            interface "eth0";
+            fixed-address 192.168.10.20;
+            option subnet-mask 255.255.240.0;
+            option routers 192.168.10.254,192.168.10.253;
+            option dhcp-lease-time 600;
+            option dhcp-message-type 5;
+            option dhcp-server-identifier 192.168.10.10;
+            option rfc3442-classless-static-routes 24,172,16,2,192,168,10,254,0,192,168,10,253;
+            option domain-name "example.org";
+            renew 3 2025/06/11 13:45:46;
+            rebind 3 2025/06/11 13:49:39;
+            expire 3 2025/06/11 13:50:54;
+            }
+            lease {
+            interface "eth0";
+            fixed-address 192.168.10.20;
+            option subnet-mask 255.255.240.0;
+            option routers 192.168.10.254,192.168.10.253;
+            option dhcp-lease-time 600;
+            option dhcp-message-type 5;
+            option dhcp-server-identifier 192.168.10.10;
+            option rfc3442-classless-static-routes 24,172,16,2,192,168,10,254,0,192,168,10,253;
+            option domain-name "example.org";
+            renew 3 2025/06/11 13:50:26;
+            rebind 3 2025/06/11 13:54:32;
+            expire 3 2025/06/11 13:55:47;
+            }
+            lease {
+            interface "eth0";
+            fixed-address 192.168.10.20;
+            option subnet-mask 255.255.240.0;
+            option routers 192.168.10.254,192.168.10.253;
+            option dhcp-lease-time 600;
+            option dhcp-message-type 5;
+            option dhcp-server-identifier 192.168.10.10;
+            option rfc3442-classless-static-routes 24,172,16,2,192,168,10,254,0,192,168,10,253;
+            option domain-name "example.org";
+            renew 3 2025/06/11 13:54:59;
+            rebind 3 2025/06/11 13:59:11;
+            expire 3 2025/06/11 14:00:26;
+            }
+            root@pc1-1:/var/lib/dhcp# 
+
+        Explication: c'est le meme repertoit et meme dossier et meme objectif que pour le serveur mais là c'est les baux réçu
+
+
+    7.
+        commande:
+            root@pc1-1:/var/lib/dhcp# dhclient -r eth0
+            Killed old client process
+            root@pc1-1:/var/lib/dhcp# ip a
+            1: lo: <LOOPBACK,UP,LOWER_UP> mtu 16384 qdisc noqueue state UNKNOWN group default qlen 1000
+                link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+                inet 127.0.0.1/8 scope host lo
+                valid_lft forever preferred_lft forever
+                inet6 ::1/128 scope host 
+                valid_lft forever preferred_lft forever
+            6: eth0@if7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc netem state UP group default qlen 1000
+                link/ether 42:00:aa:00:00:00 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+                inet6 fe80::4000:aaff:fe00:0/64 scope link 
+                valid_lft forever preferred_lft forever
+            root@pc1-1:/var/lib/dhcp# 
+
+
+        Explication: 
+            j'ai utiliser -r pour realese et on remarque que j'ai perdu mon ip.
+            Je pouvais aussi supprimer le fichier qui save les baux.
+
+
+    8. 
+        Commande:
+            root@pc1-1:/var/lib/dhcp# ping 172.16.2.1
+            PING 172.16.2.1 (172.16.2.1) 56(84) bytes of data.
+        Explication:
+            le ping fonctionne mais on a pas de echo rply donc il faut definir la route par defaut sur la machine
+            de destination on place 0.0.0.0/0 172.16.2.254
+
+            Et Bim ça marche:
+            
+            root@pc1-1:/var/lib/dhcp# ping 172.16.2.1
+            PING 172.16.2.1 (172.16.2.1) 56(84) bytes of data.
+            64 bytes from 172.16.2.1: icmp_seq=1 ttl=63 time=0.537 ms
+            64 bytes from 172.16.2.1: icmp_seq=2 ttl=63 time=0.147 ms
+            64 bytes from 172.16.2.1: icmp_seq=3 ttl=63 time=0.157 ms
+            64 bytes from 172.16.2.1: icmp_seq=4 ttl=63 time=0.137 ms
+            ^C
+            --- 172.16.2.1 ping statistics ---
+            4 packets transmitted, 4 received, 0% packet loss, time 3027ms
+            rtt min/avg/max/mdev = 0.137/0.244/0.537/0.169 ms
+            root@pc1-1:/var/lib/dhcp# 
+
+
+
+            

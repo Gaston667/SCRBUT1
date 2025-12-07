@@ -1,0 +1,6 @@
+// FOR ROOT SER
+
+zone "." {
+type master;
+file "/etc/bind/db.root.zone";
+};

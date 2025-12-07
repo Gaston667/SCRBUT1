@@ -1,0 +1,23 @@
+; BIND data file for root server (db.root.zone) // FOR ROOT SER
+$TTL    604800
+@ IN SOA ROOT-SERV. root. (
+    2         ; Serial
+    604800    ; Refresh
+    86400     ; Retry
+    2419200   ; Expire
+    604800 )  ; Negative Cache TTL
+
+@               IN NS      ROOT-SERV.
+ROOT-SERV.      IN A       90.90.0.10
+sethi.mos.      IN A       80.80.0.20
+kheops.mos.     IN A       80.80.0.11
+
+mos.            IN NS      sethi.mos.
+                IN NS      kheops.mos.
+
+
+
+
+;80.80.in-addr.arpa.   IN   NS    sethi.mos
+;					  IN   NS    kheops.mos
+

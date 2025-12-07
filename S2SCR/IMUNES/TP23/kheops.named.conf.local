@@ -1,0 +1,12 @@
+zone "mos" {
+    type slave;
+    masters { 80.80.0.20; }; // sethi
+    file "/etc/bind/sethi.db.mos";
+};
+
+
+zone "80.80.in-addr.arpa" {
+    type slave;
+    masters { 80.80.0.20; }; // sethi
+    file "/etc/bind/sethi.db.mos.inv";
+};
